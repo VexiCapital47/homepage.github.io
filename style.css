@@ -1,0 +1,70 @@
+
+.start{
+    display: flex;
+    flex-direction: column;
+}
+*/
+
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#img{
+    width: 360px;
+    height: 900px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img_main{
+    width: 600px;
+    height: 700px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img_ggc{
+       width: 400px;
+    height: 50px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; 
+    
+    
+}
+
+
+
+
+div{
+    display: flex;
+    flex-direction: column;
+}
+
+#test-img{
+      width: 600px;
+    height: 500px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    
+}
+
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.kakao_ad2{
+    width: 320px;
+    margin: 0 auto;
+}
+.coupang_ad {
+    width: 320px;
+    margin: 0 auto;
+}
