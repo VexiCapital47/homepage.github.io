@@ -40,7 +40,7 @@ img {
 }
 
 .logo {
-    width: 145px;
+    width: 100px;
     margin-top: 14px;
 }
 
@@ -89,4 +89,18 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(340px,1fr));
     margin-top: 6%
         margin-bottom: 50px;
+}
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.kakao_ad2{
+    width: 320px;
+    margin: 0 auto;
+}
+.coupang_ad {
+    width: 320px;
+    margin: 0 auto;
 }
