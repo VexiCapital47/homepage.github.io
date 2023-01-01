@@ -104,3 +104,12 @@ img {
     width: 320px;
     margin: 0 auto;
 }
+
+footer {
+     text-align: center;
+    padding: 26px 0;
+}
+
+footer p {
+    font-size: 0.875rem;
+}
