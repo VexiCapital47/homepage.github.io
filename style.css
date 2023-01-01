@@ -1,70 +1,97 @@
-
-.start{
-    display: flex;
-    flex-direction: column;
-}
-*/
-
-article{
-    display: flex;
-    flex-direction: column;
-}
-
-
-#img{
-    width: 360px;
-    height: 900px;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
-
-#img_main{
-    width: 600px;
-    height: 700px;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
-
-#img_ggc{
-       width: 400px;
-    height: 50px;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto; 
+@charset "UTF-8";
     
+    html {
+        font-size: 100%;
+    }
+
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .main-nav {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    
+    .main-nav li {
+        margin: 0 20px;
+    }
+    
+    .home-content {
+        margin-top: 20%;
+        
+    }
+    
+    .page-header {
+        flex-direction: column;
+        align-items: center;
+    }
     
 }
-
-
-
-
-div{
-    display: flex;
-    flex-direction: column;
-}
-
-#test-img{
-      width: 600px;
-    height: 500px;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
     
+body{
+   font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}    
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%
+}
+
+.logo {
+    width: 203px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+}
+
+.main-nav a{
+    color: #432;
+}
+
+.main-nav a:hover {
+    color: #0bd;
 }
 
 
-.kakao_ad{
-    width: 320px;
-    margin: 0 auto;
+.page-header {
+    display: flex;
+    justify-content: space-between;
 }
 
-.kakao_ad2{
-    width: 320px;
+
+.wrapper {
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 4%;
 }
-.coupang_ad {
-    width: 320px;
-    margin: 0 auto;
+
+.home-content {
+    text-align: center;
+    margin-top: 10%;
+}
+
+
+.grid {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(340px,1fr));
+    margin-top: 6%
+        margin-bottom: 50px;
 }
