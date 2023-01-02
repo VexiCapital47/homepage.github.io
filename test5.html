@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="naver-site-verification" content="931677a4cd67694781810b79c1fe372a22885b6b" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>크리스마스 성격 테스트</title>
+    <meta name="description" content="나를 닮은 크리스마스 캐릭터는 무엇인지 MBTI 기반으로 찾아주는 사이트 입니다.">
+<meta name="keywords" content="크리스마스 테스트,성격 테스트,크리스마스 mbti,mbti테스트,크리스마스mbti,크리스마스성격,mbti성격,mbti크리스마스">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="크리스마스 성격 테스트">
+    <meta property="og:description" content="나를 닮은 크리스마스 캐릭터는 무엇인지  MBTI 기반으로 찾아주는 사이트 입니다.">
+    <meta property="og:image" content="https://test-it.co.kr/img_main5.jpeg">
+    <meta property="og:url" content="https://test-it.co.kr/test5.html">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+   
+<style>
+
+/* start 태그와 question 태그 모두 article 태그라서 article 태그에 속성을 주면 동시에 적용됨
+.start{
+    display: flex;
+    flex-direction: column;
+}
+*/
+
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+.question{
+    display: none;
+}
+
+.result{
+    display: none;
+}
+.progress-bar {
+    background-color: #EE2641;
+}
+.progress {
+    background-color: #ffffff;
+}
+#img{
+    width: 360px;
+    height: 900px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img_main5{
+    width: 500px;
+    height: 600px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.share{
+    margin: 0 auto;
+}
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.kakao_ad2{
+    width: 320px;
+    margin: 0 auto;
+}
+.coupang_ad {
+    width: 320px;
+    margin: 0 auto;
+}
+
+</style>
+
+
+</head>
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#ffffff">
+
+    <article class="kakao_ad2 mt-5">
+        <ins class="kakao_ad_area" style="display:none;" 
+        data-ad-unit    = "DAN-mz34FqBjIYlI3odv" 
+        data-ad-width   = "320" 
+        data-ad-height  = "50"></ins> 
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    </article>
+
+    <!--시작화면-->
+    <article class="start">
+        <img id="img_main5" class="mt-5" src="img_main5.jpeg">
+        <button type="button" class="btn btn-info mt-5" onclick='start();' style="font-size:large; font-weight: bold; color: black; background-color: rgb(8, 183, 14); border-color: rgb(8, 183, 14);">테스트 시작하기</button>
+    </article>
+    <!--문제화면-->
+    <article class="question">
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h6 style="font-weight: bold;" class="text-center mt-5" id="title">문제</h6>
+        <input id="type" type="hidden" value="EI">
+        <button id="A" type="button" class="btn btn-info mt-5" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(8, 183, 14); border-color: rgb(8, 183, 14);">Primary</button>
+        <button id="B" type="button" class="btn btn-info mt-5" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(8, 183, 14); border-color: rgb(8, 183, 14);">Primary</button>
+
+        </article>
+    <!--결과화면-->
+    <article class="result">
+        <img id="img" class="mt-5" src="" alt="animal">
+        
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <!-- share 클래스는 내가 위치 조정을 위해서 준 클래스-->
+        <div class="share addthis_inline_share_toolbox"></div>
+            
+    </article>
+
+    <article class="kakao_ad mt-5">
+        <ins class="kakao_ad_area" style="display:none;" 
+        data-ad-unit    = "DAN-ubLgbyT6gkUN7YYm" 
+        data-ad-width   = "320" 
+        data-ad-height  = "100"></ins> 
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    </article>
+    <article class="coupang_ad">
+  <a href="https://link.coupang.com/a/HiwmZ" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
+  </article>
+
+
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <!--각 타입의 점수를 저장하는 input 태그(hidden으로 안보임)-->
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+        // 문제 번호를 나타내는 num 변수
+        var num = 1;
+        // 문제 번호별 질문을 저장하는 자바스크립트 객체 q
+        var q = {
+              1: {"title": "크리스마스가 다가온다! 나는?", "type": "SN", "A": "벌써? 시간 빠르네", "B": "크리스마스에 뭘 할지 생각한다."},
+             2: {"title": "크리스마스 이브<br><br>집에서 쉬고있는데 나오라는 친구의 전화", "type": "EI", "A": "마침 심심했는데 잘됐다", "B": "나오라고? 사람도 많을텐데..<br>대충 둘러대고 계속 집에서 쉰다."},
+             3: {"title": "크리스마스에 쓸데없는 선물 주기 하자!<br><br>친구의 말에 나의 속마음은?", "type": "TF", "A": "벌써 머릿속에 쓸데없는 선물 몇개를 떠올림", "B": "쓸데없는걸 굳이 왜..? 하지만 내색하지 않음"},
+
+             4: {"title": "크리스마스에 가려던 가게가 예약이 다 차버렸다!", "type": "JP", "A": "진작 예약하지 않은 나를 원망한다.", "B": "아 아쉽다. 딴데 가지 뭐"},
+             5: {"title": "자고 일어나면 크리스마스이브! 침대에 누운 나는", "type": "SN", "A": "별생각 없다. 잔다.", "B": "내일 무슨 일이 일어날지 상상의 나래를 펼친다"},
+            6: {"title": "우리 크리스마스에 드레스코드 정해서 만나자!", "type": "EI", "A": "1년에 하루뿐이니 특이한 분장을 한다.", "B": "튀기 싫어! 적당히 무난한 옷을 고른다."},
+
+                7: {"title": "산타와 루돌프가 선물을 놓고 가려다 내 방을 어질러놨다.<br><br>누구에게 더 화가 날까?", "type": "TF", "A": "사과는 뒷전, 일단 정리부터 하는 산타!", "B": "정리는 뒷전, 사과부터 하는 루돌프!"},
+             8: {"title": "산타와 루돌프가 수습을 시작했다. 내 방식은?", "type": "JP", "A": "그냥 알아서 치워줘", "B": "이거 먼저 치우고, 다음에 이거 치워줘"},
+            9: {"title": "수습을 끝낸 산타와 루돌프가 인사를 하고 떠난다.<br><br>어떤 모습으로 떠났는가?", "type": "SN", "A": "문을 열고 나간다.", "B": "창문을 열고 하늘로 날아간다."},
+
+         10: {"title": "정말 피곤했던 크리스마스 이브<br>친구가 쓸데없는 선물을 주겠다고 한다.", "type": "EI", "A": "내 선물도 챙겨서 바로 나간다!", "B": "이미 에너지를 다 썼어..다음에 주고 받는다."},
+            11: {"title": "내가 정말 쓸데없는걸 줬다며 친구가 엉엉 울어버린다..<br><br>이때 나는", "type": "TF", "A": "당황스럽지만 위로부터 해준다.", "B": "쓸데없는 선물 주기로 한거 아니야?"},
+              12: {"title": "드디어 내일이 크리스마스!<br><br>나는 내일 뭐할까?", "type": "JP", "A": "밥먹고 영화보고 구경 좀 하고~", "B": "이미 예약을 해놔서 그대로 움직인다."}
+        }
+
+        // MBTI 결과별 동물&설명을 저장하는 자바스크립트 객체 result
+        var result = {
+            "ISTJ": {"img":"img_istj5.png"},
+            "ISFJ": {"img":"img_isfj5.png"},
+            "INFJ": {"img":"img_infj5.png"},
+            "INTJ": {"img":"img_intj5.png"},
+
+            "ISTP": {"img":"img_istp5.png"},
+            "ISFP": {"img":"img_isfp5.png"},
+            "INFP": {"img":"img_infp5.png"},
+            "INTP": {"img":"img_intp5.png"},
+
+            "ESTP": {"img":"img_estp5.png"},
+            "ESFP": {"img":"img_esfp5.png"},
+            "ENFP": {"img":"img_enfp5.png"},
+            "ENTP": {"img":"img_entp5.png"},
+
+            "ESTJ": {"img":"img_estj5.png"},
+            "ESFJ": {"img":"img_esfj5.png"},
+            "ENFJ": {"img":"img_enfj5.png"},
+            "ENTJ": {"img":"img_entj5.png"},
+        }
+        // 시작 버튼을 클릭하면 시작화면 숨기고 질문화면 보여주기
+        function start(){
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+        // A 버튼 클릭하면 해당 타입 값을 가져와서 값 1 증가 후 next()
+        $("#A").click(function(){
+            var type = $("#type").val();
+            var preValue = $("#"+type).val();
+            $("#"+type).val(parseInt(preValue)+1);
+            next();
+        });
+        // B 버튼 클릭하면 값 증가 없이 next()
+        $("#B").click(function(){
+            next();
+        });
+        function next(){
+            // 마지막 문제인 경우
+            if(num==13){
+                // 질문은 숨기고 결과 화면 보여주기
+                $(".question").hide();
+                $(".result").show();
+
+                var mbti = "";
+                
+                // 삼항 연산자를 사용해서 MBTI 계산
+                ($("#EI").val()<2) ? mbti+="I" : mbti+="E";
+                ($("#SN").val()<2) ? mbti+="N" : mbti+="S";
+                ($("#TF").val()<2) ? mbti+="T" : mbti+="F";
+                ($("#JP").val()<2) ? mbti+="J" : mbti+="P";
+                
+                // 계산된 MBTI로 이미지, 동물, 설명 값 변경
+                $("#img").attr("src",result[mbti]["img"]);
+                $("#animal").html(result[mbti]["animal"]);
+                $("#explain").html(result[mbti]["explain"]);
+            } // 마지막 문제가 아닌 경우
+            else{
+                // 프로그래스 바 1/12씩 차오르도록 구현
+                $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)');
+                // 각 문제별 문제&선택지 출력
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+
+        }
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60358a0895fc8bb9"></script>
+
+</body>
+</html>
