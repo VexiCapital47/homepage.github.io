@@ -23,6 +23,42 @@
 
 <style>
 
+    
+.logo {
+    width: 100px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+.main-nav a{
+    color: #432;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
 /* start 태그와 question 태그 모두 article 태그라서 article 태그에 속성을 주면 동시에 적용됨
 .start{
     display: flex;
@@ -86,6 +122,8 @@ article{
 
 
    <link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -94,6 +132,23 @@ article{
 <!-- body 태그 style background-color 지정으로 배경색 변경-->
 <body class="container" style="background-color:#ffffff">
 
+       <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img_logo.png" alt="test it"></a>
+        </h1>
+    <nav>
+        <u1 class="main-nav">
+            <li> <a href="test.html">성격</a></li>
+            <li> <a href="face.html">얼굴</a></li>
+            <li> <a href="etc.html">그외</a></li>
+        </u1>
+    </nav>
+        
+        
+    </header>
+
+
+    
+    
     <article class="kakao_ad2 mt-5">
         <ins class="kakao_ad_area" style="display:none;" 
         data-ad-unit    = "DAN-NywnQHtQV7qBPO3F" 
