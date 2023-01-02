@@ -1,0 +1,904 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="naver-site-verification" content="c31f4c8cd09293eb3570a076ec6a6b7c69379c35" />
+
+
+
+
+
+
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta ht-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>스물다섯 스물하나</title>
+    <meta name="description" content="스물다섯 스물하나 테스트">
+    <meta name="title" content="나는 어떤 캐릭터와 닮았을까?">
+    <meta name="subject" content="스물다섯 스물하나 닮은꼴 테스트">
+    <meta name="keywords" content="얼굴테스트,mbti테스트,스물다섯스물하나테스트,스물다섯스물하나테스트,2521,스물다섯스물하나,나희도,백이진,고유림,지승완,문지웅,김태리,남주혁,보나,최현욱,이주명,김태리닮은꼴,남주혁닮은꼴,보나닮은꼴,최현욱닮은꼴">
+
+    <meta name="author" content="1990DAY">
+
+
+<style>
+
+body {
+  font-family: 'Jua', sans-serif;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #2C2C2C;
+}
+
+.file-upload {
+    padding: 3% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #ffffff;
+    background-color: #ffffff;
+    
+}
+
+.img {
+    margin: 0 auto;
+     text-align: center;
+
+}
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #F2E7FA;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+#loading {
+  display: none;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.image-upload-wrap {
+    width: 70%;
+        height: 70%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 5px;
+    border: dashed 1.5px #ffffff;
+    background-color: #FFE99F;
+    
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #FDECB4;
+    border: 1.5px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+.file-upload-image {
+  max-height:50%;
+  max-width: 50%;
+  margin: auto;
+  padding: 10px;
+}
+
+.try-again-btn {
+  border-radius: 40px;
+  border: solid 1.5px #35465d;
+  background-color: #35465d;
+}
+
+.try-again-text {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 4px 15px;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.navbar-light .navbar-brand {
+  line-height: 1.68;
+  text-align: left;
+  color: #B9B6B7; 
+}
+
+
+.navbar-light .navbar-toggler {
+    border-color: #B9B6B7;
+}
+.section {
+    margin-top: 50px;
+}
+
+.title {
+  line-height: 1.67;
+  text-align: center;
+  color: #419F2E;
+        font-size: 25px;
+}
+
+.subtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #000000;
+        font-size: 30px;
+}
+.sbtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #2C2C2C;
+        font-size: 20px;
+}
+
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+
+
+
+.upload {
+    width: 20%;
+}
+
+.upload-text {
+    width: 58%;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #35465d;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: initial;
+    color: initial;
+}
+
+.bar-container {
+  height: 2.7rem;
+}
+.cm-box {
+ position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 182, 182, 0.2);
+}
+.cm-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 182, 182, 1);
+}
+.eh-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+ background-color: rgba(135, 239, 201, 0.2);
+}
+.eh-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+    background-color: rgba(135, 239, 201, 1);
+}
+.ej-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+ background-color: rgba(171, 89, 226, 0.2);
+}
+.ej-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+background-color: rgba(171, 89, 226, 1);
+}
+.hd-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+background-color: rgba(255, 0, 0, 0.2);
+}
+.hd-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(255, 0, 0, 1);
+}
+.jk-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+background-color: rgba(250, 216, 42, 0.2);
+}
+.jk-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(250, 216, 42, 1);
+}
+.jw-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(51, 51, 255, 0.2);
+}
+.jw-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(51, 51, 255, 1);
+}
+.sw-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 140, 7, 0.2);
+}
+.sw-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(255, 140, 7, 1);
+}
+.yr-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(148, 216, 255, 0.2);
+}
+.yr-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(148, 216, 255, 1);
+}
+
+
+.percent-text {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.hp-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+#label-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.result-message {
+      font-size: 2rem;
+}
+
+
+.hp-explain {
+    color: #23231e;
+    font-size: 1.5rem;
+}
+.cm-hp-title {
+    color: #FFB6B6;
+}
+.cm-hp-celeb {
+    color: #FFB6B6;
+    font-size: 1.2rem;
+}
+.eh-hp-title {
+    color: #87EFC9;
+}
+.eh-hp-celeb {
+    color: #87EFC9;
+    font-size: 1.2rem;
+}
+.ej-hp-title {
+    color: #AB59E2;
+}
+.ej-hp-celeb {
+    color: #AB59E2;
+    font-size: 1.2rem;
+}
+.hd-hp-title {
+    color: #ff0000;
+}
+.hd-hp-celeb {
+    color: #ff0000;
+    font-size: 1.2rem;
+}
+.jk-hp-title {
+    color: #FAD82A;
+}
+.jk-hp-celeb {
+    color: #FAD82A;
+    font-size: 1.2rem;
+}
+.jw-hp-title {
+    color: #3333FF;
+}
+.jw-hp-celeb {
+    color: #3333FF;
+    font-size: 1.2rem;
+}
+.sw-hp-title {
+    color: #FF8C07;
+}
+.sw-hp-celeb {
+    color: #FF8C07;
+    font-size: 1.2rem;
+}
+.yr-hp-title {
+    color: #94D8FF;
+}
+.yr-hp-celeb {
+    color: #94D8FF;
+    font-size: 1.2rem;
+}
+
+/* gender */
+input#gender {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  width: 90px;
+  height: 41px;
+  box-shadow: 0 0 0 8px #e5e9ea inset;
+  border-radius: 30px;
+  position: relative;
+}
+
+.knob {
+  position: absolute;
+  width: 41px;
+  top: 0;
+  left: 0;
+  height: 41px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #f470a7 inset;
+  background-color: #fbd4e6;
+  transition: 0.3s;
+}
+
+.knob > i {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  top: 100%;
+  background-color: #f470a7;
+  left: calc(50% - 2px);
+}
+
+.knob > i:before,
+.knob > i:after {
+  width: 6px;
+  position: absolute;
+  top: 42%;
+  content: "";
+  height: 4px;
+  background-color: #f470a7;
+}
+
+.knob > i:before {
+  left: 4px;
+}
+.knob > i:after {
+  left: -6px;
+}
+
+input:checked + label > .knob {
+  box-shadow: 0 0 0 8px #a1c6dd inset;
+  background-color: #e2ecf4;
+  transform: translateX(49px) rotate(-140deg);
+}
+
+input:checked + label > .knob > i {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after,
+input:checked + label > .knob > i:before {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after {
+  top: 14.5px;
+  width: 12px;
+  left: -7px;
+  transform: rotate(45deg);
+}
+input:checked + label > .knob > i:before {
+  top: 13px;
+  width: 12px;
+  left: 0px;
+  transform: rotate(134deg);
+}
+
+.ad-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+.coupang-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+    
+</style>
+
+
+    <link rel="canonical" href="https://test-it.co.kr/test11.html" />
+    <meta property="og:url" content="https://test-it.co.kr/test11.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="스물다섯 스물하나 테스트" />
+    <meta property="og:description" content="스물다섯 스물하나 닮은꼴"
+    />
+ 
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <meta property="og:image" content="https://postfiles.pstatic.net/MjAyMjAzMDZfMTM2/MDAxNjQ2NTc0Njg5ODUz.mk6xKa5gF6N_6e7v7T4300tQY5JsNwKyGHamh4ixsdkg.P6imTXxAry_VsgsESmM_R4_DUURreeuFYwCGqpW8IBUg.JPEG.cccc070/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg?type=w580" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="favicon.png">
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+    <script data-ad-client="ca-pub-5522499110435321" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+</head>
+
+
+<body>
+    <nav class="p-3 container navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand"></a>스물다섯 스물하나</nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    
+                        <span class="sr-only">(current)</span>
+                </li>
+                <li class="nav-item active">
+                </li>
+            </ul>
+        </div>
+    <section class="section">
+        <h1 class="title">스물다섯 스물하나</h1>
+        <h2 class="subtitle">닮은꼴 테스트</h2>
+        <h2 class="sr-only">스물다섯 스물하나 닮은꼴</h2>
+        <h3 class="sr-only">인공지능으로 파악한 스물다섯 스물하나 닮은꼴 테스트</h3>
+        <h4 class="sr-only">본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.</h4>
+        <p class="sr-only">얼굴로 보는 스물다섯 스물하나 닮은꼴 테스트</p>
+    </section>
+
+  <div class="img"> 
+<img class="up mt-3 pb-5" src="face11.png" alt="up">
+</div>
+
+    <h3 class="sbtitle""d-flex justify-content-center">성별 선택</h3>
+    <section class="d-flex justify-content-center">
+        <p class="d-flex align-items-center pr-3">여</p>
+        <div>
+            <input type="checkbox" id="gender">
+            <label for="gender">
+                <span class="knob">
+                    <i></i>
+                </span>
+            </label>
+        </div>
+        <p class="d-flex align-items-center pl-3">남</p>
+    </section>
+   
+   <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <div class="mt-3 container file-upload">
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+                <h3 class="mb-5 pb-4 pt-5  upload-text">사진을 올려놓거나<br>눌러서 파일 업로드</h3>
+            </div>
+        </div>
+        <div class="file-upload-content">
+            <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+            <div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading</span>
+                </div>
+                <p class="text-center">닮은꼴 찾는중..</p>
+            </div>
+                <p class="result-message"></p>
+            <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox"></div>
+            
+
+            <div class="pt-3 image-title-wrap">
+                <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
+                    <span class="try-again-text">다른 사진으로 해보기</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+<div class="ad-banner mt-5">
+<a href="https://link.coupang.com/a/ktsQX" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471849?subId=&traceId=V0-301-371ae01f4226dec2-I471849&w=320&h=100" alt=""></a>a>
+    
+    <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-usLbfjnIz5jCiSLD" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+</div>
+
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+<div class="ad-banner">
+    <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-q4xx9UY2zIcUrNhg" 
+ data-ad-width   = "320" 
+ data-ad-height  = "50"></ins> 
+</div>
+
+
+
+
+<footer class="footer pt-5 container d-flex justify-content-center">
+        <div>
+            <p>&copy; 1990DAY 2021. All Rights Reserved. </p>
+        </div>
+    </footer>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('.image-upload-wrap').hide();
+                    $('.img').hide();
+                    $('#loading').show();
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show();
+                    $('.image-title').html(input.files[0].name);
+                };
+                reader.readAsDataURL(input.files[0]);
+                init().then(function() {
+                    console.log("hello");
+                    predict();
+                    $('#loading').hide();
+                });
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function() {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function() {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+        let URL;
+        const urlMale = "https://teachablemachine.withgoogle.com/models/8kcmkgwbc/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/8kcmkgwbc/";
+        let model, webcam, labelContainer, maxPredictions;
+       async function init() {
+            if (document.getElementById("gender").checked) {
+                URL = urlMale;
+            } else {
+                URL = urlFemale;
+            }
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                var element = document.createElement("div")
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+            }
+        }
+        async function predict() {
+            var image = document.getElementById("face-image")
+            const prediction = await model.predict(image, false);
+            prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+            console.log(prediction[0].className);
+            var resultTitle, resultExplain, resultCeleb;
+            if (document.getElementById("gender").checked) {
+                switch (prediction[0].className) {
+                     case "cm":
+                        resultTitle = "당신은 양찬미와 닮은꼴 입니다."
+                        resultExplain = "펜싱 금메달리스트로 많은 영광을 누린 그 시대 스포츠 스타 출신 코치"
+                        resultCeleb = "양찬미 - 배우 김혜은"
+                        break;
+                    case "eh":
+                        resultTitle = "당신은 백이현과 닮은꼴 입니다."
+                        resultExplain = "백이진 동생"
+                        resultCeleb = "백이현 - 배우 최민영"
+                        break;
+                    case "ej":
+                        resultTitle = "당신은 백이진과 닮은꼴 입니다."
+                        resultExplain = "UBS 스포츠 기자. 스물둘에 방송국 기자가 된 인물로 잠복 취재할 땐 화장품 외판원이 됐다가 경호원이 되기도 하고 아시안게임이 열려 스포츠기자도 된다. 아시안게임 펜싱 도중 금메달리스트 나희도를 만난다."
+                        resultCeleb = "백이진 - 배우 남주혁"
+                        break;
+                    case "hd":
+                        resultTitle = "당신은 나희도와 닮은꼴 입니다."
+                        resultExplain = "고등학교 펜싱부에서 국가대표. 펜싱 신동에서 4000만의 안티가 되는 금메달리스트이다. 에너지와 패기 넘치는 성격으로, 목표를 향해 굳건하게 달려가는 인물이다. IMF 사태로 부유한 집안 도련님에서 가장이 된 한 남자와 엮이면서 사랑과 우정, 꿈을 고민한다."
+                        resultCeleb = "나희도 - 배우 김태리"
+                            break;
+                     case "jk":
+                        resultTitle = "당신은 신재경과 닮은꼴 입니다."
+                        resultExplain = "희도의 엄마. 지구가 멸망하는 순간에도 속보를 전할 수만 있다면 자신은 딸 옆이 아닌 방송국의 앵커석을 지키리라 생각하는 인물로, 딸의 증오를 감내하며 깊은 속내를 감추고 있다."
+                        resultCeleb = "신재경 - 배우 서재희"
+                        break;
+                    case "jw":
+                        resultTitle = "당신은 문지웅과 닮은꼴 입니다."
+                        resultExplain = "태양고 5인방 중 한 명이자 싸이월드의 투멤남이 목표, 일진이라 주장하지만 딱히 뭘 하지 않는 머리부터 발끝까지 그 시절 인플루언서이다. 개성과 스타일이 남다른 패셔니스타로 자신만의 예술세계를 주장하는 엉뚱함을 지녔다."
+                        resultCeleb = "문지웅 - 배우 최현욱"
+                        break;
+                    case "sw":
+                        resultTitle = "당신은 지승완과 닮은꼴 입니다."
+                        resultExplain = "전교 1등이면서 반장인, 그러나 가슴 속엔 반항심으로 가득 찬 잔다르크이다. 고등학교 방송부로 이 시대와 사회, 학교와 개인의 삶에 대해 청취자들과 열정적으로 고민을 나누는 해적방송 DJ로 활약한다."
+                        resultCeleb = "지승완 - 배우 이주명"
+                        break;
+                    case "yr":
+                        resultTitle = "당신은 고유림과 닮은꼴 입니다."
+                        resultExplain = "최연소 펜싱 금메달리스트. 카리스마 넘치는 펜싱 선수지만 펜싱복을 벗으면 천상 귀요미인 사랑스러운 외유내강형 인물이다. 언론에서 만든 나희도와 라이벌 구도지만 실제 사이가 안 좋지 않으며 올림픽 금메달을 목표로 한다."
+                        resultCeleb = "고유림 - 배우 김지연"
+                            break;
+           
+              
+                        
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            } else {
+                switch (prediction[0].className) {
+
+                          case "cm":
+                        resultTitle = "당신은 양찬미와 닮은꼴 입니다."
+                        resultExplain = "펜싱 금메달리스트로 많은 영광을 누린 그 시대 스포츠 스타 출신 코치"
+                        resultCeleb = "양찬미 - 배우 김혜은"
+                        break;
+                    case "eh":
+                        resultTitle = "당신은 백이현과 닮은꼴 입니다."
+                        resultExplain = "백이진 동생"
+                        resultCeleb = "백이현 - 배우 최민영"
+                        break;
+                    case "ej":
+                        resultTitle = "당신은 백이진과 닮은꼴 입니다."
+                        resultExplain = "UBS 스포츠 기자. 스물둘에 방송국 기자가 된 인물로 잠복 취재할 땐 화장품 외판원이 됐다가 경호원이 되기도 하고 아시안게임이 열려 스포츠기자도 된다. 아시안게임 펜싱 도중 금메달리스트 나희도를 만난다."
+                        resultCeleb = "백이진 - 배우 남주혁"
+                        break;
+                    case "hd":
+                        resultTitle = "당신은 나희도와 닮은꼴 입니다."
+                        resultExplain = "고등학교 펜싱부에서 국가대표. 펜싱 신동에서 4000만의 안티가 되는 금메달리스트이다. 에너지와 패기 넘치는 성격으로, 목표를 향해 굳건하게 달려가는 인물이다. IMF 사태로 부유한 집안 도련님에서 가장이 된 한 남자와 엮이면서 사랑과 우정, 꿈을 고민한다."
+                        resultCeleb = "나희도 - 배우 김태리"
+                            break;
+                     case "jk":
+                        resultTitle = "당신은 신재경과 닮은꼴 입니다."
+                        resultExplain = "희도의 엄마. 지구가 멸망하는 순간에도 속보를 전할 수만 있다면 자신은 딸 옆이 아닌 방송국의 앵커석을 지키리라 생각하는 인물로, 딸의 증오를 감내하며 깊은 속내를 감추고 있다."
+                        resultCeleb = "신재경 - 배우 서재희"
+                        break;
+                    case "jw":
+                        resultTitle = "당신은 문지웅과 닮은꼴 입니다."
+                        resultExplain = "태양고 5인방 중 한 명이자 싸이월드의 투멤남이 목표, 일진이라 주장하지만 딱히 뭘 하지 않는 머리부터 발끝까지 그 시절 인플루언서이다. 개성과 스타일이 남다른 패셔니스타로 자신만의 예술세계를 주장하는 엉뚱함을 지녔다."
+                        resultCeleb = "문지웅 - 배우 최현욱"
+                        break;
+                    case "sw":
+                        resultTitle = "당신은 지승완과 닮은꼴 입니다."
+                        resultExplain = "전교 1등이면서 반장인, 그러나 가슴 속엔 반항심으로 가득 찬 잔다르크이다. 고등학교 방송부로 이 시대와 사회, 학교와 개인의 삶에 대해 청취자들과 열정적으로 고민을 나누는 해적방송 DJ로 활약한다."
+                        resultCeleb = "지승완 - 배우 이주명"
+                        break;
+                    case "yr":
+                        resultTitle = "당신은 고유림과 닮은꼴 입니다."
+                        resultExplain = "최연소 펜싱 금메달리스트. 카리스마 넘치는 펜싱 선수지만 펜싱복을 벗으면 천상 귀요미인 사랑스러운 외유내강형 인물이다. 언론에서 만든 나희도와 라이벌 구도지만 실제 사이가 안 좋지 않으며 올림픽 금메달을 목표로 한다."
+                        resultCeleb = "고유림 - 배우 김지연"
+                            break;
+           
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            }
+            var title = "<div class='" + prediction[0].className + "-hp-title'>" + resultTitle + "</div>"
+            var explain = "<div class='hp-explain pt-2'>" + resultExplain + "</div>"
+            var celeb = "<div class='" + prediction[0].className + "-hp-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+            $('.result-message').html(title + explain + celeb);
+            var barWidth;
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability.toFixed(2) > 0.1) {
+                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                    barWidth = "4%"
+                } else {
+                    barWidth = "2%"
+                }
+                var labelTitle;
+                switch (prediction[i].className) {
+                    case "cm":
+                        labelTitle = "양찬미"
+                        break;
+                    case "eh":
+                        labelTitle = "백이현"
+                        break;
+                    case "ej":
+                        labelTitle = "백이진"
+                        break;
+                    case "hd":
+                        labelTitle = "나희도"
+                         break;
+       	        case "jk":
+                        labelTitle = "신재경"
+                        break;
+                    case "jw":
+                        labelTitle = "문지웅"
+                        break;
+                    case "sw":
+                        labelTitle = "지승완"
+                        break;
+                    case "yr":
+                        labelTitle = "고유림"
+                         break;
+       
+                   
+                    default:
+                        labelTitle = "알수없음"
+            }
+                var label = "<div class='hp-label d-flex align-items-center'>" + labelTitle + "</div>"
+                var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                labelContainer.childNodes[i].innerHTML = label + bar;
+            }
+        }
+    </script>
+    <script>
+        function iosApp() {
+            document.getElementById("coupang").style.display="none";
+            $("#coupang ins").hide();
+            document.getElementById("addThis").style.display="none";
+            document.getElementById("disqus_thread").style.display="none";
+            var kakao = document.getElementsByClassName("kakao_ad_area");
+            for (var i = 0; i < kakao.length; i++) {
+              if(kakao[i]) {
+                  kakao[i].style.display="none";
+              }
+            }
+            document.getElementById("yotube-top-link").style.display="none";
+            document.getElementById("yotube-mid-link").style.display="none";
+            document.getElementById("yotube-bottom-link").style.display="none";
+        }
+    </script>
+</body>
+<!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+</html>
