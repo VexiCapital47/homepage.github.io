@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta name="naver-site-verification" content="4ff060c7eef5527e85605e82a2c406479b690612" />
+
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 날씨 테스트</title>
+    <meta name="description" content="나와 어울리는 날씨를 MBTI를 기반으로 추천해주는 테스트입니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="나의 날씨 테스트">
+    <meta property="og:description" content="나와 어울리는 날씨를 MBTI를 기반으로 추천해주는 테스트입니다.">
+    <meta property="og:image" content="test25.png">
+    <meta property="og:url" content="https://test-it.co.kr/test25.html">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+
+<style>
+
+
+body {
+    background-color: #e4f3f8;
+    color: #131212;
+    font-family: 'Jua', sans-serif;
+}
+article {
+    display: flex;
+    flex-direction: column;
+}
+.copyright-text {
+    font-family: "Jua";
+    font-size: 12px;
+    color: #a1a1a1;
+}
+
+.question {
+    display: none;
+}
+
+.main-title {
+    font-size: 20px;
+    color: #797979;
+}
+.sub-title {
+    font-size: 30px;
+    font-weight: 500;
+    color: #000000;
+}
+.updown-slash {
+    width: 280px;
+    margin: 0 auto;
+}
+.up{
+    width: 300px;
+    margin: 0 auto;
+}
+.start-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-start {
+    font-size: 16px;
+    color:#000000;
+    background-color: #a5e1f3;
+    border:#ffffff;
+}
+.btn-start, .btn-start:visited, .btn-start:hover, .btn-start:active {
+    font-size: 20x;
+    color:#0a0a0a;
+    background-color: #a5e1f3;
+    border:#ffffff;
+}
+.btn-start:active, .btn-start:focus {
+    background-color: #a5e1f3 !important;
+    border:#a5e1f3 !important;
+    font-size: 20px;
+    color:#030303;
+}
+
+.btn-answer, .btn-answer:visited, .btn-answer:hover, .btn-answer:active, .btn-answer:focus {
+    background-color: #a5e1f3;
+    border:#adadad;
+    width: 320px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #0f0f0f;
+}
+.btn-answer:hover {
+    background-color: #bfebf8 !important;
+    border:#bfebf8 !important;
+    width: 320px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #000000;
+}
+.progress-bar {
+    background-color: #a5e1f3;
+}
+.progress {
+    background-color: #ffffff;
+}
+.slash-element {
+    width: 20px;
+    margin: 0 auto;
+}
+.question-content {
+    font-size: 20px;
+    color: #070707;
+}
+.rectangle {
+    width: 320px;
+    height: 8px;
+    background-color: #a5e1f3;
+    margin: 0 auto;
+}
+.mid-rectangle {
+    width: 320px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+.result-message {
+    color: #5d5d5e;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 100;
+}
+.result-weather {
+    font: size 20px;
+    font-weight: 500;
+    color: #000000;
+}
+.result-explain {
+    font-size: 16px;
+    font-weight: normal;
+    color: #34313d;
+}
+.share-message {
+    margin: 0 auto;
+    color:#a5e1f3;
+    font-size: 20px;
+    font-weight: 100;
+}
+.result {
+    display: none;
+}
+#img {
+    width: 200px;
+    height: 160px;
+    margin: 0 auto;
+}
+.share {
+    margin: 0 auto;
+}
+.kakao_ad {
+    width: 320px;
+    margin: 0 auto;
+}
+.kakao_ad {
+    width: 320px;
+    margin: 0 auto;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: 0 auto;
+}
+.banner-img {
+    width: 300px;
+    height: 405.17px;
+}
+
+.coupang_ad {
+    width: 320px;
+    margin: 0 auto;
+
+
+</style>
+
+
+
+</head>
+<body class="container">
+  <article class="start">
+    <h1 class="main-title mt-5 text-center">Look for my weather</h1>
+    <h2 class="sub-title mt-3 text-center">나에게 어울리는 날씨 찾기</h2>
+    <img class="up mt-5" src="up.jpg" alt="up">
+    <div class="start-cover mt-5 mb-3">
+        <button type="button" class="btn-start btn btn-primary" onclick="start();">START</button>
+    </div>
+</article>
+<article class="question">
+  <div class="progress mt-5">
+      <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
+  </div>
+  <img class="mt-5 slash-element" src="left.png" alt="slash-element">
+  <h2 id="title" class="question-content text-center mt-4 mb-4">문제</h2>
+  <img class="slash-element" src="right.png" alt="slash-element">
+  <input id="type" type="hidden" value="EI">
+  <div class="rectangle mt-5"></div>
+  <button id="A" type="button" class="btn-answer btn btn-primary pt-5 pb-5">대답A</button>
+  <div class="mid-rectangle"></div>
+  <button id="B" type="button" class="btn-answer btn btn-primary pt-5 pb-5">대답B</button>
+  <div class="rectangle"></div>
+</article>
+
+  <article class="result">
+    <span class="result-message mt-4 mb-4">나와 어울리는 날씨는?</span>
+    <h2 id="weather" class="result-weather text-center mt-4 mb-4">날씨이름</h2>
+    <img class="updown-slash" src="test25-1.png" alt="down-slash">
+    <h3 id="explain" class="result-explain text-center mt-4">설명</h3>
+    <div class="rectangle mt-4 mb-4"></div>
+    <span class="share-message mb-4">나의 날씨 <strong>공유하기</strong></span>
+    <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="share addthis_inline_share_toolbox"></div>
+</article>
+<article class="logo">
+  <span class="mt-5 text-center copyright-text">Copyright 2021 1990DAY all rights reserved</span>
+</article>
+<article class="kakao_ad mt-5">
+  <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-AJpQWjxnMslTwy8N" data-ad-width="320" data-ad-height="100"></ins>
+</article>
+<article class="kakao_ad">
+  <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-PTv5T2Kk3vavsjrj" data-ad-width="320" data-ad-height="100"></ins>
+</article>
+<article class="coupang_ad">
+  <a href="https://coupa.ng/bWWNQl" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471300?subId=&traceId=V0-301-bae0f72e5e59e45f-I471300&w=320&h=50" alt=""></a>
+  </article>
+
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async=""></script>
+<input type="hidden" id="EI" value="0">
+<input type="hidden" id="SN" value="0">
+<input type="hidden" id="TF" value="0">
+<input type="hidden" id="JP" value="0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+ <script> 
+ var num = 1;
+ var q = {
+     1: {"title": "바쁜 일상 중 오랜만에 찾아온 휴일! 오늘 뭐하지?", "type" : "EI", "A" : "친구들 만나서 수다 떨면서 스트레스 풀기", "B": "빨래 청소 등등 집안일 먼저 처리하기"},
+     2: {"title": "친구들과의 단톡방에서 내 모습은?", "type" : "EI", "A" : "농담 주고받으며 계속 떠들기", "B": "필요한 말만 하고 다른 거 하기"},
+     3: {"title": "단톡방에서 갑자기 친구가 지금 만날 사람!<br>했을 때 내 반응은?", "type" : "EI", "A" : "시간 확인해보고 시간 되면<br>준비하고 나가기", "B": "시간은 되는데.. 급약속은 싫어<br>안된다고 하기"},
+     4: {"title": "인터넷에서 예쁜 카페를 발견했다 내 반응은?", "type" : "SN", "A" : "와 이쁘다 가봐야겠다", "B": "와 창가 자리 앉아서<br>책보고 커피마시면 너무 좋겠다!"},
+     5: {"title": "잠자리에 누운 당신 지금 무슨 생각 하나요?", "type" : "SN", "A" : "아 오늘 피곤한 하루였다 자야지", "B": "아 그때 참 좋았는데<br>상상의 나래를 펼친다"},
+     6: {"title": "'만약에 자고 일어났는데 전쟁 났다고 하면 어떨 것 같아?'<br>친구의 질문에 나는?", "type" : "SN", "A" : "음..죽겠지?", "B": "우리 집에 식량이 얼마나 있었나..<br>언제까지 살아남을 수 있으려나"},
+     7: {"title": "어려운 일을 해냈을 때 내가 듣고 싶은 칭찬은?", "type" : "TF", "A" : "넌 못하는 게 없네 어떻게 이걸 해내?", "B": "정말 고생했어<br>난 네가 해낼 줄 알고 있었어!!"},
+     8: {"title": "'나 오늘 기분이 별로라서 하루종일 책만 읽었어'<br>라는 친구의 말에 당신은?", "type" : "TF", "A" : "무슨 책 읽었어?", "B": "기분이 왜 별로야?"},
+     9: {"title": "약속시간에 1시간이나 늦은 친구에게 듣고 싶은 말은?", "type" : "TF", "A" : "오다가 차 사고가 나서 늦었어 진짜 미안해", "B": "진짜 미안해 안늦으려고 했는데<br>오늘 내가 밥 살게"},
+     10: {"title": "신년에 세워둔 계획 지금 보니 좀 무리인 것 같다<br>이럴 때 당신은?", "type" : "JP", "A" : "일단 세웠으니 그대로 간다", "B": "조금 쉽게 수정한다"},
+     11: {"title": "갑자기 생긴 100만원<br>어떻게 쓸까?", "type" : "JP", "A" : "얼마는 이렇게 쓰고 얼마는 이렇게 써야지!", "B": "사고 싶은 거 있었는데 당장 사야지!"},
+     12: {"title": "오랜만에 친구와의 약속!<br>밥 먼저 먹을까 카페 먼저 갈까?", "type" : "JP", "A" : "밥 먼저 먹고 카페 가자!", "B": "일단 만나서 결정하자!"}
+ }
+ var result = {
+     "ISTJ": {"weather": "한겨울 한파 날씨", "explain": " 공과 사의 구분이 강하다<br> 반복적인 일을 잘한다<br> 다수 모임보단 소수 모임을 선호한다<br> 집중력이 뛰어나다<br> 일에 대한 책임감이 강하다<br> 혼자 일하는게 좋다<br> 할말 없으면 먼저 연락 안한다<br> 징징거리는거 싫어한다<br> 배울점 있는 사람을 좋아한다<br> 신년 계획을 잘 세운다<br> 쓸데없는 선물 싫어한다<br> 리액션을 잘 못한다<br> 아닌건 아니라고 말해주는게 좋다<br> 우선순위는 무조건 나다", "img": "istj.png"},
+     "ISFJ": {"weather": "해 쨍쨍 날씨", "explain": " 잔소리를 잘한다<br> 매사에 열심이다<br> 변화를 싫어한다<br> 남에게 상처줄까봐 조심하는 편이다<br> 예민하다<br> 조짜서 하는것보단 혼자 하는게 좋다<br> 눈치를 많이 본다<br> 예의없는 행동을 싫어한다<br> 귀가 얇다<br> 아닌척 하지만 속으로 온갖 생각 다 한다<br> 먼저 말 잘 못건다<br> 계획 안지켜도 일단 세운다<br> 어쩔땐 외향적 어쩔땐 내향적", "img": "isfj.png"},
+     "INFJ": {"weather": "안개낀 새벽 날씨", "explain": " 내사람들에게 잘한다<br> 생각이 많다<br> 쉽게 휘둘리지 않는다<br> 자신에게 엄격하다<br> 왜? 왜? 라는 말을 많이 한다<br> 뭐든 잘 참는편이다<br> 혹시 말 실수 한거 있나 신경 많이 쓴다<br> 친해지기 어렵다<br> 겉은 차가운데 속은 따뜻하다<br> 계획 세우는걸 좋아한다<br> 자신의 실수나 흑역사를 쉽게 잊지 못한다<br> 어떤 사람인지 파악하기 어렵다", "img": "infj.png"},
+     "INTJ": {"weather": "언제 내릴지 모르는 소나기 날씨", "explain":" 남일에 관심 없다<br> 혼자 있는거 좋아한다<br> 안좋은일이 있으면 좌절하기보단 해결하려고 한다<br> 금사빠 아님<br> 잘난척 싫어한다<br> 누가 가르치려들면 기분이 확 상한다<br> 남이 날 판단하는걸 안좋아한다<br> 남의 눈치를 잘 안본다<br> 영화 본 후 해석 찾아보는 걸 좋아한다<br> 특이한데 남이 나한테 특이하다 하는거 싫어한다<br> 감정 읽기 쉽지 않다<br> 집중력이 좋다<br> 일은 혼자 하는게 낫다", "img": "intj.png"},
+     "ISTP": {"weather": "선선하게 바람부는 날씨", "explain": " 극단적 개인주의다<br> 임기응변에 능하다<br> 뒤끝이 없다<br> 깊게 파고들지 않는다<br> 자기주장이 강하다<br> 생각은 적극적이지만 행동은 소극적이다<br> 손재주 있는편<br> 조용하지만 분위기에 따라 달라진다<br> 욱하는 경우가 있다<br> 고집이 세다<br> 공감능력이 떨어진다<br> 혼자 생각하는 시간이 꼭 필요하다<br> 타인과 감정공유를 잘 안한다<br> 기계를 잘다룬다", "img": "istp.png"},
+     "ISFP": {"weather": "여름밤 날씨", "explain": " 다정하고 온화하다<br> 의견충돌을 피한다<br> 우유부단하다<br> 세심한 편이다<br> 내 의견을 남에게 강요하지 않는다<br> 기분 나쁜걸 잘 못숨긴다<br> 집순이다<br> 누워있어야 에너지가 충전된다<br> 상대방에게 속마음을 잘 드러내지 않는다<br> 부탁을 잘 거절하지 못한다<br> 관심 갖는건 싫은데 아예 안가져주면 서운하다<br> 뭐 어떻게든 되겠지.. 한다", "img": "isfp.png"},
+     "INFP": {"weather": "비오기 전 어두운 날씨", "explain": " 일을 미루고 미룬다<br> 상상을 좋아한다<br> 과몰입을 잘한다<br> 자기애가 강하다<br> 낯가림이 심하다<br> 다른 사람의 감정을 잘 읽는편<br> 질투심이 많다<br> 의미부여 하는걸 좋아한다<br> 자기전에 끝없는 망상에 빠진다<br> 내말에 반응이 없으면 말실수했나 생각한다<br> 걱정을 너무 많이 한다<br> 낭만적이다<br> 자기검열이 심하다", "img": "infp.png"},
+     "INTP": {"weather": "노을지는 여름 날씨", "explain": " 예리하다<br> 아이디어 뱅크다<br> 혼자 있는거 좋아한다<br> 유행타는거 별로 안좋아한다<br> 수줍음이 많다<br> 우울할때 끝까지 파고든다<br> 무엇이든 분석하려 한다<br> 입이 무거운편<br> 너무 활발한 사람 옆에 있으면 기빨린다<br> 논쟁도 귀찮다 그냥 그러려니<br> 의미없는 카톡을 잘 이어나가지 못한다<br> 옷이 구겨져도 그냥 입는편<br> 사람 만난후엔 혼자만의 시간이 꼭 필요하다<br> 호기심이 많다", "img": "intp.png"},
+     "ESTP": {"weather": "천둥 번개 치는 날씨", "explain": " 말보다는 행동파<br>●주로 벼락치기를 한다<br>●다른사람이 눈치 못채는걸 눈치채는 편이다<br> 요약을 좋아한다<br> 내기를 좋아한다<br> 규칙이나 규율을 싫어한다<br> 오늘 할일은 내일로<br> 내편일땐 든든하지만 남의편일떈 두려운 사람<br> 기분 나쁜건 잘 잊는편이다<br> 하고 싶은건 해야한다<br> 기억력이 좋다<br> 순발력이 뛰어나다<br> 직설적이라 말을 돌려서 하지 못한다<br> 자신감이 넘친다<br> 적응이 빠르다", "img": "estp.png"},
+     "ESFP": {"weather": "꽃피는 봄 아침 날씨", "explain": " 충동적이다<br> 미루고 미룬다음 몰아서 한다<br> 어색한거 싫어한다<br> 사소한거라도 챙겨주면 감동받는다<br> 싸움이 싫어서 회피한다<br> 손편지에 감동한다<br> 다른 사람을 잘 돕는다<br> 별거 아닌걸로 행복해지곤 한다<br> 혼자서도 잘 논다<br> 사진첩에 음식사진이 많다<br> 술자리 좋아한다<br> 자유로운 분위기를 선호한다<br> 친절하고 센스있다", "img": "esfp.png"},
+     "ENFP": {"weather": "비온뒤 무지개 날씨", "explain": " 재능이 많다<br> 감정기복이 심하다<br> 나빼고 놀면 너무 서운하다<br> 일처리가 빠르다<br> 사람들이 자꾸 고민상담을 한다<br> 내가 한 말 기억했다가 선물주면 감동을 크게 받는다<br> 다정한 사람이 잘해주면 너무 좋다<br> 먼저 연락해주는걸 좋아한다<br> 타인을 잘 배려한다<br> 상상력이 풍부하다<br> 누구와도 쉽게 친해진다<br> 하지만 깊게 친해지는건 오래 걸린다<br> 충동적이다", "img": "enfp.png"},
+     "ENTP": {"weather": "가을 아침 날씨", "explain":" 머리가 좋다<br> 내말이 다 맞다<br> 돌려 말하는거 싫어한다<br> 관심 분야만 좋아한다<br> 이해가 빠르다<br> 반복 작업을 싫어한다<br> 생각을 잘하고 실행도 잘하지만 마무리가 좋지 않다<br> 주관이 뚜렷하다<br>관심있는 주제 하나로 몇시간을 떠든다<br> 나를 좋아하는 사람보단 내가 좋아하는 사람이 좋다<br> 내가 잘될거라는 막연한 믿음이 있다", "img": "entp.png"},
+     "ESTJ": {"weather": "눈 펑펑 오는 날씨", "explain": " 규칙을 중요시 한다<br> 공감능력이 부족하다<br> 덤벙대는 사람 이해 못한다<br> 문제 생기면 바로 착착 해결한다<br> 계획을 잘 세운다<br> 실없는 소리 잘 안한다<br> 스펙타클보단 고요하고 잔잔한 삶<br> 제품 설명서나 리뷰 보는거 좋아한다<br> 감정의 동요가 크지 않다<br> 즉흥적인걸 싫어한다<br> 일처리가 답답하면 화가 난다<br> 미래보단 현재가 중요하다<br> 지시내리는걸 좋아한다<br> 가족에게 잘한다", "img": "estj.png"},
+     "ESFJ": {"weather": "여름 장마 날씨", "explain": " 리액션을 잘한다<br> 타인에게 관심이 많다<br> 약자를 잘 돕는다<br> 예의 바르다<br> 타인의 반응에 예민하다<br> 내 요구를 거절당하면 상처 받는다<br> 나한테 잘해주면 쉽게 감동한다<br> 다정한걸 좋아한다<br> 내가 해주는것만큼 남들도 해줬으면 좋겠다<br> 자존감이 높다<br> 어색한 분위기가 싫다<br> 조화로운 편이다", "img": "esfj.png"},
+     "ENFJ": {"weather": "비온뒤 갠 날씨", "explain": " 말주변이 좋다<br> 주목받는걸 좋아한다<br> 금사빠다<br> 센스가 있다<br> 별 얘기 다하지만 정작 중요한 속마음은 얘기하지 않는다<br> ߮߬눈치를 많이 본다<br> ߮߬현재보단 미래가 중요하다<br> ߮߬힘든티를 잘 내지 않는다<br> ߮߬술자리를 좋아한다<br> ߮߬다른 사람의 장점을 잘 알아본다<br> ߮߬고민상담을 잘 해준다<br> ߮߬정에 약하다", "img": "enfj.png"},
+     "ENTJ": {"weather": "한여름 폭염 날씨", "explain": " 우유부단한걸 싫어한다<br> 자존심이 쎄다<br> 떼쓰는거 보면 화가 난다<br> 성공하고 싶다<br> 관심없으면 먼저 연락 안한다<br> 내가 소중한만큼 내 시간도 너무 소중하다<br> 나무보단 숲을 본다<br> 타인 의견보단 내 의견이 중요하다<br> 일처리가 정확해야한다<br> 단호하고 솔직하다<br> 열정이 많다<br> 참을성이 부족하다<br> 도전을 좋아한다", "img": "entj.png"},
+ }
+  function start() {
+    $(".start").hide();
+    $(".question").show();
+    next();
+  }
+  $("#A").click(function(){
+     var type = ($("#type").val());
+    var preValue= $("#"+type).val();
+    $("#"+type).val(parseInt(preValue)+1);
+    next();
+  });
+  $("#B").click(function(){
+      next();
+  });
+      function next() {
+          if (num == 13) {
+              $(".question").hide();
+              $(".result").show();
+              var mbti = "";
+              ($("#EI").val() < 2) ? mbti+="I" : mbti+="E";
+              ($("#SN").val() < 2) ? mbti+="N" : mbti+="S";
+              ($("#TF").val() < 2) ? mbti+="F" : mbti+="T";
+              ($("#JP").val() < 2) ? mbti+="P" : mbti+="J";
+            $("#weather").html(result[mbti]["weather"]);
+            $("#explain").html(result[mbti]["explain"]);
+          } else {
+            $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)');
+          $("#title").html(q[num]["title"]);
+           $("#type").val(q[num]["type"]);
+          $("#A").html(q[num]["A"]);
+          $("#B").html(q[num]["B"]);
+            num++;  
+          }
+
+  }
+</script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+
+</body>
+</html>

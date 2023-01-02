@@ -1,0 +1,1338 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="naver-site-verification" content="7f491b13d33aa12a68c7c1d1d21a8a587038a4f2" />
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <title>빈센조 테스트</title>
+        <meta name="title" content="나는 빈센조의 어떤 캐릭터와 닮았을까?"/>
+        <meta
+            name="subject"
+            content="얼굴로 보는 인공지능 빈센조 테스트, 나와 닮은 빈센조 캐릭터를 찾아보세요!"
+        />
+        <meta name="description" content="얼굴로 보는 인공지능 빈센조 테스트, 나와 닮은 빈센조 캐릭터를 찾아보세요!">
+        <meta name="keywords" content="빈센조테스트, 빈센조, 생김새테스트,빈센조,송중기,홍차영,전여빈,빈센조mbti,빈센조MBTI,mbti,빈센조닮은꼴,빈센조출연자,빈센조얼굴" />
+        <meta name="author" content="1990DAY" />
+
+<style>
+
+
+body {
+  font-family: 'Jua', sans-serif;
+  background-color: #000000;
+  box-sizing: border-box;
+  color: #EAECEE;
+}
+.file-upload {
+    padding: 5% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #000000;
+    background-color: #000000;
+}
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #000000;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #5d5d5d;
+  color: #000000;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+#loading {
+  display: none;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 10px;
+    border: dashed 1.5px #696969;
+    background-color: #696969;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #000000;
+    border: 1.5px dashed #000000;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.file-upload-image {
+  max-height: 60%;
+  max-width: 60%;
+  margin: auto;
+  padding: 10px;
+}
+
+.try-again-btn {
+  border-radius: 40px;
+  border: solid 1.5px #eaecee;
+  background-color: #eaecee;
+}
+
+.try-again-text {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 4px 15px;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.navbar-light .navbar-brand {
+  line-height: 1.68;
+  text-align: center;
+  color: #eaecee; 
+}
+
+.navbar-light .navbar-toggler {
+      text-align: center;
+    border-color: #000000;
+}
+
+.section {
+    margin-top: 50px;
+}
+
+.title {
+  line-height: 1.67;
+  text-align: center;
+  color: #eaecee;
+}
+
+.subtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #eaecee;
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+    .navbar-brand {
+        font-size: 2rem;
+          text-align: center;
+    }
+}
+
+
+
+.upload {
+    width: 20%;
+}
+
+.upload-text {
+    width: 58%;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #eaecee;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: initial;
+    color: initial;
+}
+
+
+.bar-container {
+  height: 2.7rem;
+}
+.njs-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.njs-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.psd-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.psd-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.vsz-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.vsz-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.smr-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.smr-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.aks-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.aks-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.lcw-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.lcw-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.jyj-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.jyj-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.jjw-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.jjw-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.jhs-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.jhs-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.jyw-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.jyw-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.cmh-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.cmh-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.ths-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.ths-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.tt-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.tt-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.hsh-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.hsh-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.hyc-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.hyc-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+.hcy-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.hcy-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(204, 204, 204, 1);
+}
+
+
+
+
+
+
+
+.percent-text {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.vinsenzo-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+#label-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.result-message {
+    font-size: 2rem;
+}
+
+
+.vinsenzo-explain {
+    font-size: 1.5rem;
+}
+.njs-vinsenzo-title {
+    color: #31849b;
+}
+.njs-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.psd-vinsenzo-title {
+    color: #31849b;
+}
+.psd-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.vsz-vinsenzo-title {
+    color: #31849b;
+}
+.vsz-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.smr-vinsenzo-title {
+    color: #31849b;
+}
+.smr-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.aks-vinsenzo-title {
+    color: #31849b;
+}
+.aks-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.lcw-vinsenzo-title {
+    color: #31849b;
+}
+.lcw-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.jyj-vinsenzo-title {
+    color: #31849b;
+}
+.jyj-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.jjw-vinsenzo-title {
+    color: #31849b;
+}
+.jjw-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.jhs-vinsenzo-title {
+    color: #31849b;
+}
+.jhs-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.jyw-vinsenzo-title {
+    color: #31849b;
+}
+.jyw-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.cmh-vinsenzo-title {
+    color: #31849b;
+}
+.cmh-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.ths-vinsenzo-title {
+    color: #31849b;
+}
+.ths-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.tt-vinsenzo-title {
+    color: #31849b;
+}
+.tt-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.hsh-vinsenzo-title {
+    color: #31849b;
+}
+.hsh-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.hyc-vinsenzo-title {
+    color: #31849b;
+}
+.hyc-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.hcy-vinsenzo-title {
+    color: #31849b;
+}
+.hcy-vinsenzo-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+
+
+/* gender */
+input#gender {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  width: 90px;
+  height: 41px;
+  box-shadow: 0 0 0 8px #e5e9ea inset;
+  border-radius: 30px;
+  position: relative;
+}
+
+.knob {
+  position: absolute;
+  width: 41px;
+  top: 0;
+  left: 0;
+  height: 41px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #f470a7 inset;
+  background-color: #fbd4e6;
+  transition: 0.3s;
+}
+
+.knob > i {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  top: 100%;
+  background-color: #f470a7;
+  left: calc(50% - 2px);
+}
+
+.knob > i:before,
+.knob > i:after {
+  width: 6px;
+  position: absolute;
+  top: 42%;
+  content: "";
+  height: 4px;
+  background-color: #f470a7;
+}
+
+.knob > i:before {
+  left: 4px;
+}
+.knob > i:after {
+  left: -6px;
+}
+
+input:checked + label > .knob {
+  box-shadow: 0 0 0 8px #a1c6dd inset;
+  background-color: #e2ecf4;
+  transform: translateX(49px) rotate(-140deg);
+}
+
+input:checked + label > .knob > i {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after,
+input:checked + label > .knob > i:before {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after {
+  top: 14.5px;
+  width: 12px;
+  left: -7px;
+  transform: rotate(45deg);
+}
+input:checked + label > .knob > i:before {
+  top: 13px;
+  width: 12px;
+  left: 0px;
+  transform: rotate(134deg);
+}
+
+.ad-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+.coupang_ad {
+    width: 320px;
+    margin: 0 auto;
+}
+
+</style>
+
+
+        <link rel="canonical" href="https://test-it.co.kr/test24.html" />
+        <meta property="og:url" content="https://test-it.co.kr/test24.html" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="빈센조 테스트" />
+        <meta
+            property="og:description"
+            content="얼굴로 보는 인공지능 빈센조 닮은꼴 테스트, 나와 닮은 빈센조 캐릭터를 찾아보세요! 빈센조 캐릭터 데이터로 학습한 인공지능이 나의 얼굴로 빈센조 캐릭터와 닮은꼴을 찾아드립니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이 보는 나의 빈센조 닮은꼴 테스트 한번 해보세요!"
+        />
+
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+
+        <meta
+            property="og:image"
+            content="test24.png"
+        />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+           <link rel="icon" type="image/png" href="favicon.png">
+        <script
+            type="text/javascript"
+            src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"
+        ></script>
+        <script
+            data-ad-client="ca-pub-5522499110435321"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ></script>
+    </head>
+
+    <body>
+        <nav class="p-3 container navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand">빈센조 테스트 By.1990DAY</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <span class="sr-only">(current)</span>
+                    </li>
+                    <li class="nav-item active"></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="section">
+            <h1 class="title">빈센조 테스트</h1>
+            <h2 class="subtitle">얼굴로 보는 인공지능 빈센조 닮은꼴 테스트</h2>
+            <h2 class="sr-only">
+                나는 어떤 빈센조 캐릭터와 닮았을까? 나의 닮은꼴 찾기를 해보세요!
+            </h2>
+            <h3 class="sr-only">
+                빈센조 캐릭터 사진 데이터로 학습한 인공지능이 나의 얼굴로 닮은꼴을 찾아드립니다.
+            </h3>
+            <h4 class="sr-only">
+                본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.
+            </h4>
+            <p class="sr-only">
+                얼굴로 보는 인공지능 빈센조 닮은꼴 테스트, 나와 닮은 빈센조 캐릭터를 찾아보세요!
+                빈센조 캐릭터 데이터로 학습한 인공지능이 나의 얼굴로 빈센조 캐릭터와 닮은꼴을
+                찾아드립니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그
+                어디에도 전송되지 않습니다. 인공지능이 보는 나의 빈센조 닮은꼴 테스트 한번 해보세요!
+            </p>
+        </section>
+        <h3 class="pb-2 d-flex justify-content-center">성별을 선택하세요</h3>
+        <section class="d-flex justify-content-center">
+            <p class="d-flex align-items-center pr-3">여자</p>
+            <div>
+                <input type="checkbox" id="gender" />
+                <label for="gender">
+                    <span class="knob">
+                        <i></i>
+                    </span>
+                </label>
+            </div>
+            <p class="d-flex align-items-center pl-3">남자</p>
+        </section>
+
+        <script
+            class="jsbin"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+        ></script>
+        <div class="container file-upload">
+            <div class="image-upload-wrap">
+                <input
+                    class="file-upload-input"
+                    type="file"
+                    onchange="readURL(this);"
+                    accept="image/*"
+                />
+                <div class="drag-text">
+                    <h3 class="mb-5 pb-5 pt-4 upload-text">
+                        얼굴 사진을 올려놓거나 눌러서 업로드하세요!
+                    </h3>
+                </div>
+            </div>
+            <div class="file-upload-content">
+                <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+                <div id="loading" class="animated bounce">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <p class="text-center">AI가 당신의 닮은꼴을 분석중입니다.</p>
+                </div>
+                <p class="result-message"></p>
+                <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox_7zcf"></div>
+
+                <div class="pt-3 image-title-wrap">
+                    <button
+                        type="button p-2"
+                        class="try-again-btn"
+                        onclick="window.location.reload();"
+                    >
+                        <span class="try-again-text">다른 사진으로 재시도</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="coupang_ad">
+  <a href="https://coupa.ng/bW4fqp" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
+  </div>
+        <div class="ad-banner">
+            <ins
+                class="kakao_ad_area"
+                style="display: none;"
+                data-ad-unit="DAN-Pz9nzNZb8t4nqj8f"
+                data-ad-width="320"
+                data-ad-height="100"
+            ></ins>
+        </div>
+
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+        <div class="ad-banner">
+            <ins
+                class="kakao_ad_area"
+                style="display: none;"
+                data-ad-unit="DAN-R8yaH27SqXTU139L"
+                data-ad-width="320"
+                data-ad-height="50"
+            ></ins>
+        </div>
+
+        <footer class="footer pt-5 container d-flex justify-content-center">
+            <div>
+                <p>&copy; 1990DAY 2021. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <script>
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('.image-upload-wrap').hide();
+                        $('#loading').show();
+                        $('.file-upload-image').attr('src', e.target.result);
+                        $('.file-upload-content').show();
+                        $('.image-title').html(input.files[0].name);
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                    init().then(function () {
+                        console.log('hello');
+                        predict();
+                        $('#loading').hide();
+                    });
+                } else {
+                    removeUpload();
+                }
+            }
+
+            function removeUpload() {
+                $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+                $('.file-upload-content').hide();
+                $('.image-upload-wrap').show();
+            }
+            $('.image-upload-wrap').bind('dragover', function () {
+                $('.image-upload-wrap').addClass('image-dropping');
+            });
+            $('.image-upload-wrap').bind('dragleave', function () {
+                $('.image-upload-wrap').removeClass('image-dropping');
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+        <script type="text/javascript">
+            let URL;
+            const urlMale = 'https://teachablemachine.withgoogle.com/models/Mnr9UuRuk/';
+            const urlFemale = 'https://teachablemachine.withgoogle.com/models/Mnr9UuRuk/';
+            let model, webcam, labelContainer, maxPredictions;
+            async function init() {
+                if (document.getElementById('gender').checked) {
+                    URL = urlMale;
+                } else {
+                    URL = urlFemale;
+                }
+                const modelURL = URL + 'model.json';
+                const metadataURL = URL + 'metadata.json';
+                model = await tmImage.load(modelURL, metadataURL);
+                maxPredictions = model.getTotalClasses();
+                labelContainer = document.getElementById('label-container');
+                for (let i = 0; i < maxPredictions; i++) {
+                    var element = document.createElement('div');
+                    element.classList.add('d-flex');
+                    labelContainer.appendChild(element);
+                }
+            }
+            async function predict() {
+                var image = document.getElementById('face-image');
+                const prediction = await model.predict(image, false);
+                prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+                console.log(prediction[0].className);
+                var resultTitle, resultExplain, resultCeleb;
+                if (document.getElementById('gender').checked) {
+                    switch (prediction[0].className) {
+                        case 'njs':
+                            resultTitle = '법무법인 지푸라기 사무장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 지푸라기 사무장 남주성님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+                            break;
+
+                        case 'psd':
+                            resultTitle = '바이바이벌룬 사장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 바이바이벌룬 사장 박석도님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+                            break;
+
+                        case 'vsz':
+                            resultTitle = '빈센조 까사노 콘실리에리';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 주인공 빈센조 까사노님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+                            break;
+                        case 'smr':
+                            resultTitle = '운명 피아노 학원 원장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 운명 피아노 학원 원장 서미리님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+                            break;
+                        case 'aks':
+                            resultTitle = '대외안보정보원 해외범죄조직대응팀 이탈리아부 팀장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 국정원 안군님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'lcw':
+                            resultTitle = '연진의 남편, 전당포 사장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 전당포 사장 이철욱님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'jyj':
+                            resultTitle = '철욱의 아내, 전당포 사장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 전당포 사장 장연진님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'jjw':
+                            resultTitle = '바벨그룹의 진짜 회장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 바벨그룹 진짜 회장 장준우(장한석)님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'jhs':
+                            resultTitle = '바벨그룹의 가짜 회장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 바벨그룹 가짜 회장 장한서님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'jyw':
+                            resultTitle = '금가프라자 건물주';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 금가프라자 건물주 조영운님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'cmh':
+                            resultTitle = '법무법인 우상 최변호사';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 악한 변호사 최명희님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'ths':
+                            resultTitle = '제일 세탁소 사장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 숨겨진 싸움고수 세탁소 사장 탁홍식님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'tt':
+                            resultTitle = '파스타 전문점 아르노 오너 셰프';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 파스타집 오너 셰프지만 요리를 못하는 토토님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'hsh':
+                            resultTitle = '법무법인 우상 대표';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 법무법인 우상 대표 한승혁님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'hyc':
+                            resultTitle = '법무법인 지푸라기 변호사';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 법무법인 지푸라기 변호사 홍유찬님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'hcy':
+                            resultTitle = '법무법인 지푸라기 주인';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 주인공 법무법인 지푸라기 변호사 홍차영님과 닮았습니다';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        default:
+                            resultTitle = '알수없음';
+                            resultExplain = '';
+                            resultCeleb = '';
+                    }
+                } else {
+                    switch (prediction[0].className) {
+                        case 'njs':
+                            resultTitle = '법무법인 지푸라기 사무장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 지푸라기 사무장 남주성님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+                            break;
+                        case 'psd':
+                            resultTitle = '바이바이벌룬 사장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 바이바이벌룬 사장 박석도님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+                            break;
+                        case 'vsz':
+                            resultTitle = '빈센조 까사노 콘실리에리';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 주인공 빈센조 까사노님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+                            break;
+                        case 'smr':
+                            resultTitle = '운명 피아노 학원 원장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 운명 피아노 학원 원장 서미리님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+                            break;
+                        case 'aks':
+                            resultTitle = '대외안보정보원 해외범죄조직대응팀 이탈리아부 팀장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 국정원 안군님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'lcw':
+                            resultTitle = '연진의 남편, 전당포 사장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 전당포 사장 이철욱님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'jyj':
+                            resultTitle = '철욱의 아내, 전당포 사장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 전당포 사장 장연진님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'jjw':
+                            resultTitle = '바벨그룹의 진짜 회장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 바벨그룹 진짜 회장 장준우(장한석)님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'jhs':
+                            resultTitle = '바벨그룹의 가짜 회장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 바벨그룹 가짜 회장 장한서님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'jyw':
+                            resultTitle = '금가프라자 건물주';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 금가프라자 건물주 조영운님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'cmh':
+                            resultTitle = '법무법인 우상 최변호사';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 악한 변호사 최명희님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'ths':
+                            resultTitle = '제일 세탁소 사장';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 숨겨진 싸움고수 세탁소 사장 탁홍식님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'tt':
+                            resultTitle = '파스타 전문점 아르노 오너 셰프';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 파스타집 오너 셰프지만 요리를 못하는 토토님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'hsh':
+                            resultTitle = '법무법인 우상 대표';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 법무법인 우상 대표 한승혁님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'hyc':
+                            resultTitle = '법무법인 지푸라기 변호사';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 법무법인 지푸라기 변호사 홍유찬님과 닮았습니다!';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+
+                            break;
+                        case 'hcy':
+                            resultTitle = '법무법인 지푸라기 주인';
+                            resultExplain =
+                                '축하드립니다! 당신은 빈센조의 주인공 법무법인 지푸라기 변호사 홍차영님과 닮았습니다';
+                            resultCeleb =
+                                '본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.';
+                            break;
+                        default:
+                            resultTitle = '알수없음';
+                            resultExplain = '';
+                            resultCeleb = '';
+                    }
+                }
+                var title =
+                    "<div class='" +
+                    prediction[0].className +
+                    "-vinsenzo-title'>" +
+                    resultTitle +
+                    '</div>';
+                var explain = "<div class='vinsenzo-explain pt-2'>" + resultExplain + '</div>';
+                var celeb =
+                    "<div class='" +
+                    prediction[0].className +
+                    "-vinsenzo-celeb pt-2 pb-2'>" +
+                    resultCeleb +
+                    '</div>';
+                $('.result-message').html(title + explain + celeb);
+                var barWidth;
+                for (let i = 0; i < maxPredictions; i++) {
+                    if (prediction[i].probability.toFixed(2) > 0.1) {
+                        barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + '%';
+                    } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                        barWidth = '4%';
+                    } else {
+                        barWidth = '2%';
+                    }
+                    var labelTitle;
+                    switch (prediction[i].className) {
+                        case 'njs':
+                            labelTitle = '남주성';
+                            break;
+                        case 'psd':
+                            labelTitle = '박석도';
+                            break;
+                        case 'vsz':
+                            labelTitle = '빈센조';
+                            break;
+                        case 'smr':
+                            labelTitle = '서미리';
+                            break;
+                        case 'aks':
+                            labelTitle = '안기석';
+                            break;
+                        case 'lcw':
+                            labelTitle = '이철욱';
+                            break;
+                        case 'jyj':
+                            labelTitle = '장연진';
+                            break;
+                        case 'jjw':
+                            labelTitle = '장준우';
+                            break;
+                        case 'jhs':
+                            labelTitle = '장한서';
+                            break;
+                        case 'jyw':
+                            labelTitle = '조영운';
+                            break;
+                        case 'cmh':
+                            labelTitle = '최명희';
+                            break;
+                        case 'ths':
+                            '탁홍식';
+                             labelTitle = '탁홍식';
+                            break;
+                        case 'tt':
+                            labelTitle = '토토';
+                            break;
+                        case 'hsh':
+                            labelTitle = '한승혁';
+                            break;
+                        case 'hyc':
+                            labelTitle = '홍유찬';
+                            break;
+                        case 'hcy':
+                            labelTitle = '홍차영';
+                            break;
+
+                        default:
+                            labelTitle = '알수없음';
+                    }
+                    var label =
+                        "<div class='vinsenzo-label d-flex align-items-center'>" +
+                        labelTitle +
+                        '</div>';
+                    var bar =
+                        "<div class='bar-container position-relative container'><div class='" +
+                        prediction[i].className +
+                        "-box'></div><div class='d-flex justify-content-center align-items-center " +
+                        prediction[i].className +
+                        "-bar' style='width: " +
+                        barWidth +
+                        "'><span class='d-block percent-text'>" +
+                        Math.round(prediction[i].probability.toFixed(2) * 100) +
+                        '%</span></div></div>';
+                    labelContainer.childNodes[i].innerHTML = label + bar;
+                }
+            }
+        </script>
+        <script>
+            function iosApp() {
+                document.getElementById('coupang').style.display = 'none';
+                $('#coupang ins').hide();
+                document.getElementById('addThis').style.display = 'none';
+                document.getElementById('disqus_thread').style.display = 'none';
+                var kakao = document.getElementsByClassName('kakao_ad_area');
+                for (var i = 0; i < kakao.length; i++) {
+                    if (kakao[i]) {
+                        kakao[i].style.display = 'none';
+                    }
+                }
+                document.getElementById('yotube-top-link').style.display = 'none';
+                document.getElementById('yotube-mid-link').style.display = 'none';
+                document.getElementById('yotube-bottom-link').style.display = 'none';
+            }
+        </script>
+    </body>
+    <!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+gender toggle
+Copyright (c) 2020 by Mert Cukuren (https://codepen.io/knyttneve/pen/bPpEZY)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+</html>
