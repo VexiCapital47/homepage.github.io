@@ -1,0 +1,896 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="naver-site-verification" content="9b15310690655ca042add2ce0a065b3e2c6dd83c" />
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta ht-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>스트릿 우먼 파이터 닮은꼴 찾기</title>
+    <meta name="description" content="스우파 닮은꼴 찾기 테스트">
+    <meta name="title" content="스우파 닮은꼴 찾기">
+    <meta name="subject" content="나는 스트릿 우먼 파이터 출연자 중 누구와 닮았을까?">
+    <meta name="keywords" content="스우파, 스트릿우먼파이터, 가비, 노제, 아이키, 허니제이, 리헤이, 모니카, 효진초이, 리정, 프라우드먼, 웨이비, YGX, 코카엔버터, 홀리뱅, 라치카, 원트, mbti테스트, 테스트, 심리테스트, 닮은꼴, 스우파mbti,스트릿우먼파이터mbti,가비mbti,노제mbti,아이키mbti,리헤이mbti,모니카mbti,효진초이mbti,리정mbti">
+
+    <meta name="author" content="1990DAY">
+
+<style>
+
+body {
+  font-family: 'Jua', sans-serif;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #DE3E3E;
+}
+
+.file-upload {
+    padding: 3% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #ffffff;
+    background-color: #ffffff;
+    
+}
+
+.img {
+    margin: 0 auto;
+     text-align: center;
+
+}
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #7A7171;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+#loading {
+  display: none;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.image-upload-wrap {
+    width: 70%;
+        height: 70%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 5px;
+    border: dashed 1.5px #ffffff;
+    background-color: #7A7171;
+    
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #D1CECE;
+    border: 1.5px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+.file-upload-image {
+  max-height:50%;
+  max-width: 50%;
+  margin: auto;
+  padding: 10px;
+}
+
+.try-again-btn {
+  border-radius: 40px;
+  border: solid 1.5px #35465d;
+  background-color: #35465d;
+}
+
+.try-again-text {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 4px 15px;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.navbar-light .navbar-brand {
+  line-height: 1.68;
+  text-align: left;
+  color: #B9B6B7; 
+}
+
+
+.navbar-light .navbar-toggler {
+    border-color: #B9B6B7;
+}
+.section {
+    margin-top: 50px;
+}
+
+.title {
+  line-height: 1.67;
+  text-align: center;
+  color: #DE3E3E;
+        font-size: 25px;
+}
+
+.subtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #31312E;
+        font-size: 30px;
+}
+.sbtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #A5A297;
+        font-size: 20px;
+}
+
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+
+
+
+.upload {
+    width: 20%;
+}
+
+.upload-text {
+    width: 58%;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #EFEFEF;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: initial;
+    color: initial;
+}
+
+.bar-container {
+  height: 2.7rem;
+}
+.gb-box {
+ position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 182, 182, 0.2);
+}
+.gb-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 182, 182, 1);
+}
+.hc-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+ background-color: rgba(135, 239, 201, 0.2);
+}
+.hc-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+    background-color: rgba(135, 239, 201, 1);
+}
+.hj-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+ background-color: rgba(171, 89, 226, 0.2);
+}
+.hj-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+background-color: rgba(171, 89, 226, 1);
+}
+.ik-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+background-color: rgba(255, 0, 0, 0.2);
+}
+.ik-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(255, 0, 0, 1);
+}
+.lh-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+background-color: rgba(250, 216, 42, 0.2);
+}
+.lh-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(250, 216, 42, 1);
+}
+.lj-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(57, 57, 56, 0.2);
+}
+.lj-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(57, 57, 56, 1);
+}
+.mn-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 140, 7, 0.2);
+}
+.mn-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(255, 140, 7, 1);
+}
+.nz-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(148, 216, 255, 0.2);
+}
+.nz-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(148, 216, 255, 1);
+}
+
+.percent-text {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.swf-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+#label-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.result-message {
+    font-size: 2rem;
+}
+
+
+.swf-explain {
+    color: #23231e;
+    font-size: 1.5rem;
+}
+.gb-swf-title {
+    color: #FFB6B6;
+}
+.gb-swf-celeb {
+    color: #FFB6B6;
+    font-size: 1.2rem;
+}
+.hc-swf-title {
+    color: #87EFC9;
+}
+.hc-swf-celeb {
+    color: #87EFC9;
+    font-size: 1.2rem;
+}
+.hj-swf-title {
+    color: #AB59E2;
+}
+.hj-swf-celeb {
+    color: #AB59E2;
+    font-size: 1.2rem;
+}
+.ik-swf-title {
+    color: #ff0000;
+}
+.ik-swf-celeb {
+    color: #ff0000;
+    font-size: 1.2rem;
+}
+.lh-swf-title {
+    color: #FAD82A;
+}
+.lh-swf-celeb {
+    color: #FAD82A;
+    font-size: 1.2rem;
+}
+.lj-swf-title {
+    color: #393938;
+}
+.lj-swf-celeb {
+    color: #393938;
+    font-size: 1.2rem;
+}
+.mn-swf-title {
+    color: #FF8C07;
+}
+.mn-swf-celeb {
+    color: #FF8C07;
+    font-size: 1.2rem;
+}
+.nz-swf-title {
+    color: #94D8FF;
+}
+.nz-swf-celeb {
+    color: #94D8FF;
+    font-size: 1.2rem;
+}
+
+/* gender */
+input#gender {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  width: 90px;
+  height: 41px;
+  box-shadow: 0 0 0 8px #e5e9ea inset;
+  border-radius: 30px;
+  position: relative;
+}
+
+.knob {
+  position: absolute;
+  width: 41px;
+  top: 0;
+  left: 0;
+  height: 41px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #f470a7 inset;
+  background-color: #fbd4e6;
+  transition: 0.3s;
+}
+
+.knob > i {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  top: 100%;
+  background-color: #f470a7;
+  left: calc(50% - 2px);
+}
+
+.knob > i:before,
+.knob > i:after {
+  width: 6px;
+  position: absolute;
+  top: 42%;
+  content: "";
+  height: 4px;
+  background-color: #f470a7;
+}
+
+.knob > i:before {
+  left: 4px;
+}
+.knob > i:after {
+  left: -6px;
+}
+
+input:checked + label > .knob {
+  box-shadow: 0 0 0 8px #a1c6dd inset;
+  background-color: #e2ecf4;
+  transform: translateX(49px) rotate(-140deg);
+}
+
+input:checked + label > .knob > i {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after,
+input:checked + label > .knob > i:before {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after {
+  top: 14.5px;
+  width: 12px;
+  left: -7px;
+  transform: rotate(45deg);
+}
+input:checked + label > .knob > i:before {
+  top: 13px;
+  width: 12px;
+  left: 0px;
+  transform: rotate(134deg);
+}
+
+.ad-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+.coupang-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+</style>
+
+
+
+    <link rel="canonical" href="https://test-it.co.kr/test18.html" />
+    <meta property="og:url" content="https://test-it.co.kr/test18.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="스우파 닮은꼴 찾기" />
+    <meta property="og:description" content="얼굴로 보는 스우파 닮은꼴 테스트"
+    />
+ 
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <meta property="og:image" content="test18.png" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+     <link rel="icon" type="image/png" href="favicon.png">
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+    <script data-ad-client="ca-pub-5522499110435321" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+</head>
+
+
+<body>
+    <nav class="p-3 container navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand"></a>스우파 닮은꼴</nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    
+                        <span class="sr-only">(current)</span>
+                </li>
+                <li class="nav-item active">
+                </li>
+            </ul>
+        </div>
+    <section class="section">
+        <h1 class="title">스우파 닮은꼴 찾기</h1>
+        <h2 class="subtitle">내가 닮은 스우파 리더는?</h2>
+        <h2 class="sr-only">스우파 닮은꼴 찾기</h2>
+        <h3 class="sr-only">인공지능으로 파악한 스우파 닮은꼴</h3>
+        <h4 class="sr-only">본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.</h4>
+        <p class="sr-only">스트릿 우먼 파이터 닮은꼴 찾기, 나는 어느팀 리더와 닮았을까?</p>
+    </section>
+
+  <div class="img"> 
+<img class="up mt-3 pb-5" src="face18.png" alt="up">
+</div>
+
+    <h3 class="sbtitle""d-flex justify-content-center">성별 선택</h3>
+    <section class="d-flex justify-content-center">
+        <p class="d-flex align-items-center pr-3">여</p>
+        <div>
+            <input type="checkbox" id="gender">
+            <label for="gender">
+                <span class="knob">
+                    <i></i>
+                </span>
+            </label>
+        </div>
+        <p class="d-flex align-items-center pl-3">남</p>
+    </section>
+   
+   <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <div class="mt-3 container file-upload">
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+                <h3 class="mb-5 pb-4 pt-5  upload-text">사진을 올려놓거나<br>눌러서 파일 업로드</h3>
+            </div>
+        </div>
+        <div class="file-upload-content">
+            <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+            <div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading</span>
+                </div>
+                <p class="text-center">닮은 리더를 찾는 중입니다</p>
+            </div>
+                <p class="result-message"></p>
+            <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox"></div>
+            
+
+            <div class="pt-3 image-title-wrap">
+                <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
+                    <span class="try-again-text">다른 사진으로 해보기</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+<div class="ad-banner mt-5">
+<a href="https://coupa.ng/casAyg" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
+    
+    <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-imvJgfOAl3RX8CXa" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+</div>
+
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+<div class="ad-banner">
+    <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-XesKrayW8a27GkJU" 
+ data-ad-width   = "320" 
+ data-ad-height  = "50"></ins> 
+</div>
+
+
+
+
+<footer class="footer pt-5 container d-flex justify-content-center">
+        <div>
+            <p>&copy; 1990DAY 2021. All Rights Reserved. </p>
+        </div>
+    </footer>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('.image-upload-wrap').hide();
+                    $('.img').hide();
+                    $('#loading').show();
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show();
+                    $('.image-title').html(input.files[0].name);
+                };
+                reader.readAsDataURL(input.files[0]);
+                init().then(function() {
+                    console.log("hello");
+                    predict();
+                    $('#loading').hide();
+                });
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function() {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function() {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+        let URL;
+        const urlMale = "https://teachablemachine.withgoogle.com/models/Qna1R9snG/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/Qna1R9snG/";
+        let model, webcam, labelContainer, maxPredictions;
+       async function init() {
+            if (document.getElementById("gender").checked) {
+                URL = urlMale;
+            } else {
+                URL = urlFemale;
+            }
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                var element = document.createElement("div")
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+            }
+        }
+        async function predict() {
+            var image = document.getElementById("face-image")
+            const prediction = await model.predict(image, false);
+            prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+            console.log(prediction[0].className);
+            var resultTitle, resultExplain, resultCeleb;
+            if (document.getElementById("gender").checked) {
+                switch (prediction[0].className) {
+                    case "gb":
+                        resultTitle = "가비"
+                        resultExplain = "당신은 라치카의 리더 가비와 닮은꼴 입니다."
+                        resultCeleb = "가비 MBTI : ENFP"
+                        break;
+                    case "hc":
+                        resultTitle = "효진초이"
+                        resultExplain = "당신은 원트의 리더 효진초이와 닮은꼴 입니다."
+                        resultCeleb = "효진초이 MBTI : ENFJ"
+                        break;
+                    case "hj":
+                        resultTitle = "허니제이"
+                        resultExplain = "당신은 홀리뱅의 리더 허니제이와 닮은꼴 입니다."
+                        resultCeleb = "허니제이 MBTI : ENTP"
+                        break;
+                    case "ik":
+                        resultTitle = "아이키"
+                        resultExplain = "당신은 훅의 리더 아이키와 닮은꼴 입니다."
+                        resultCeleb = "아이키 MBTI : ENFP"
+                            break;
+                        
+                    case "lh":
+                        resultTitle = "리헤이"
+                        resultExplain = "당신은 코카엔버터의 리더 리헤이와 닮은꼴 입니다."
+                        resultCeleb = "리헤이는 MBTI 검사를 해본적이 없다고 한다"
+                        break;
+                    case "lj":
+                        resultTitle = "리정"
+                        resultExplain = "당신은 YGX의 리더 리정과 닮은꼴 입니다."
+                        resultCeleb = "리정 MBTI : ENTP"
+                            break;
+                        case "mn":
+                        resultTitle = "모니카"
+                        resultExplain = "당신은 프라우드먼의 리더 모니카와 닮은꼴 입니다."
+                        resultCeleb = "모니카 MBTI : ESTJ(일할때),ENTJ(평온할때),ENFJ(쉴때)"
+                        break;
+                    case "nz":
+                        resultTitle = "노제"
+                        resultExplain = "당신은 웨이비의 리더 노제와 닮은꼴 입니다."
+                        resultCeleb = "노제 MBTI : ISFP"
+                            break;
+
+                        
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            } else {
+                switch (prediction[0].className) {
+                     case "gb":
+                        resultTitle = "가비"
+                        resultExplain = "당신은 라치카의 리더 가비와 닮은꼴 입니다."
+                        resultCeleb = "가비 MBTI : ENFP"
+                        break;
+                    case "hc":
+                        resultTitle = "효진초이"
+                        resultExplain = "당신은 원트의 리더 효진초이와 닮은꼴 입니다."
+                        resultCeleb = "효진초이 MBTI : ENFJ"
+                        break;
+                    case "hj":
+                        resultTitle = "허니제이"
+                        resultExplain = "당신은 홀리뱅의 리더 허니제이와 닮은꼴 입니다."
+                        resultCeleb = "허니제이 MBTI : ENTP"
+                        break;
+                    case "ik":
+                        resultTitle = "아이키"
+                        resultExplain = "당신은 훅의 리더 아이키와 닮은꼴 입니다."
+                        resultCeleb = "아이키 MBTI : ENFP"
+                            break;
+                        
+                    case "lh":
+                        resultTitle = "리헤이"
+                        resultExplain = "당신은 코카엔버터의 리더 리헤이와 닮은꼴 입니다."
+                        resultCeleb = "리헤이는 MBTI 검사를 해본적이 없다고 한다"
+                        break;
+                    case "lj":
+                        resultTitle = "리정"
+                        resultExplain = "당신은 YGX의 리더 리정과 닮은꼴 입니다."
+                        resultCeleb = "리정 MBTI : ENTP"
+                            break;
+                        case "mn":
+                        resultTitle = "모니카"
+                        resultExplain = "당신은 프라우드먼의 리더 모니카와 닮은꼴 입니다."
+                        resultCeleb = "모니카 MBTI : ESTJ(일할때),ENTJ(평온할때),ENFJ(쉴때)"
+                        break;
+                    case "nz":
+                        resultTitle = "노제"
+                        resultExplain = "당신은 웨이비의 리더 노제와 닮은꼴 입니다."
+                        resultCeleb = "노제 MBTI : ISFP"
+                            break;
+
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            }
+            var title = "<div class='" + prediction[0].className + "-swf-title'>" + resultTitle + "</div>"
+            var explain = "<div class='swf-explain pt-2'>" + resultExplain + "</div>"
+            var celeb = "<div class='" + prediction[0].className + "-swf-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+            $('.result-message').html(title + explain + celeb);
+            var barWidth;
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability.toFixed(2) > 0.1) {
+                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                    barWidth = "4%"
+                } else {
+                    barWidth = "2%"
+                }
+                var labelTitle;
+                switch (prediction[i].className) {
+                    case "gb":
+                        labelTitle = "가비"
+                        break;
+                    case "hc":
+                        labelTitle = "효진초이"
+                        break;
+                    case "hj":
+                        labelTitle = "허니제이"
+                        break;
+                    case "ik":
+                        labelTitle = "아이키"
+                         break;
+                        case "lh":
+                        labelTitle = "리헤이"
+                        break;
+                    case "lj":
+                        labelTitle = "리정"
+                        break;
+                    case "mn":
+                        labelTitle = "모니카"
+                        break;
+                    case "nz":
+                        labelTitle = "노제"
+                         break;
+                    default:
+                        labelTitle = "알수없음"
+            }
+                var label = "<div class='swf-label d-flex align-items-center'>" + labelTitle + "</div>"
+                var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                labelContainer.childNodes[i].innerHTML = label + bar;
+            }
+        }
+    </script>
+    <script>
+        function iosApp() {
+            document.getElementById("coupang").style.display="none";
+            $("#coupang ins").hide();
+            document.getElementById("addThis").style.display="none";
+            document.getElementById("disqus_thread").style.display="none";
+            var kakao = document.getElementsByClassName("kakao_ad_area");
+            for (var i = 0; i < kakao.length; i++) {
+              if(kakao[i]) {
+                  kakao[i].style.display="none";
+              }
+            }
+            document.getElementById("yotube-top-link").style.display="none";
+            document.getElementById("yotube-mid-link").style.display="none";
+            document.getElementById("yotube-bottom-link").style.display="none";
+        }
+    </script>
+</body>
+<!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+</html>
