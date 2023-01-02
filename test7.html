@@ -1,0 +1,941 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="naver-site-verification" content="4c99b86cc075e3c9605be6f3eef26de074015a7a" />
+
+
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta ht-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>축구선수 테스트</title>
+    <meta name="description" content="축구선수 얼굴합 테스트">
+    <meta name="title" content="국가대표 축구선수 테스트">
+    <meta name="subject" content="나는 어떤 축구선수와 어울릴까?">
+    <meta name="keywords" content="축구선수테스트,손흥민닮은꼴,이강인닮은꼴,김승규닮은꼴,황희찬닮은꼴,조규성닮은꼴,김진수닮은꼴,황의조닮은꼴,김영권닮은꼴,조규성얼굴,황희찬얼굴,손흥민얼굴,이강인얼굴,김민재닮은꼴,김민재얼굴,김승규얼굴,손흥민,이강인,김영권,김승규,김민재,김진수,조규성,황희찬,황의조,mbti테스트, 테스트, 심리테스트, 닮은꼴">
+
+    <meta name="author" content="1990DAY">
+
+<style>
+
+body {
+  font-family: 'Jua', sans-serif;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #FAA0A6;
+}
+
+.file-upload {
+    padding: 3% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #ffffff;
+    background-color: #ffffff;
+    
+}
+
+.img {
+    margin: 0 auto;
+     text-align: center;
+
+}
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #F2E7FA;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+#loading {
+  display: none;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.image-upload-wrap {
+    width: 70%;
+        height: 70%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 5px;
+    border: dashed 1.5px #ffffff;
+    background-color: #FDDBE3;
+    
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #FDDBE3;
+    border: 1.5px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+.file-upload-image {
+  max-height:50%;
+  max-width: 50%;
+  margin: auto;
+  padding: 10px;
+}
+
+.try-again-btn {
+  border-radius: 40px;
+  border: solid 1.5px #35465d;
+  background-color: #35465d;
+}
+
+.try-again-text {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 4px 15px;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.navbar-light .navbar-brand {
+  line-height: 1.68;
+  text-align: left;
+  color: #B9B6B7; 
+}
+
+
+.navbar-light .navbar-toggler {
+    border-color: #B9B6B7;
+}
+.section {
+    margin-top: 50px;
+}
+
+.title {
+  line-height: 1.67;
+  text-align: center;
+  color: #3F3F3F;
+        font-size: 25px;
+}
+
+.subtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #FFABAB;
+        font-size: 30px;
+}
+.sbtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #CACACA;
+        font-size: 20px;
+}
+
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+
+
+
+.upload {
+    width: 20%;
+}
+
+.upload-text {
+    width: 58%;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #35465d;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: initial;
+    color: initial;
+}
+
+.bar-container {
+  height: 2.7rem;
+}
+.shm-box {
+ position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 102, 102, 0.2);
+}
+.shm-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 102, 102, 1);
+}
+.lki-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+ background-color: rgba(117, 204, 84, 0.2);
+}
+.lki-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+    background-color: rgba(117, 204, 84, 1);
+}
+.kyk-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+ background-color: rgba(255, 102, 153, 0.2);
+}
+.kyk-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+background-color: rgba(255, 102, 153, 1);
+}
+.ksk-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+background-color: rgba(103, 107, 108, 0.2);
+}
+.ksk-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(103, 107, 108, 1);
+}
+.kmj-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+background-color: rgba(235, 166, 190, 0.2);
+}
+.kmj-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(235, 166, 190, 1);
+}
+.kjs-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(105, 140, 102, 0.2);
+}
+.kjs-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(105, 140, 102, 1);
+}
+.jks-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.jks-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(204, 204, 204, 1);
+}
+.hhc-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(204, 153, 255, 0.2);
+}
+.hhc-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(204, 153, 255, 1);
+}
+.hej-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(255, 205, 0, 0.2);
+}
+.hej-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 205, 0, 1);
+}
+
+.percent-text {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.kk-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+#label-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.result-message {
+    font-size: 2rem;
+}
+
+
+.kk-explain {
+    color: #23231e;
+    font-size: 1.5rem;
+}
+.shm-kk-title {
+    color: #FF6666;
+}
+.shm-kk-celeb {
+    color: #FF6666;
+    font-size: 1.2rem;
+}
+.lki-kk-title {
+    color: #75CC54;
+}
+.lki-kk-celeb {
+    color: #75CC54;
+    font-size: 1.2rem;
+}
+.kyk-kk-title {
+    color: #FF6699;
+}
+.kyk-kk-celeb {
+    color: #FF6699;
+    font-size: 1.2rem;
+}
+.ksk-kk-title {
+    color: #676B6C;
+}
+.ksk-kk-celeb {
+    color: #676B6C;
+    font-size: 1.2rem;
+}
+.kmj-kk-title {
+    color: #EBA6BE;
+}
+.kmj-kk-celeb {
+    color: #EBA6BE;
+    font-size: 1.2rem;
+}
+.kjs-kk-title {
+    color: #698C66;
+}
+.kjs-kk-celeb {
+    color: #698C66;
+    font-size: 1.2rem;
+}
+.jks-kk-title {
+    color: #CCCCCC;
+}
+.jks-kk-celeb {
+    color: #CCCCCC;
+    font-size: 1.2rem;
+}
+.hhc-kk-title {
+    color: #CC99FF;
+}
+.hhc-kk-celeb {
+    color: #CC99FF;
+    font-size: 1.2rem;
+}
+.hej-kk-title {
+    color: #FFCD00;
+}
+.hej-kk-celeb {
+    color: #FFCD00;
+    font-size: 1.2rem;
+}
+
+
+
+/* gender */
+input#gender {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  width: 90px;
+  height: 41px;
+  box-shadow: 0 0 0 8px #e5e9ea inset;
+  border-radius: 30px;
+  position: relative;
+}
+
+.knob {
+  position: absolute;
+  width: 41px;
+  top: 0;
+  left: 0;
+  height: 41px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #f470a7 inset;
+  background-color: #fbd4e6;
+  transition: 0.3s;
+}
+
+.knob > i {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  top: 100%;
+  background-color: #f470a7;
+  left: calc(50% - 2px);
+}
+
+.knob > i:before,
+.knob > i:after {
+  width: 6px;
+  position: absolute;
+  top: 42%;
+  content: "";
+  height: 4px;
+  background-color: #f470a7;
+}
+
+.knob > i:before {
+  left: 4px;
+}
+.knob > i:after {
+  left: -6px;
+}
+
+input:checked + label > .knob {
+  box-shadow: 0 0 0 8px #a1c6dd inset;
+  background-color: #e2ecf4;
+  transform: translateX(49px) rotate(-140deg);
+}
+
+input:checked + label > .knob > i {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after,
+input:checked + label > .knob > i:before {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after {
+  top: 14.5px;
+  width: 12px;
+  left: -7px;
+  transform: rotate(45deg);
+}
+input:checked + label > .knob > i:before {
+  top: 13px;
+  width: 12px;
+  left: 0px;
+  transform: rotate(134deg);
+}
+
+.ad-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+.coupang-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+
+</style>
+
+    
+
+
+    <link rel="canonical" href="https://test-it.co.kr/test7.html" />
+    <meta property="og:url" content="https://test-it.co.kr/test7.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="대한민국 축구 국가대표팀 월드컵" />
+    <meta property="og:description" content="나는 어떤 축구선수와 어울릴까?"
+    />
+ 
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <meta property="og:image" content="https://postfiles.pstatic.net/MjAyMjEyMDRfNzUg/MDAxNjcwMTY1MjM2NzU4.PVa8BwOcLIN0n6YhCBYjKM0b45oUSv5QAOkaV4h4Du4g.SvPqtCTsGJE1RK_9X1BtCohe8eYs9yQxuIIyblpR_dsg.JPEG.cccc070/20221204505583.jpg?type=w580" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+    <script data-ad-client="ca-pub-5522499110435321" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+</head>
+
+
+<body>
+    <nav class="p-3 container navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand"></a>축구선수 얼굴합 테스트</nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    
+                        <span class="sr-only">(current)</span>
+                </li>
+                <li class="nav-item active">
+                </li>
+            </ul>
+        </div>
+    <section class="section">
+        <h1 class="title">2022 카타르 월드컵 특집</h1>
+        <h2 class="subtitle">나는 어떤 축구선수와 어울릴까?</h2>
+        <h2 class="sr-only">국가대표 축구선수 테스트</h2>
+        <h3 class="sr-only">인공지능으로 파악한 국가대표 얼굴 찾기</h3>
+        <h4 class="sr-only">본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.</h4>
+        <p class="sr-only">국가대표 축구선수 얼굴 테스트</p>
+    </section>
+
+  <div class="img"> 
+<img class="up mt-3 pb-5" src="face7.png" alt="up">
+</div>
+
+    <h3 class="sbtitle""d-flex justify-content-center">당신의 성별은?</h3>
+    <section class="d-flex justify-content-center">
+        <p class="d-flex align-items-center pr-3">여</p>
+        <div>
+            <input type="checkbox" id="gender">
+            <label for="gender">
+                <span class="knob">
+                    <i></i>
+                </span>
+            </label>
+        </div>
+        <p class="d-flex align-items-center pl-3">남</p>
+    </section>
+   
+   <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <div class="mt-3 container file-upload">
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+                <h3 class="mb-5 pb-4 pt-5  upload-text">사진을 올려놓거나<br>눌러서 업로드</h3>
+            </div>
+        </div>
+        <div class="file-upload-content">
+            <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+            <div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading</span>
+                </div>
+                <p class="text-center">공 굴러가는중...</p>
+            </div>
+                <p class="result-message"></p>
+            <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox"></div>
+            
+
+            <div class="pt-3 image-title-wrap">
+                <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
+                    <span class="try-again-text">다른 사진으로 재시도</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+<div class="ad-banner mt-5">
+<a href="https://link.coupang.com/a/G27Jo" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
+    
+    <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-02wMbRJI1IwT7z7n" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+</div>
+
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+<div class="ad-banner">
+    <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-CFJzzR0rM2cApb3v" 
+ data-ad-width   = "320" 
+ data-ad-height  = "50"></ins> 
+</div>
+
+
+
+
+<footer class="footer pt-5 container d-flex justify-content-center">
+        <div>
+            <p>&copy; 1990DAY 2022. All Rights Reserved. </p>
+        </div>
+    </footer>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('.image-upload-wrap').hide();
+                    $('.img').hide();
+                    $('#loading').show();
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show();
+                    $('.image-title').html(input.files[0].name);
+                };
+                reader.readAsDataURL(input.files[0]);
+                init().then(function() {
+                    console.log("hello");
+                    predict();
+                    $('#loading').hide();
+                });
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function() {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function() {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+        let URL;
+        const urlMale = "https://teachablemachine.withgoogle.com/models/ZYAUehgP9/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/ZYAUehgP9/";
+        let model, webcam, labelContainer, maxPredictions;
+       async function init() {
+            if (document.getElementById("gender").checked) {
+                URL = urlMale;
+            } else {
+                URL = urlFemale;
+            }
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                var element = document.createElement("div")
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+            }
+        }
+        async function predict() {
+            var image = document.getElementById("face-image")
+            const prediction = await model.predict(image, false);
+            prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+            console.log(prediction[0].className);
+            var resultTitle, resultExplain, resultCeleb;
+            if (document.getElementById("gender").checked) {
+                switch (prediction[0].className) {
+                    case "shm":
+                        resultTitle = "손흥민 Son Heung-min"
+                        resultExplain = "당신은 축구선수 손흥민과 얼굴합이 맞습니다."
+                        resultCeleb = "No.7 손흥민, 1992년생, 토트넘 훗스퍼"
+                        break;
+                    case "lki":
+                        resultTitle = "이강인 Lee Kangin"
+                        resultExplain = "당신은 축구선수 이강인과 얼굴합이 맞습니다."
+                        resultCeleb = "No.18 이강인, 2001년생, RCD 마요르카"
+                        break;
+                    case "kyk":
+                        resultTitle = "김영권 Kim Young-Gwon"
+                        resultExplain = "당신은 축구선수 김영권과 얼굴합이 맞습니다."
+                        resultCeleb = "No.19 김영권, 1990년생, 울산 현대"
+                        break;
+                    case "ksk":
+                        resultTitle = "김승규 Kim Seunggyu"
+                        resultExplain = "당신은 축구선수 김승규와 얼굴합이 맞습니다."
+                        resultCeleb = "No.1 김승규, 1990년생, 알 샤바브 FC"
+                            break;
+                        
+                    case "kmj":
+                             resultTitle = "김민재 Kim Minjae"
+                        resultExplain = "당신은 축구선수 김민재와 얼굴합이 맞습니다."
+                        resultCeleb = "No.4 김민재, 1996년생, SSC 나폴리"
+                        break;
+                    case "kjs":
+                        resultTitle = "김진수 Kim Jin-Su"
+                        resultExplain = "당신은 축구선수 김진수와 얼굴합이 맞습니다."
+                        resultCeleb = "No.3 김진수, 1992년생, 전북 현대 모터스"
+                            break;
+                        case "jks":
+                        resultTitle = "조규성 Cho Gue-sung"
+                        resultExplain = "당신은 축구선수 조규성과 얼굴합이 맞습니다."
+                        resultCeleb = "No.9 조규성, 1998년생, 전북 현대 모터스"
+                        break;
+                    case "hhc":
+                        resultTitle = "황희찬 Hwang Heechan"
+                        resultExplain = "당신은 축구선수 황희찬과 얼굴합이 맞습니다."
+                        resultCeleb = "No.11 황희찬, 1996년생, 울버햄튼 원더러스 FC"
+                            break;
+                    case "hej":
+                        resultTitle = "황의조 Hwang Ui-jo"
+                        resultExplain = "당신은 축구선수 황의조와 얼굴합이 맞습니다."
+                        resultCeleb = "No.16 황의조, 1992년생, 올림피아코스 FC"
+                            break;
+            
+
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            } else {
+                switch (prediction[0].className) {
+                             case "shm":
+                        resultTitle = "손흥민 Son Heung-min"
+                        resultExplain = "당신은 축구선수 손흥민과 얼굴합이 맞습니다."
+                        resultCeleb = "No.7 손흥민, 1992년생, 토트넘 훗스퍼"
+                        break;
+                    case "lki":
+                        resultTitle = "이강인 Lee Kangin"
+                        resultExplain = "당신은 축구선수 이강인과 얼굴합이 맞습니다."
+                        resultCeleb = "No.18 이강인, 2001년생, RCD 마요르카"
+                        break;
+                    case "kyk":
+                        resultTitle = "김영권 Kim Young-Gwon"
+                        resultExplain = "당신은 축구선수 김영권과 얼굴합이 맞습니다."
+                        resultCeleb = "No.19 김영권, 1990년생, 울산 현대"
+                        break;
+                    case "ksk":
+                        resultTitle = "김승규 Kim Seunggyu"
+                        resultExplain = "당신은 축구선수 김승규와 얼굴합이 맞습니다."
+                        resultCeleb = "No.1 김승규, 1990년생, 알 샤바브 FC"
+                            break;
+                        
+                    case "kmj":
+                             resultTitle = "김민재 Kim Minjae"
+                        resultExplain = "당신은 축구선수 김민재와 얼굴합이 맞습니다."
+                        resultCeleb = "No.4 김민재, 1996년생, SSC 나폴리"
+                        break;
+                    case "kjs":
+                        resultTitle = "김진수 Kim Jin-Su"
+                        resultExplain = "당신은 축구선수 김진수와 얼굴합이 맞습니다."
+                        resultCeleb = "No.3 김진수, 1992년생, 전북 현대 모터스"
+                            break;
+                        case "jks":
+                        resultTitle = "조규성 Cho Gue-sung"
+                        resultExplain = "당신은 축구선수 조규성과 얼굴합이 맞습니다."
+                        resultCeleb = "No.9 조규성, 1998년생, 전북 현대 모터스"
+                        break;
+                    case "hhc":
+                        resultTitle = "황희찬 Hwang Heechan"
+                        resultExplain = "당신은 축구선수 황희찬과 얼굴합이 맞습니다."
+                        resultCeleb = "No.11 황희찬, 1996년생, 울버햄튼 원더러스 FC"
+                            break;
+                    case "hej":
+                        resultTitle = "황의조 Hwang Ui-jo"
+                        resultExplain = "당신은 축구선수 황의조와 얼굴합이 맞습니다."
+                        resultCeleb = "No.16 황의조, 1992년생, 올림피아코스 FC"
+                            break;
+            
+                             
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            }
+            var title = "<div class='" + prediction[0].className + "-kk-title'>" + resultTitle + "</div>"
+            var explain = "<div class='kk-explain pt-2'>" + resultExplain + "</div>"
+            var celeb = "<div class='" + prediction[0].className + "-kk-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+            $('.result-message').html(title + explain + celeb);
+            var barWidth;
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability.toFixed(2) > 0.1) {
+                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                    barWidth = "4%"
+                } else {
+                    barWidth = "2%"
+                }
+                var labelTitle;
+                switch (prediction[i].className) {
+                    case "shm":
+                        labelTitle = "손흥민"
+                        break;
+                    case "lki":
+                        labelTitle = "이강인"
+                        break;
+                    case "kyk":
+                        labelTitle = "김영권"
+                        break;
+                    case "ksk":
+                        labelTitle = "김승규"
+                         break;
+                        case "kmj":
+                        labelTitle = "김민재"
+                        break;
+                    case "kjs":
+                        labelTitle = "김진수"
+                        break;
+                    case "jks":
+                        labelTitle = "조규성"
+                        break;
+                    case "hhc":
+                        labelTitle = "황희찬"
+                         break;
+                       case "hej":
+                        labelTitle = "황의조"
+                         break;
+                  
+                    default:
+                        labelTitle = "알수없음"
+            }
+                var label = "<div class='kk-label d-flex align-items-center'>" + labelTitle + "</div>"
+                var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                labelContainer.childNodes[i].innerHTML = label + bar;
+            }
+        }
+    </script>
+    <script>
+        function iosApp() {
+            document.getElementById("coupang").style.display="none";
+            $("#coupang ins").hide();
+            document.getElementById("addThis").style.display="none";
+            document.getElementById("disqus_thread").style.display="none";
+            var kakao = document.getElementsByClassName("kakao_ad_area");
+            for (var i = 0; i < kakao.length; i++) {
+              if(kakao[i]) {
+                  kakao[i].style.display="none";
+              }
+            }
+            document.getElementById("yotube-top-link").style.display="none";
+            document.getElementById("yotube-mid-link").style.display="none";
+            document.getElementById("yotube-bottom-link").style.display="none";
+        }
+    </script>
+</body>
+<!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+</html>
