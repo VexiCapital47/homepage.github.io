@@ -1,0 +1,895 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="naver-site-verification" content="3c4cc66553a4bf965389626870dc98596725bb5f" />
+
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta ht-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>2022년 운세</title>
+    <meta name="description" content="얼굴로 보는 2022년 운세">
+    <meta name="title" content="얼굴로 보는 2022년 운세">
+    <meta name="subject" content="2022년 나에게 들어올 운은?">
+    <meta name="keywords" content="얼굴테스트,mbti테스트,2022년운세,신년운세,2022년,도화살,홍염살,애정운,성공운,사업운,합격운,2022년복,2022년애정운,2022년건강운,2022년사업운,2022년얼굴운세,2022년테스트,심리테스트">
+
+    <meta name="author" content="1990DAY">
+
+<style>
+
+body {
+  font-family: 'Jua', sans-serif;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #FAA0A6;
+}
+
+.file-upload {
+    padding: 3% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #ffffff;
+    background-color: #ffffff;
+    
+}
+
+.img {
+    margin: 0 auto;
+     text-align: center;
+
+}
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #F2E7FA;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+#loading {
+  display: none;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.image-upload-wrap {
+    width: 70%;
+        height: 70%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 5px;
+    border: dashed 1.5px #ffffff;
+    background-color: #FDDBE3;
+    
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #FDDBE3;
+    border: 1.5px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+.file-upload-image {
+  max-height:50%;
+  max-width: 50%;
+  margin: auto;
+  padding: 10px;
+}
+
+.try-again-btn {
+  border-radius: 40px;
+  border: solid 1.5px #35465d;
+  background-color: #35465d;
+}
+
+.try-again-text {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 4px 15px;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.navbar-light .navbar-brand {
+  line-height: 1.68;
+  text-align: left;
+  color: #B9B6B7; 
+}
+
+
+.navbar-light .navbar-toggler {
+    border-color: #B9B6B7;
+}
+.section {
+    margin-top: 50px;
+}
+
+.title {
+  line-height: 1.67;
+  text-align: center;
+  color: #FFE010;
+        font-size: 25px;
+}
+
+.subtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #FFAFB2;
+        font-size: 30px;
+}
+.sbtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #FCDC5F;
+        font-size: 20px;
+}
+
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+
+
+
+.upload {
+    width: 20%;
+}
+
+.upload-text {
+    width: 58%;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #35465d;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: initial;
+    color: initial;
+}
+
+.bar-container {
+  height: 2.7rem;
+}
+.gg-box {
+ position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(255, 102, 102, 0.2);
+}
+.gg-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 102, 102, 1);
+}
+.hg-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+ background-color: rgba(117, 204, 84, 0.2);
+}
+.hg-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+     background-color: rgba(117, 204, 84, 1);
+}
+.lv-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+ background-color: rgba(255, 166, 166, 0.2);
+}
+.lv-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+background-color: rgba(255, 166, 166, 1);
+}
+.mn-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+background-color: rgba(4, 146, 255, 0.2);
+}
+.mn-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(4, 146, 255, 1);
+}
+.sb-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+background-color: rgba(255, 128, 0, 0.2);
+}
+.sb-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 128, 0, 1);
+}
+.sg-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 206, 7, 0.2);
+}
+.sg-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+    background-color: rgba(255, 206, 7, 1);
+}
+.su-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(153, 76, 0, 0.2);
+}
+.su-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(153, 76, 0, 1);
+}
+.ib-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(204, 153, 255, 0.2);
+}
+.ib-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(204, 153, 255, 1);
+}
+
+.percent-text {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.us-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+#label-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.result-message {
+    font-size: 2rem;
+}
+
+
+.us-explain {
+    color: #23231e;
+    font-size: 1.5rem;
+}
+.gg-us-title {
+    color:  #FF6666;
+}
+.gg-us-celeb {
+    color: #FF6666;
+    font-size: 1.2rem;
+}
+.hg-us-title {
+      color: #75CC54;
+}
+.hg-us-celeb {
+    color: #75CC54;
+    font-size: 1.2rem;
+}
+.lv-us-title {
+ color: #FFA6A6;
+}
+.lv-us-celeb {
+       color: #FFA6A6;
+    font-size: 1.2rem;
+}
+.mn-us-title {
+    color: #0492FF;
+}
+.mn-us-celeb {
+    color: #0492FF;
+    font-size: 1.2rem;
+}
+.sb-us-title {
+   color: #FF9C07;
+}
+.sb-us-celeb {
+  color: #FF9C07;
+     font-size: 1.2rem;
+}
+.sg-us-title {
+  color: #FFCE07;
+}
+.sg-us-celeb {
+    color: #FFCE07;
+    font-size: 1.2rem;
+}
+.su-us-title {
+   color: #A46A15;
+}
+.su-us-celeb {
+ color: #A46A15;
+    font-size: 1.2rem;
+}
+.ib-us-title {
+    color: #CC99FF;
+}
+.ib-us-celeb {
+     color: #CC99FF;
+    font-size: 1.2rem;
+}
+
+/* gender */
+input#gender {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  width: 90px;
+  height: 41px;
+  box-shadow: 0 0 0 8px #e5e9ea inset;
+  border-radius: 30px;
+  position: relative;
+}
+
+.knob {
+  position: absolute;
+  width: 41px;
+  top: 0;
+  left: 0;
+  height: 41px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #f470a7 inset;
+  background-color: #fbd4e6;
+  transition: 0.3s;
+}
+
+.knob > i {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  top: 100%;
+  background-color: #f470a7;
+  left: calc(50% - 2px);
+}
+
+.knob > i:before,
+.knob > i:after {
+  width: 6px;
+  position: absolute;
+  top: 42%;
+  content: "";
+  height: 4px;
+  background-color: #f470a7;
+}
+
+.knob > i:before {
+  left: 4px;
+}
+.knob > i:after {
+  left: -6px;
+}
+
+input:checked + label > .knob {
+  box-shadow: 0 0 0 8px #a1c6dd inset;
+  background-color: #e2ecf4;
+  transform: translateX(49px) rotate(-140deg);
+}
+
+input:checked + label > .knob > i {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after,
+input:checked + label > .knob > i:before {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after {
+  top: 14.5px;
+  width: 12px;
+  left: -7px;
+  transform: rotate(45deg);
+}
+input:checked + label > .knob > i:before {
+  top: 13px;
+  width: 12px;
+  left: 0px;
+  transform: rotate(134deg);
+}
+
+.ad-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+.coupang-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+</style>
+
+    <link rel="canonical" href="https://test-it.co.kr/test14.html" />
+    <meta property="og:url" content="https://test-it.co.kr/test14.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="2022년 운세" />
+    <meta property="og:description" content="얼굴로 보는 나의 2022년 운세"
+    />
+ 
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <meta property="og:image" content="test14.png" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+   <link rel="icon" type="image/png" href="favicon.png">
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+    <script data-ad-client="ca-pub-5522499110435321" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+</head>
+
+
+<body>
+    <nav class="p-3 container navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand"></a>2022년 운세</nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    
+                        <span class="sr-only">(current)</span>
+                </li>
+                <li class="nav-item active">
+                </li>
+            </ul>
+        </div>
+    <section class="section">
+        <h1 class="title">나에게 들어올 운은?</h1>
+        <h2 class="subtitle">얼굴로 보는 2022년 운세</h2>
+        <h2 class="sr-only">22년 나에게 들어올 운은?</h2>
+        <h3 class="sr-only">인공지능으로 파악한 2022년 운세</h3>
+        <h4 class="sr-only">본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.</h4>
+        <p class="sr-only">얼굴로 보는 2022년 운세</p>
+    </section>
+
+  <div class="img"> 
+<img class="up mt-3 pb-5" src="face14.png" alt="up">
+</div>
+
+    <h3 class="sbtitle""d-flex justify-content-center">성별 선택</h3>
+    <section class="d-flex justify-content-center">
+        <p class="d-flex align-items-center pr-3">여</p>
+        <div>
+            <input type="checkbox" id="gender">
+            <label for="gender">
+                <span class="knob">
+                    <i></i>
+                </span>
+            </label>
+        </div>
+        <p class="d-flex align-items-center pl-3">남</p>
+    </section>
+   
+   <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <div class="mt-3 container file-upload">
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+                <h3 class="mb-5 pb-4 pt-5  upload-text">사진을 올려놓거나<br>눌러서 파일 업로드</h3>
+            </div>
+        </div>
+        <div class="file-upload-content">
+            <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+            <div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading</span>
+                </div>
+                <p class="text-center">나에게 올 행운은...</p>
+            </div>
+                <p class="result-message"></p>
+            <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox"></div>
+            
+
+            <div class="pt-3 image-title-wrap">
+                <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
+                    <span class="try-again-text">다른 사진으로 해보기</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+<div class="ad-banner mt-5">
+<a href="https://coupa.ng/caUdxQ" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
+    
+    <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-RgskRWtD0EWisubj" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+</div>
+
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+<div class="ad-banner">
+    <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-f6whSppgm0CeSV5B" 
+ data-ad-width   = "320" 
+ data-ad-height  = "50"></ins> 
+</div>
+
+
+
+
+<footer class="footer pt-5 container d-flex justify-content-center">
+        <div>
+            <p>&copy; 1990DAY 2021. All Rights Reserved. </p>
+        </div>
+    </footer>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('.image-upload-wrap').hide();
+                    $('.img').hide();
+                    $('#loading').show();
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show();
+                    $('.image-title').html(input.files[0].name);
+                };
+                reader.readAsDataURL(input.files[0]);
+                init().then(function() {
+                    console.log("hello");
+                    predict();
+                    $('#loading').hide();
+                });
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function() {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function() {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+        let URL;
+        const urlMale = "https://teachablemachine.withgoogle.com/models/JINK07Jsi/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/JINK07Jsi/";
+        let model, webcam, labelContainer, maxPredictions;
+       async function init() {
+            if (document.getElementById("gender").checked) {
+                URL = urlMale;
+            } else {
+                URL = urlFemale;
+            }
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                var element = document.createElement("div")
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+            }
+        }
+        async function predict() {
+            var image = document.getElementById("face-image")
+            const prediction = await model.predict(image, false);
+            prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+            console.log(prediction[0].className);
+            var resultTitle, resultExplain, resultCeleb;
+            if (document.getElementById("gender").checked) {
+                switch (prediction[0].className) {
+                     case "gg":
+                        resultTitle = "건강운"
+                        resultExplain = "2022년에 당신이 얻을 운은 건강운 입니다."
+                        resultCeleb = "질병 치레 없이 건강한 한 해가 되겠네요! 기운이 넘쳐서 활동량도 늘어납니다."
+                        break;
+                    case "lv":
+                        resultTitle = "애정운"
+                        resultExplain = "2022년에 당신이 얻을 운은 애정운 입니다."
+                        resultCeleb = "어딜 가도 인기 만점! 누구에게나 애정을 넘치게 받는 한 해가 되겠네요."
+                        break;
+                    case "mn":
+                        resultTitle = "재물운"
+                        resultExplain = "2022년에 당신이 얻을 운은 재물운 입니다."
+                        resultCeleb = "재물이 넘치는 한 해가 되겠네요! 우연히 산 복권도 당첨될 확률이 높습니다."
+                        break;
+                    case "sb":
+                        resultTitle = "식복"
+                        resultExplain = "2022년에 당신이 얻을 운은 먹을복 입니다."
+                        resultCeleb = "절대 굶고 다닐 일 없는 한 해가 되겠네요! 어딜 가나 당신을 위한 맛있는 음식이 가득합니다."
+                            break;
+                        
+                    case "sg":
+                        resultTitle = "성공운"
+                        resultExplain = "2022년에 당신이 얻을 운은 성공운 입니다."
+                        resultCeleb = "크든 작든 성공운이 넘치는 한 해네요! 평소에 도전하고 싶었던걸 도전하기 딱 좋은 한 해입니다."
+                        break;
+                    case "su":
+                        resultTitle = "사업운"
+                        resultExplain = "2022년에 당신이 얻을 운은 사업운 입니다."
+                        resultCeleb = "당신의 손을 타면 대박이 터지네요! 대박 사업운이 흐르는 한 해입니다."
+                            break;
+                        case "ib":
+                        resultTitle = "인복"
+                        resultExplain = "2022년에 당신이 얻을 운은 인복 입니다."
+                        resultCeleb = "당신을 돕겠다는 사람이 가득한 한 해네요! 이번 해에 귀인을 많이 얻겠어요."
+                        break;
+                    case "hg":
+                        resultTitle = "합격운"
+                        resultExplain = "2022년에 당신이 얻을 운은 합격운 입니다."
+                        resultCeleb = "합격의 기운이 당신을 향해있네요. 봤다 하면 척척 붙는 합격운이 넘치는 한 해입니다!"
+                            break;
+
+                        
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            } else {
+                switch (prediction[0].className) {
+                      case "gg":
+                        resultTitle = "건강운"
+                        resultExplain = "2022년에 당신이 얻을 운은 건강운 입니다."
+                        resultCeleb = "질병 치레 없이 건강한 한 해가 되겠네요! 기운이 넘쳐서 활동량도 늘어납니다."
+                        break;
+                    case "lv":
+                        resultTitle = "애정운"
+                        resultExplain = "2022년에 당신이 얻을 운은 애정운 입니다."
+                        resultCeleb = "어딜 가도 인기 만점! 누구에게나 애정을 넘치게 받는 한 해가 되겠네요."
+                        break;
+                    case "mn":
+                        resultTitle = "재물운"
+                        resultExplain = "2022년에 당신이 얻을 운은 재물운 입니다."
+                        resultCeleb = "재물이 넘치는 한 해가 되겠네요! 우연히 산 복권도 당첨될 확률이 높습니다."
+                        break;
+                    case "sb":
+                        resultTitle = "식복"
+                        resultExplain = "2022년에 당신이 얻을 운은 먹을복 입니다."
+                        resultCeleb = "절대 굶고 다닐 일 없는 한 해가 되겠네요! 어딜 가나 당신을 위한 맛있는 음식이 가득합니다."
+                            break;
+                        
+                    case "sg":
+                        resultTitle = "성공운"
+                        resultExplain = "2022년에 당신이 얻을 운은 성공운 입니다."
+                        resultCeleb = "크든 작든 성공운이 넘치는 한 해네요! 평소에 도전하고 싶었던걸 도전하기 딱 좋은 한 해입니다."
+                        break;
+                    case "su":
+                        resultTitle = "사업운"
+                        resultExplain = "2022년에 당신이 얻을 운은 사업운 입니다."
+                        resultCeleb = "당신의 손을 타면 대박이 터지네요! 대박 사업운이 흐르는 한 해입니다."
+                            break;
+                        case "ib":
+                        resultTitle = "인복"
+                        resultExplain = "2022년에 당신이 얻을 운은 인복 입니다."
+                        resultCeleb = "당신을 돕겠다는 사람이 가득한 한 해네요! 이번 해에 귀인을 많이 얻겠어요."
+                        break;
+                    case "hg":
+                        resultTitle = "합격운"
+                        resultExplain = "2022년에 당신이 얻을 운은 합격운 입니다."
+                        resultCeleb = "합격의 기운이 당신을 향해있네요. 봤다 하면 척척 붙는 합격운이 넘치는 한 해입니다!"
+                            break;
+
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            }
+            var title = "<div class='" + prediction[0].className + "-us-title'>" + resultTitle + "</div>"
+            var explain = "<div class='us-explain pt-2'>" + resultExplain + "</div>"
+            var celeb = "<div class='" + prediction[0].className + "-us-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+            $('.result-message').html(title + explain + celeb);
+            var barWidth;
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability.toFixed(2) > 0.1) {
+                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                    barWidth = "4%"
+                } else {
+                    barWidth = "2%"
+                }
+                var labelTitle;
+                switch (prediction[i].className) {
+                    case "gg":
+                        labelTitle = "건강"
+                        break;
+                    case "hg":
+                        labelTitle = "합격"
+                        break;
+                    case "lv":
+                        labelTitle = "애정"
+                        break;
+                    case "mn":
+                        labelTitle = "재물"
+                         break;
+                        case "sb":
+                        labelTitle = "식복"
+                        break;
+                    case "sg":
+                        labelTitle = "성공"
+                        break;
+                    case "su":
+                        labelTitle = "사업"
+                        break;
+                    case "ib":
+                        labelTitle = "인복"
+                         break;
+                    default:
+                        labelTitle = "알수없음"
+            }
+                var label = "<div class='us-label d-flex align-items-center'>" + labelTitle + "</div>"
+                var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                labelContainer.childNodes[i].innerHTML = label + bar;
+            }
+        }
+    </script>
+    <script>
+        function iosApp() {
+            document.getElementById("coupang").style.display="none";
+            $("#coupang ins").hide();
+            document.getElementById("addThis").style.display="none";
+            document.getElementById("disqus_thread").style.display="none";
+            var kakao = document.getElementsByClassName("kakao_ad_area");
+            for (var i = 0; i < kakao.length; i++) {
+              if(kakao[i]) {
+                  kakao[i].style.display="none";
+              }
+            }
+            document.getElementById("yotube-top-link").style.display="none";
+            document.getElementById("yotube-mid-link").style.display="none";
+            document.getElementById("yotube-bottom-link").style.display="none";
+        }
+    </script>
+</body>
+<!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+</html>
