@@ -162,6 +162,7 @@ article{
         </article>
     <!--결과화면-->
     <article class="result">
+        
         <img id="img" class="mt-5" src="" alt="animal">
         
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -214,22 +215,21 @@ article{
   // MBTI 결과별 동물&설명을 저장하는 자바스크립트 객체 result
         var result = {
             "12": {"img":"img_100u.png"},
-            "11": {"img":"img_95u.png"},
+            "I1": {"img":"img_95u.png"},
             "10": {"img":"img_90u.png"},
             "9": {"img":"img_85u.png"},
 
             "8": {"img":"img_80u.png"},
             "7": {"img":"img_70u.png"},
             "6": {"img":"img_60u.png"},
-            "5": {"img":"img_50u.png"},
 
+            "5": {"img":"img_50u.png"},
             "4": {"img":"img_40u.png"},
             "3": {"img":"img_30u.png"},
             "2": {"img":"img_20u.png"},
+
             "1": {"img":"img_10u.png"},
-
             "0": {"img":"img_0u.png"},
-
         }
         // 시작 버튼을 클릭하면 시작화면 숨기고 질문화면 보여주기
         function start(){
@@ -238,7 +238,7 @@ article{
             next();
         }
         // A 버튼 클릭하면 해당 타입 값을 가져와서 값 1 증가 후 next()
-        $("#A").click(function()
+        $("#A").click(function(){
             var type = $("#type").val();
             var preValue = $("#"+type).val();
             $("#"+type).val(parseInt(preValue)+1);
@@ -255,15 +255,17 @@ article{
                 $(".question").hide();
                 $(".result").show();
 
-            var mbti = "";
-                
-        function add(E,I) {
-            let result = E + I;
-            return result
+           function result() {
+   var A_counter = 0;
+                   var elements = document.getElementsByClassName("A");
+    
         }
-
+    }
                 
-         // 계산된 MBTI로 이미지, 동물, 설명 값 변경
+ 
+                
+                
+                // 계산된 MBTI로 이미지, 동물, 설명 값 변경
                 $("#img").attr("src",result[mbti]["img"]);
                 $("#animal").html(result[mbti]["animal"]);
                 $("#explain").html(result[mbti]["explain"]);
@@ -282,7 +284,6 @@ article{
         }
     </script>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60358a0895fc8bb9"></script>
 
 </body>
 </html>
