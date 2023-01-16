@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>생일파티 성격 테스트</title>
+    <meta name="description" content="생일파티에서 하지 말아야 할 행동을 mbti 별로 나눈 성격 테스트입니다.">
+<meta name="keywords" content="생일파티, 생일파티 성격테스트, 생일 초대장, 생일파티 mbti, 생일성격테스트, 생일파티테스트, 생일파티 테스트, 생일 테스트, 성격테스트, 심리테스트, mbti테스트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="생일파티 성격 테스트">
+    <meta property="og:description" content="생일파티에서 하지 말아야 할 행동을 mbti 별로 나눈 성격 테스트입니다.">
+    <meta property="og:image" content="https://test-it.co.kr/img_main36.png">
+    <meta property="og:url" content="https://test-it.co.kr/test36.html">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+
+
+<style>
+
+/* start 태그와 question 태그 모두 article 태그라서 article 태그에 속성을 주면 동시에 적용됨
+.start{
+    display: flex;
+    flex-direction: column;
+}
+*/
+.logo {
+    width: 100px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+.main-nav a{
+    color: #432;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+    
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+.question{
+    display: none;
+}
+
+.result{
+    display: none;
+}
+.progress-bar {
+    background-color: #ffb2b2;
+}
+.progress {
+    background-color: #ffffff;
+}
+#img{
+    width: 360px;
+    height: 900px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img_main{
+    width: 500px;
+    height: 600px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+        
+        
+ 
+.share{
+    margin: 0 auto;
+}
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.kakao_ad2{
+    width: 320px;
+    margin: 0 auto;
+}
+.coupang_ad {
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+</style>
+
+
+
+
+
+</head>
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#faffdb">
+            
+    <header class="page-header wrapper">
+        <h1><a href="https://test-it.co.kr"><img class="logo" src="img_logo.png" alt="test it"></a>
+        </h1>
+    <nav>
+        <u1 class="main-nav">
+            <li> <a href="https://test-it.co.kr/test.html">성격</a></li>
+            <li> <a href="https://test-it.co.kr/face.html">얼굴</a></li>
+            <li> <a href="https://test-it.co.kr/etc.html">그외</a></li>
+        </u1>
+    </nav>
+        
+        
+    </header>
+
+    
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#ffffff">
+
+    <article class="kakao_ad2 mt-5">
+        <ins class="kakao_ad_area" style="display:none;" 
+        data-ad-unit    = "DAN-u8xfknHjdW6Z1evc" 
+        data-ad-width   = "320" 
+        data-ad-height  = "50"></ins> 
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    </article>
+
+     <!--시작화면-->
+    <article class="start">
+        <img id="img_main" class="mt-5" src="img_main36.png">
+        <button type="button" class="btn btn-info mt-5" onclick='start();' style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 250, 157); border-color: rgb(255, 250, 157);">테스트 시작하기</button>
+    </article>
+    <!--문제화면-->
+    <article class="question">
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h6 style="font-weight: bold; color: black;" class="text-center mt-5" id="title">문제</h6>
+        <input id="type" type="hidden" value="EI">
+        <button id="A" type="button" class="btn btn-info mt-5" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(255, 250, 157); border-color: rgb(255, 250, 157);">Primary</button>
+        <button id="B" type="button" class="btn btn-info mt-5" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(255, 250, 157); border-color: rgb(255, 250, 157);">Primary</button>
+
+        </article>
+    <!--결과화면-->
+    <article class="result">
+        <img id="img" class="mt-5" src="" alt="animal">
+        
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <!-- share 클래스는 내가 위치 조정을 위해서 준 클래스-->
+        <div class="share addthis_inline_share_toolbox"></div>
+            
+    </article>
+
+    <article class="kakao_ad mt-5">
+        <ins class="kakao_ad_area" style="display:none;" 
+        data-ad-unit    = "DAN-929ukfyAopRO4Q8i" 
+        data-ad-width   = "320" 
+        data-ad-height  = "100"></ins> 
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    </article>
+    <article class="coupang_ad">
+<a href="https://link.coupang.com/a/Mhi4p" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
+
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <!--각 타입의 점수를 저장하는 input 태그(hidden으로 안보임)-->
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+        // 문제 번호를 나타내는 num 변수
+        var num = 1;
+        // 문제 번호별 질문을 저장하는 자바스크립트 객체 q
+        var q = {
+              1: {"title": "생일에 대한 나의 생각은?", "type": "SN", "A": "그냥 태어난 날일 뿐", "B": "1년에 한 번밖에 없는 특별한 날"},
+             2: {"title": "안 친한 친구의 생일파티 초대를 받으면?", "type": "EI", "A": "초대해 줘서 기쁘다", "B": "어색할 것 같아 망설인다"},
+             3: {"title": "받고 싶은 생일선물은?", "type": "TF", "A": "날 생각해서 고른 선물", "B": "실용적인 선물"},
+
+             4: {"title": "생일파티 자리는 어떤 걸 선호하는가", "type": "JP", "A": "뭘 할지 순서가 정해져있는 파티", "B": "순서 없이 노는 파티"},
+             5: {"title": "쓸데없는 선물하기에 대한 나의 생각은?", "type": "SN", "A": "쓸데없는 걸 왜 주는지 이해 안 간다", "B": "친구가 싫어할 걸 생각하니 즐겁다"},
+            6: {"title": "여러 사람이 모인 생일파티는?", "type": "EI", "A": "새로운 사람을 많이 알게 돼 좋다", "B": "재밌긴 한데 기가 빨린다"},
+
+                7: {"title": "친구가 내 생일파티에 늦었다면 먼저 듣고 싶은 말은?", "type": "TF", "A": "사과", "B": "이유"},
+             8: {"title": "파티 순서가 적힌 종이를 받았는데 그대로 하질 않는다면", "type": "JP", "A": "알아서 하겠지 생각한다", "B": "순서대로 해야 하는 거 아닌가? 생각한다"},
+            9: {"title": "파티 중에 경품을 준다고 번호가 적힌 종이를 나눠준다", "type": "SN", "A": "당첨되는 건 아닐까 생각한다", "B": "당첨돼서 경품 받고 기념사진 찍는 생각까지 한다"},
+
+         10: {"title": "약간 어색한 친구들과 같은 테이블이 됐다면", "type": "EI", "A": "어색한 분위기를 깨려 먼저 말을 한다", "B": "말하면 더 어색해질까 봐 가만히 있는다"},
+            11: {"title": "친구를 위해 준비한 내 선물은?", "type": "TF", "A": "친구를 생각하며 고른 선물과 편지", "B": "평소에 친구가 필요해 보였던 선물"},
+              12: {"title": "경품에 당첨돼 플래너를 받았다", "type": "JP", "A": "안 쓰지만 감사히 받는다", "B": "유용한 선물이라 좋아한다"}
+        }
+
+        // MBTI 결과별 동물&설명을 저장하는 자바스크립트 객체 result
+        var result = {
+            "ISTJ": {"img":"img_istj36.png"},
+            "ISFJ": {"img":"img_isfj36.png"},
+            "INFJ": {"img":"img_infj36.png"},
+            "INTJ": {"img":"img_intj36.png"},
+
+            "ISTP": {"img":"img_istp36.png"},
+            "ISFP": {"img":"img_isfp36.png"},
+            "INFP": {"img":"img_infp36.png"},
+            "INTP": {"img":"img_intp36.png"},
+
+            "ESTP": {"img":"img_estp36.png"},
+            "ESFP": {"img":"img_esfp36.png"},
+            "ENFP": {"img":"img_enfp36.png"},
+            "ENTP": {"img":"img_entp36.png"},
+
+            "ESTJ": {"img":"img_estj36.png"},
+            "ESFJ": {"img":"img_esfj36.png"},
+            "ENFJ": {"img":"img_enfj36.png"},
+            "ENTJ": {"img":"img_entj36.png"},
+        }
+        // 시작 버튼을 클릭하면 시작화면 숨기고 질문화면 보여주기
+        function start(){
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+        // A 버튼 클릭하면 해당 타입 값을 가져와서 값 1 증가 후 next()
+        $("#A").click(function(){
+            var type = $("#type").val();
+            var preValue = $("#"+type).val();
+            $("#"+type).val(parseInt(preValue)+1);
+            next();
+        });
+        // B 버튼 클릭하면 값 증가 없이 next()
+        $("#B").click(function(){
+            next();
+        });
+        function next(){
+            // 마지막 문제인 경우
+            if(num==13){
+                // 질문은 숨기고 결과 화면 보여주기
+                $(".question").hide();
+                $(".result").show();
+
+                var mbti = "";
+                
+                // 삼항 연산자를 사용해서 MBTI 계산
+                ($("#EI").val()<2) ? mbti+="I" : mbti+="E";
+                ($("#SN").val()<2) ? mbti+="N" : mbti+="S";
+                ($("#TF").val()<2) ? mbti+="T" : mbti+="F";
+                ($("#JP").val()<2) ? mbti+="J" : mbti+="P";
+                
+                // 계산된 MBTI로 이미지, 동물, 설명 값 변경
+                $("#img").attr("src",result[mbti]["img"]);
+                $("#animal").html(result[mbti]["animal"]);
+                $("#explain").html(result[mbti]["explain"]);
+            } // 마지막 문제가 아닌 경우
+            else{
+                // 프로그래스 바 1/12씩 차오르도록 구현
+                $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)');
+                // 각 문제별 문제&선택지 출력
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+
+        }
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60358a0895fc8bb9"></script>
+
+</body>
+</html>
