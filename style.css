@@ -34,7 +34,9 @@ body{
    font-family: 'Do Hyeon', sans-serif;
     line-height: 1.7;
     color: #432;
-}    
+    background: #fce2ff;
+    
+}
 
 a {
     text-decoration: none;
