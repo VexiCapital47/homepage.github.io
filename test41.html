@@ -1,0 +1,1258 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="naver-site-verification" content="5623e6989e1c57986f0d2f80226068ea8d503753" />
+
+
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta ht-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>얼굴로 보는 걸그룹 테스트</title>
+    <meta name="description" content="얼굴로 보는 걸그룹 테스트">
+    <meta name="title" content="내가 걸그룹에 들어간다면?">
+    <meta name="subject" content="나는 어느 여자 아이돌과 얼굴합이 맞을까?">
+    <meta name="keywords" content="얼굴테스트,mbti테스트,걸그룹,걸그룹테스트,아이돌테스트,레드벨벳,마마무,블랙핑크,스테이씨,아이브,에스파,여자아이들,오마이걸,있지,트와이스,걸그룹얼굴,여자아이돌얼굴,아이돌멤버,걸그룹얼굴합,걸그룹테스트">
+
+    <meta name="author" content="1990DAY">
+
+    <link rel="canonical" href="https://girlgroup.netlify.app/" />
+    <meta property="og:url" content="https://girlgroup.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="걸그룹 테스트" />
+    <meta property="og:description" content="얼굴로 보는 걸그룹 테스트"/>
+ 
+       <link rel="icon" type="image/png" href="favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+
+
+<style>
+
+
+.logo {
+    width: 100px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+.main-nav a{
+    color: #432;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+    
+
+body {
+  font-family: 'Jua', sans-serif;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #9A9A9A;
+}
+
+.file-upload {
+    padding: 3% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #ffffff;
+    background-color: #ffffff;
+    
+}
+
+.img {
+    margin: 0 auto;
+     text-align: center;
+
+}
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #F2E7FA;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+#loading {
+  display: none;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.image-upload-wrap {
+    width: 70%;
+        height: 70%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 5px;
+    border: dashed 1.5px #ffffff;
+    background-color: #FDDBE3;
+    
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #FDDBE3;
+    border: 1.5px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+.file-upload-image {
+  max-height:50%;
+  max-width: 50%;
+  margin: auto;
+  padding: 10px;
+}
+
+.try-again-btn {
+  border-radius: 40px;
+  border: solid 1.5px #ffb5b5;
+  background-color: #ffb5b5;
+}
+
+.try-again-text {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 4px 15px;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.section {
+    margin-top: 50px;
+}
+
+.title {
+  line-height: 1.67;
+  text-align: center;
+  color: #f5c82b;
+        font-size: 25px;
+}
+
+.subtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #FAA0A6;
+        font-size: 30px;
+}
+.sbtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #BDBDBD;
+        font-size: 20px;
+}
+
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+
+
+
+.upload {
+    width: 20%;
+}
+
+.upload-text {
+    width: 58%;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #35465d;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: initial;
+    color: initial;
+}
+
+.bar-container {
+  height: 2.7rem;
+}
+.bp-box {
+ position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(255, 102, 102, 0.2);
+}
+.bp-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 102, 102, 1);
+}
+.ie-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+ background-color: rgba(117, 204, 84, 0.2);
+}
+.ie-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+     background-color: rgba(117, 204, 84, 1);
+}
+.it-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+ background-color: rgba(217, 139, 209, 0.2);
+}
+.it-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+background-color: rgba(217, 139, 209, 1);
+}
+.iv-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+background-color: rgba(4, 146, 255, 0.2);
+}
+.iv-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(4, 146, 255, 1);
+}
+.us-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+background-color: rgba(255, 128, 0, 0.2);
+}
+.us-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 128, 0, 1);
+}
+.om-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 206, 7, 0.2);
+}
+.om-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+    background-color: rgba(255, 206, 7, 1);
+}
+.rd-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(238, 48, 48, 0.2);
+}
+.rd-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(238, 48, 48, 1);
+}
+.sp-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(154, 0, 255, 0.2);
+}
+.sp-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(154, 0, 255, 1);
+}
+.st-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(27, 145, 9, 0.2);
+}
+.st-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(27, 145, 9, 1);
+}
+.tw-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(204, 153, 255, 0.2);
+}
+.tw-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(204, 153, 255, 1);
+}
+
+.kp-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(255, 62, 194, 0.2);
+}
+.kp-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 62, 194, 1);
+}
+
+.kr-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(42, 239, 195, 0.2);
+}
+.kr-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(42, 239, 195, 1);
+}
+.ss-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(255, 166, 166, 0.2);
+}
+.ss-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 166, 166, 1);
+}
+.pm-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(89, 100, 165, 0.2);
+}
+.pm-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(89, 100, 165, 1);
+}
+.nm-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(158, 196, 239, 0.2);
+}
+.nm-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(158, 196, 239, 1);
+}
+.nj-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(144, 144, 144, 0.2);
+}
+.nj-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(144, 144, 144, 1);
+}
+.percent-text {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.gg-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+#label-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.result-message {
+    font-size: 2rem;
+}
+
+
+.gg-explain {
+    color: #23231e;
+    font-size: 1.5rem;
+}
+.bp-gg-title {
+    color:  #FF6666;
+}
+.bp-gg-celeb {
+    color: #FF6666;
+    font-size: 1.2rem;
+}
+.ie-gg-title {
+      color: #75CC54;
+}
+.ie-gg-celeb {
+    color: #75CC54;
+    font-size: 1.2rem;
+}
+.it-gg-title {
+ color: #d98bd1;
+}
+.it-gg-celeb {
+       color: #d98bd1;
+    font-size: 1.2rem;
+}
+.iv-gg-title {
+    color: #0492FF;
+}
+.iv-gg-celeb {
+    color: #0492FF;
+    font-size: 1.2rem;
+}
+.us-gg-title {
+   color: #FF9C07;
+}
+.us-gg-celeb {
+  color: #FF9C07;
+     font-size: 1.2rem;
+}
+.om-gg-title {
+  color: #FFCE07;
+}
+.om-gg-celeb {
+    color: #FFCE07;
+    font-size: 1.2rem;
+}
+.rd-gg-title {
+   color: #ee3030;
+}
+.rd-gg-celeb {
+ color: #ee3030;
+    font-size: 1.2rem;
+}
+.sp-gg-title {
+    color: #9A00FF;
+}
+.sp-gg-celeb {
+     color: #9A00FF;
+    font-size: 1.2rem;
+}
+.st-gg-title {
+    color: #1B9109;
+}
+.st-gg-celeb {
+     color: #1B9109;
+    font-size: 1.2rem;
+}
+.tw-gg-title {
+    color: #CC99FF;
+}
+.tw-gg-celeb {
+     color: #CC99FF;
+    font-size: 1.2rem;
+}
+.kr-gg-title {
+    color: #2aefc3;
+}
+.kr-gg-celeb {
+     color: #2aefc3;
+    font-size: 1.2rem;
+}
+.ss-gg-title {
+    color: #FFA6A6;
+}
+.ss-gg-celeb {
+     color: #FFA6A6;
+    font-size: 1.2rem;
+}
+.pm-gg-title {
+    color: #5964a5;
+}
+.pm-gg-celeb {
+     color: #5964a5;
+    font-size: 1.2rem;
+}
+.kp-gg-title {
+    color: #ff3ec2;
+}
+.kp-gg-celeb {
+     color: #ff3ec2;
+    font-size: 1.2rem;
+}
+.nm-gg-title {
+    color: #9ec4ef;
+}
+.nm-gg-celeb {
+     color: #9ec4ef;
+    font-size: 1.2rem;
+}
+.nj-gg-title {
+    color: #909090;
+}
+.nj-gg-celeb {
+     color: #909090;
+    font-size: 1.2rem;
+}
+
+
+/* gender */
+input#gender {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  width: 90px;
+  height: 41px;
+  box-shadow: 0 0 0 8px #e5e9ea inset;
+  border-radius: 30px;
+  position: relative;
+}
+
+.knob {
+  position: absolute;
+  width: 41px;
+  top: 0;
+  left: 0;
+  height: 41px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #f470a7 inset;
+  background-color: #fbd4e6;
+  transition: 0.3s;
+}
+
+.knob > i {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  top: 100%;
+  background-color: #f470a7;
+  left: calc(50% - 2px);
+}
+
+.knob > i:before,
+.knob > i:after {
+  width: 6px;
+  position: absolute;
+  top: 42%;
+  content: "";
+  height: 4px;
+  background-color: #f470a7;
+}
+
+.knob > i:before {
+  left: 4px;
+}
+.knob > i:after {
+  left: -6px;
+}
+
+input:checked + label > .knob {
+  box-shadow: 0 0 0 8px #a1c6dd inset;
+  background-color: #e2ecf4;
+  transform: translateX(49px) rotate(-140deg);
+}
+
+input:checked + label > .knob > i {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after,
+input:checked + label > .knob > i:before {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after {
+  top: 14.5px;
+  width: 12px;
+  left: -7px;
+  transform: rotate(45deg);
+}
+input:checked + label > .knob > i:before {
+  top: 13px;
+  width: 12px;
+  left: 0px;
+  transform: rotate(134deg);
+}
+
+.ad-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+.coupang-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+</style>
+
+
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <meta property="og:image" content="test41.png" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+
+    <script data-ad-client="ca-pub-5522499110435321" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+</head>
+
+
+<body>
+
+
+    <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img_logo.png" alt="test it"></a>
+        </h1>
+    <nav>
+        <u1 class="main-nav">
+            <li> <a href="test.html">성격</a></li>
+            <li> <a href="face.html">얼굴</a></li>
+            <li> <a href="etc.html">그외</a></li>
+        </u1>
+    </nav>
+        
+        
+    </header>
+    
+    <div class="ad-banner">
+    <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-ZFgVzVxW8xCg2Puu" 
+ data-ad-width   = "320" 
+ data-ad-height  = "50"></ins> 
+</div>
+
+    <section class="section">
+        <h1 class="title">나에게 어울리는 걸그룹은?</h1>
+        <h2 class="subtitle">얼굴로 보는 걸그룹 테스트</h2>
+        <h2 class="sr-only">나에게 어울리는 걸그룹은?</h2>
+        <h3 class="sr-only">인공지능으로 파악한 2022년 운세</h3>
+        <h4 class="sr-only">본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.</h4>
+        <p class="sr-only">얼굴로 보는 아이돌 테스트</p>
+    </section>
+
+  <div class="img"> 
+<img class="up mt-3 pb-5" src="face41.png" alt="up">
+</div>
+
+    <h3 class="sbtitle""d-flex justify-content-center">성별 선택</h3>
+    <section class="d-flex justify-content-center">
+        <p class="d-flex align-items-center pr-3">여</p>
+        <div>
+            <input type="checkbox" id="gender">
+            <label for="gender">
+                <span class="knob">
+                    <i></i>
+                </span>
+            </label>
+        </div>
+        <p class="d-flex align-items-center pl-3">남</p>
+    </section>
+   
+   <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <div class="mt-3 container file-upload">
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+                <h3 class="mb-5 pb-4 pt-5  upload-text">사진을 올려놓거나<br>눌러서 파일 업로드</h3>
+            </div>
+        </div>
+        <div class="file-upload-content">
+            <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+            <div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading</span>
+                </div>
+                <p class="text-center">나에게 어울리는 그룹은....</p>
+            </div>
+                <p class="result-message"></p>
+            <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+
+
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox_bzap"></div>
+            
+            
+
+            <div class="pt-3 image-title-wrap">
+                <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
+                    <span class="try-again-text">다른 사진으로 해보기</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+<div class="ad-banner mt-5">
+
+    
+    <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-PaU1KUzqhRwTi6fy" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+</div>
+    <div class="ad-banner mt-1">
+<a href="https://coupa.ng/caU8fJ" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
+
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+
+
+
+<footer class="footer pt-5 container d-flex justify-content-center">
+        <div>
+            <p>&copy; test it 2023. All Rights Reserved. </p>
+        </div>
+    </footer>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('.image-upload-wrap').hide();
+                    $('.img').hide();
+                    $('#loading').show();
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show();
+                    $('.image-title').html(input.files[0].name);
+                };
+                reader.readAsDataURL(input.files[0]);
+                init().then(function() {
+                    console.log("hello");
+                    predict();
+                    $('#loading').hide();
+                });
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function() {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function() {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+        let URL;
+        const urlMale = "https://teachablemachine.withgoogle.com/models/Fo16G-_Cg/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/Fo16G-_Cg/";
+        let model, webcam, labelContainer, maxPredictions;
+       async function init() {
+            if (document.getElementById("gender").checked) {
+                URL = urlMale;
+            } else {
+                URL = urlFemale;
+            }
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                var element = document.createElement("div")
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+            }
+        }
+        async function predict() {
+            var image = document.getElementById("face-image")
+            const prediction = await model.predict(image, false);
+            prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+            console.log(prediction[0].className);
+            var resultTitle, resultExplain, resultCeleb;
+            if (document.getElementById("gender").checked) {
+                switch (prediction[0].className) {
+                      case "bp":
+                        resultTitle = "블랙핑크"
+                        resultExplain = "당신은 블랙핑크와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "블랙핑크 : 지수, 제니, 로제, 리사"
+                        break;
+                    case "ie":
+                        resultTitle = "여자아이들"
+                        resultExplain = "당신은 여자아이들과 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "여자아이들 : 미연, 민니, 소연, 우기, 슈화"
+                        break;
+                    case "it":
+                        resultTitle = "있지"
+                        resultExplain = "당신은 있지와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "있지 : 예지, 리아, 류진, 채령, 유나"
+                        break;
+                    case "iv":
+                        resultTitle = "아이브"
+                        resultExplain = "당신은 아이브와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "IVE : 안유진, 가을, 레이, 장원영, 리즈, 이서"
+                            break;
+                        
+                    case "kp":
+                        resultTitle = "케플러"
+                        resultExplain = "당신은 케플러와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "케플러 : 최유진, 샤오팅, 마시로, 김채현, 김다연, 히카루, 휴닝바히에, 서영은, 강예서"
+                        break;
+         case "kr":
+                        resultTitle = "카라"
+                        resultExplain = "당신은 카라와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "카라 : 박규리, 한승연, 구하라, 니콜, 강지영, 허영지"
+                        break;
+        case "nj":
+                        resultTitle = "뉴진스"
+                        resultExplain = "당신은 뉴진스와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "뉴진스 : 민지, 하니, 다니엘, 해린, 혜인"
+                        break;
+
+     case "nm":
+                        resultTitle = "엔믹스"
+                        resultExplain = "당신은 엔믹스와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "엔믹스 : 릴리, 해원, 설윤, 배이, 지우, 규진"
+                        break;
+
+                    case "om":
+                        resultTitle = "오마이걸"
+                        resultExplain = "당신은 오마이걸과 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "오마이걸 : 효정, 미미, 유아, 승희, 지호, 비니, 아린"
+                            break;
+
+   case "pm":
+                        resultTitle = "프로미스나인"
+                        resultExplain = "당신은 프로미스나인과 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "프로미스나인 : 이새롬, 송하영, 박지원, 노지선, 이서연, 이채영, 이나경, 백지헌"
+                            break;
+                        case "rd":
+                        resultTitle = "레드벨벳"
+                        resultExplain = "당신은 레드벨벳과 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "레드벨벳 : 웬디, 아이린, 슬기, 조이, 예리"
+                        break;
+                    case "sp":
+                        resultTitle = "에스파"
+                        resultExplain = "당신은 에스파와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "에스파 : 카리나, 윈터, 지젤, 닝닝"
+                            break;
+
+               case "ss":
+                        resultTitle = "소녀시대"
+                        resultExplain = "당신은 소녀시대와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "소녀시대 : 태연, 써니, 티파니, 효연, 유리, 수영, 윤아, 서현"
+                            break;
+
+
+                    case "tw":
+                        resultTitle = "트와이스"
+                        resultExplain = "당신은 트와이스와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "트와이스 : 나연, 정연, 모모, 사나, 지효, 미나, 다현, 채영, 쯔위"
+                            break;
+    	   case "st":
+                        resultTitle = "스테이씨"
+                        resultExplain = "당신은 스테이씨와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "스테이씨 : 수민, 시은, 아이사, 세은, 윤, 재이"
+                            break;
+    	   case "us":
+                        resultTitle = "우주소녀"
+                        resultExplain = "당신은 우주소녀와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "우주소녀 : 엑시, 설아, 보나, 수빈, 루다, 다원, 은서, 여름, 다영, 연정, 선의, 미기, 성소"
+                            break;
+
+                        
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            } else {
+                switch (prediction[0].className) {
+                         case "bp":
+                        resultTitle = "블랙핑크"
+                        resultExplain = "당신은 블랙핑크와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "블랙핑크 : 지수, 제니, 로제, 리사"
+                        break;
+                    case "ie":
+                        resultTitle = "여자아이들"
+                        resultExplain = "당신은 여자아이들과 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "여자아이들 : 미연, 민니, 소연, 우기, 슈화"
+                        break;
+                    case "it":
+                        resultTitle = "있지"
+                        resultExplain = "당신은 있지와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "있지 : 예지, 리아, 류진, 채령, 유나"
+                        break;
+                    case "iv":
+                        resultTitle = "아이브"
+                        resultExplain = "당신은 아이브와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "IVE : 안유진, 가을, 레이, 장원영, 리즈, 이서"
+                            break;
+                        
+                    case "kp":
+                        resultTitle = "케플러"
+                        resultExplain = "당신은 케플러와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "케플러 : 최유진, 샤오팅, 마시로, 김채현, 김다연, 히카루, 휴닝바히에, 서영은, 강예서"
+                        break;
+         case "kr":
+                        resultTitle = "카라"
+                        resultExplain = "당신은 카라와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "카라 : 박규리, 한승연, 구하라, 니콜, 강지영, 허영지"
+                        break;
+        case "nj":
+                        resultTitle = "뉴진스"
+                        resultExplain = "당신은 뉴진스와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "뉴진스 : 민지, 하니, 다니엘, 해린, 혜인"
+                        break;
+
+     case "nm":
+                        resultTitle = "엔믹스"
+                        resultExplain = "당신은 엔믹스와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "엔믹스 : 릴리, 해원, 설윤, 배이, 지우, 규진"
+                        break;
+
+                    case "om":
+                        resultTitle = "오마이걸"
+                        resultExplain = "당신은 오마이걸과 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "오마이걸 : 효정, 미미, 유아, 승희, 지호, 비니, 아린"
+                            break;
+
+   case "pm":
+                        resultTitle = "프로미스나인"
+                        resultExplain = "당신은 프로미스나인과 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "프로미스나인 : 이새롬, 송하영, 박지원, 노지선, 이서연, 이채영, 이나경, 백지헌"
+                            break;
+                        case "rd":
+                        resultTitle = "레드벨벳"
+                        resultExplain = "당신은 레드벨벳과 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "레드벨벳 : 웬디, 아이린, 슬기, 조이, 예리"
+                        break;
+                    case "sp":
+                        resultTitle = "에스파"
+                        resultExplain = "당신은 에스파와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "에스파 : 카리나, 윈터, 지젤, 닝닝"
+                            break;
+
+               case "ss":
+                        resultTitle = "소녀시대"
+                        resultExplain = "당신은 소녀시대와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "소녀시대 : 태연, 써니, 티파니, 효연, 유리, 수영, 윤아, 서현"
+                            break;
+
+
+                    case "tw":
+                        resultTitle = "트와이스"
+                        resultExplain = "당신은 트와이스와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "트와이스 : 나연, 정연, 모모, 사나, 지효, 미나, 다현, 채영, 쯔위"
+                            break;
+    	   case "st":
+                        resultTitle = "스테이씨"
+                        resultExplain = "당신은 스테이씨와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "스테이씨 : 수민, 시은, 아이사, 세은, 윤, 재이"
+                            break;
+    	   case "us":
+                        resultTitle = "우주소녀"
+                        resultExplain = "당신은 우주소녀와 얼굴 합이 잘 맞고 멤버들과 닮았네요"
+                        resultCeleb = "우주소녀 : 엑시, 설아, 보나, 수빈, 루다, 다원, 은서, 여름, 다영, 연정, 선의, 미기, 성소"
+                            break;
+
+
+
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            }
+            var title = "<div class='" + prediction[0].className + "-gg-title'>" + resultTitle + "</div>"
+            var explain = "<div class='gg-explain pt-2'>" + resultExplain + "</div>"
+            var celeb = "<div class='" + prediction[0].className + "-gg-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+            $('.result-message').html(title + explain + celeb);
+            var barWidth;
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability.toFixed(2) > 0.1) {
+                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                    barWidth = "4%"
+                } else {
+                    barWidth = "2%"
+                }
+                var labelTitle;
+                switch (prediction[i].className) {
+                    case "bp":
+                        labelTitle = "블랙핑크"
+                        break;
+                    case "ie":
+                        labelTitle = "아이들"
+                        break;
+                    case "it":
+                        labelTitle = "있지"
+                        break;
+                    case "iv":
+                        labelTitle = "아이브"
+                         break;
+                        case "kp":
+                        labelTitle = "케플러"
+                        break;
+                        case "kr":
+                        labelTitle = "카라"
+                        break;
+                        case "nj":
+                        labelTitle = "뉴진스"
+                        break;
+                        case "nm":
+                        labelTitle = "엔믹스"
+                        break;
+                        case "om":
+                        labelTitle = "오마이걸"
+                        break;
+                    case "pm":
+                        labelTitle = "프미나"
+                        break;
+                    case "rd":
+                        labelTitle = "레드벨벳"
+                        break;
+                    case "sp":
+                        labelTitle = "에스파"
+                         break;
+                        case "ss":
+                        labelTitle = "소녀시대"
+                        break;
+                    case "st":
+                        labelTitle = "스테이씨"
+                        break;
+                    case "tw":
+                        labelTitle = "트와이스"
+                         break;
+                        case "us":
+                        labelTitle = "우주소녀"
+                        break;
+                    default:
+                        labelTitle = "알수없음"
+            }
+                var label = "<div class='gg-label d-flex align-items-center'>" + labelTitle + "</div>"
+                var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                labelContainer.childNodes[i].innerHTML = label + bar;
+            }
+        }
+    </script>
+    <script>
+        function iosApp() {
+            document.getElementById("coupang").style.display="none";
+            $("#coupang ins").hide();
+            document.getElementById("addThis").style.display="none";
+            document.getElementById("disqus_thread").style.display="none";
+            var kakao = document.getElementsByClassName("kakao_ad_area");
+            for (var i = 0; i < kakao.length; i++) {
+              if(kakao[i]) {
+                  kakao[i].style.display="none";
+              }
+            }
+            document.getElementById("yotube-top-link").style.display="none";
+            document.getElementById("yotube-mid-link").style.display="none";
+            document.getElementById("yotube-bottom-link").style.display="none";
+        }
+    </script>
+</body>
+<!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+</html>
