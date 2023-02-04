@@ -1,0 +1,1282 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="naver-site-verification" content="76081b74cd43245d89a4160aeb9fc9a827be455d" />
+
+
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+     crossorigin="anonymous"></script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta ht-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>얼굴로 보는 남배우 테스트</title>
+    <meta name="description" content="얼굴로 보는 남배우 테스트">
+    <meta name="title" content="나는 어느 남배우와 닮은꼴일까?">
+    <meta name="subject" content="나는 어느 남배우와 닮은꼴일까?">
+    <meta name="keywords" content="얼굴테스트,mbti테스트,남배우테스트,배우닮은꼴,남배우닮은꼴,테스트잇,닮은꼴테스트,테스트잇,테스트,심리테스트,심테">
+
+    <meta name="author" content="test it">
+   
+    <link rel="canonical" href="https://b-actress.netlify.app/" />
+    <meta property="og:url" content="https://b-actress.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="남배우 테스트" />
+    <meta property="og:description" content="얼굴로 보는 남배우 테스트"/>
+
+       <link rel="icon" type="image/png" href="favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+ 
+
+<style>
+
+
+
+.logo {
+    width: 100px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+.main-nav a{
+    color: #432;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+    
+
+body {
+  font-family: 'Jua', sans-serif;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #9A9A9A;
+}
+
+.file-upload {
+    padding: 3% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #ffffff;
+    background-color: #ffffff;
+    
+}
+
+.img {
+    margin: 0 auto;
+     text-align: center;
+
+}
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #F2E7FA;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+#loading {
+  display: none;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.image-upload-wrap {
+    width: 70%;
+        height: 70%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 5px;
+    border: dashed 1.5px #ffffff;
+    background-color: #ffc9c9;
+    
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #ffc9c9;
+    border: 1.5px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+.file-upload-image {
+  max-height:50%;
+  max-width: 50%;
+  margin: auto;
+  padding: 10px;
+}
+
+.try-again-btn {
+  border-radius: 40px;
+  border: solid 1.5px #ffc9c9;
+  background-color: #ffc9c9;
+}
+
+.try-again-text {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 4px 15px;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.section {
+    margin-top: 50px;
+}
+
+.title {
+  line-height: 1.67;
+  text-align: center;
+  color: #bfbbf2;
+        font-size: 25px;
+}
+
+.subtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #948bd3;
+        font-size: 30px;
+}
+.sbtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #BDBDBD;
+        font-size: 20px;
+}
+
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+
+
+
+.upload {
+    width: 20%;
+}
+
+.upload-text {
+    width: 58%;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #35465d;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: initial;
+    color: initial;
+}
+
+.bar-container {
+  height: 2.7rem;
+}
+.ks-box {
+ position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(154, 0, 255, 0.2);
+}
+.ks-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(154, 0, 255, 1);
+}
+.bg-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+ background-color: rgba(117, 204, 84, 0.2);
+}
+.bg-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+     background-color: rgba(117, 204, 84, 1);
+}
+.sj-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+ background-color: rgba(255, 166, 166, 0.2);
+}
+.sj-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+background-color: rgba(255, 166, 166, 1);
+}
+.kj-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+background-color: rgba(4, 146, 255, 0.2);
+}
+.kj-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(4, 146, 255, 1);
+}
+.ss-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+background-color: rgba(255, 128, 0, 0.2);
+}
+.ss-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 128, 0, 1);
+}
+.sk-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 206, 7, 0.2);
+}
+.sk-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+    background-color: rgba(255, 206, 7, 1);
+}
+.bh-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(113, 174, 206, 0.2);
+}
+.bh-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(113, 174, 206, 1);
+}
+.hs-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(255, 102, 102, 0.2);
+}
+.hs-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 102, 102, 1);
+}
+.jg-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(27, 145, 9, 0.2);
+}
+.jg-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(27, 145, 9, 1);
+}
+.sh-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(255, 229, 138, 0.2);
+}
+.sh-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 229, 138, 1);
+}
+.dh-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(204, 153, 255, 0.2);
+}
+.dh-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(204, 153, 255, 1);
+}
+.js-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(249, 77, 255, 0.2);
+}
+.js-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(249, 77, 255, 1);
+}
+.sy-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(100, 191, 164, 0.2);
+}
+.sy-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(100, 191, 164, 1);
+}
+.hi-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(5, 191, 238, 0.2);
+}
+.hi-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(5, 191, 238, 1);
+}
+.ew-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(221, 10, 10, 0.2);
+}
+.ew-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(221, 10, 10, 1);
+}
+.us-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(8, 38, 123, 0.2);
+}
+.us-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(8, 38, 123, 1);
+}
+
+
+
+
+.percent-text {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.gg-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+#label-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.result-message {
+    font-size: 2rem;
+}
+
+
+.gg-explain {
+    color: #23231e;
+    font-size: 1.5rem;
+}
+.ks-gg-title {
+    color:  #9A00FF;
+}
+.ks-gg-celeb {
+    color: #9A00FF;
+    font-size: 1.2rem;
+}
+.bg-gg-title {
+      color: #75CC54;
+}
+.bg-gg-celeb {
+    color: #75CC54;
+    font-size: 1.2rem;
+}
+.sj-gg-title {
+ color: #FFA6A6;
+}
+.sj-gg-celeb {
+       color: #FFA6A6;
+    font-size: 1.2rem;
+}
+.kj-gg-title {
+    color: #0492FF;
+}
+.kj-gg-celeb {
+    color: #0492FF;
+    font-size: 1.2rem;
+}
+.ss-gg-title {
+   color: #FF9C07;
+}
+.ss-gg-celeb {
+  color: #FF9C07;
+     font-size: 1.2rem;
+}
+.sk-gg-title {
+  color: #FFCE07;
+}
+.sk-gg-celeb {
+    color: #FFCE07;
+    font-size: 1.2rem;
+}
+.bh-gg-title {
+   color: #71aece;
+}
+.bh-gg-celeb {
+ color: #71aece;
+    font-size: 1.2rem;
+}
+.hs-gg-title {
+    color: #FF6666;
+}
+.hs-gg-celeb {
+     color: #FF6666;
+    font-size: 1.2rem;
+}
+.jg-gg-title {
+    color: #1B9109;
+}
+.jg-gg-celeb {
+     color: #1B9109;
+    font-size: 1.2rem;
+}
+.sh-gg-title {
+    color: #ffe58a;
+}
+.sh-gg-celeb {
+     color: #ffe58a;
+    font-size: 1.2rem;
+}
+.dh-gg-title {
+    color: #CC99FF;
+}
+.dh-gg-celeb {
+     color: #CC99FF;
+    font-size: 1.2rem;
+}
+.js-gg-title {
+    color: #f94dff;
+}
+.js-gg-celeb {
+     color: #f94dff;
+    font-size: 1.2rem;
+}
+.sy-gg-title {
+    color: #64bfa4;
+}
+.sy-gg-celeb {
+     color: #64bfa4;
+    font-size: 1.2rem;
+}
+.hi-gg-title {
+    color: #05bfee;
+}
+.hi-gg-celeb {
+     color: #05bfee;
+    font-size: 1.2rem;
+}
+.ew-gg-title {
+    color: #dd0a0a;
+}
+.ew-gg-celeb {
+     color: #dd0a0a;
+    font-size: 1.2rem;
+}
+.us-gg-title {
+    color: #08267b;
+}
+.us-gg-celeb {
+     color: #08267b;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+/* gender */
+input#gender {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  width: 90px;
+  height: 41px;
+  box-shadow: 0 0 0 8px #e5e9ea inset;
+  border-radius: 30px;
+  position: relative;
+}
+
+.knob {
+  position: absolute;
+  width: 41px;
+  top: 0;
+  left: 0;
+  height: 41px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #f470a7 inset;
+  background-color: #fbd4e6;
+  transition: 0.3s;
+}
+
+.knob > i {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  top: 100%;
+  background-color: #f470a7;
+  left: calc(50% - 2px);
+}
+
+.knob > i:before,
+.knob > i:after {
+  width: 6px;
+  position: absolute;
+  top: 42%;
+  content: "";
+  height: 4px;
+  background-color: #f470a7;
+}
+
+.knob > i:before {
+  left: 4px;
+}
+.knob > i:after {
+  left: -6px;
+}
+
+input:checked + label > .knob {
+  box-shadow: 0 0 0 8px #a1c6dd inset;
+  background-color: #e2ecf4;
+  transform: translateX(49px) rotate(-140deg);
+}
+
+input:checked + label > .knob > i {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after,
+input:checked + label > .knob > i:before {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after {
+  top: 14.5px;
+  width: 12px;
+  left: -7px;
+  transform: rotate(45deg);
+}
+input:checked + label > .knob > i:before {
+  top: 13px;
+  width: 12px;
+  left: 0px;
+  transform: rotate(134deg);
+}
+
+.ad-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+.coupang-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <meta property="og:image" content="test49.png" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+
+    <script data-ad-client="ca-pub-5522499110435321" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+</head>
+
+
+
+<body>
+ 
+
+    <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img_logo.png" alt="test it"></a>
+        </h1>
+    <nav>
+        <u1 class="main-nav">
+            <li> <a href="https://test-it.co.kr/test.html">성격</a></li>
+            <li> <a href="https://test-it.co.kr/face.html">얼굴</a></li>
+            <li> <a href="https://test-it.co.kr/etc.html">그외</a></li>
+        </u1>
+    </nav>
+        
+        
+    </header>
+    
+    <section class="section">
+  </section>
+
+
+<div class="ad-banner">
+    <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-0YebRs0L54uA1zgM" 
+ data-ad-width   = "320" 
+ data-ad-height  = "50"></ins> 
+</div>
+
+
+
+    <section class="section">
+        <h2 class="sr-only">나와 닮은 남배우는?</h2>
+        <h3 class="sr-only">인공지능으로 파악한 남배우 닮은꼴 테스트</h3>
+        <h4 class="sr-only">본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.</h4>
+        <p class="sr-only">얼굴로 보는 남배우 테스트</p>
+    </section>
+
+  <div class="img"> 
+<img class="up mt-3 pb-5" src="face49.png" alt="up">
+</div>
+
+    <h3 class="sbtitle""d-flex justify-content-center">성별 선택</h3>
+    <section class="d-flex justify-content-center">
+        <p class="d-flex align-items-center pr-3">여</p>
+        <div>
+            <input type="checkbox" id="gender">
+            <label for="gender">
+                <span class="knob">
+                    <i></i>
+                </span>
+            </label>
+        </div>
+        <p class="d-flex align-items-center pl-3">남</p>
+    </section>
+   
+   <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <div class="mt-3 container file-upload">
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+                <h3 class="mb-5 pb-4 pt-5  upload-text">사진을 올려놓거나<br>눌러서 파일 업로드</h3>
+            </div>
+        </div>
+        <div class="file-upload-content">
+            <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+            <div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading</span>
+                </div>
+                <p class="text-center">나와 닮은 남배우는....</p>
+            </div>
+                <p class="result-message"></p>
+            <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox_bzap"></div>
+            
+
+            <div class="pt-3 image-title-wrap">
+                <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
+                    <span class="try-again-text">다른 사진으로 해보기</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+<div class="ad-banner mt-5">
+
+  <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-gEH5a9Qkgy5xx8Jm" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+</div>
+
+    <div class="ad-banner mt-1">
+<a href="https://link.coupang.com/a/NMe9R" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
+    
+  
+
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+
+
+
+<footer class="footer pt-5 container d-flex justify-content-center">
+        <div>
+            <p>&copy; test it 2023. All Rights Reserved. </p>
+        </div>
+    </footer>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('.image-upload-wrap').hide();
+                    $('.img').hide();
+                    $('#loading').show();
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show();
+                    $('.image-title').html(input.files[0].name);
+                };
+                reader.readAsDataURL(input.files[0]);
+                init().then(function() {
+                    console.log("hello");
+                    predict();
+                    $('#loading').hide();
+                });
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function() {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function() {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+        let URL;
+        const urlMale = "https://teachablemachine.withgoogle.com/models/OwFFHhJbm/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/OwFFHhJbm/";
+        let model, webcam, labelContainer, maxPredictions;
+       async function init() {
+            if (document.getElementById("gender").checked) {
+                URL = urlMale;
+            } else {
+                URL = urlFemale;
+            }
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                var element = document.createElement("div")
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+            }
+        }
+        async function predict() {
+            var image = document.getElementById("face-image")
+            const prediction = await model.predict(image, false);
+            prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+            console.log(prediction[0].className);
+            var resultTitle, resultExplain, resultCeleb;
+            if (document.getElementById("gender").checked) {
+                switch (prediction[0].className) {
+                     case "ks":
+                        resultTitle = "김수현"
+                        resultExplain = "당신은 배우 김수현과 닮은꼴 입니다."
+                        resultCeleb = "김수현 - 1988년생 / 골드메달리스트"
+                        break;
+                    case "bg":
+                        resultTitle = "박보검"
+                        resultExplain = "당신은 배우 박보검과 닮은꼴 입니다."
+                        resultCeleb = "박보검 - 1993년생 / 더블랙레이블"
+                        break;
+                    case "sj":
+                        resultTitle = "박서준"
+                        resultExplain = "당신은 배우 박서준과 닮은꼴 입니다."
+                        resultCeleb = "박서준 - 1988년생 / 어썸이엔티"
+                        break;
+                    case "kj":
+                        resultTitle = "서강준"
+                        resultExplain = "당신은 배우 서강준과 닮은꼴 입니다."
+                        resultCeleb = "서강준 - 1993년생 / 맨오브크리에이션"
+                            break;
+                        
+                    case "ss":
+                        resultTitle = "손석구"
+                        resultExplain = "당신은 배우 손석구와 닮은꼴 입니다."
+                        resultCeleb = "손석구 - 1983년생 / 샛별당엔터테인먼트"
+                        break;
+                    case "sk":
+                        resultTitle = "송강"
+                        resultExplain = "당신은 배우 송강과 닮은꼴 입니다."
+                        resultCeleb = "송강 - 1994년생 / 나무엑터스"
+                            break;
+                        case "bh":
+                        resultTitle = "안보현"
+                        resultExplain = "당신은 배우 안보현과 닮은꼴 입니다."
+                        resultCeleb = "안보현 - 1988년생 / FN엔터테인먼트"
+                        break;
+                    case "hs":
+                        resultTitle = "안효섭"
+                        resultExplain = "당신은 배우 안효섭과 닮은꼴 입니다."
+                        resultCeleb = "안효섭 - 1995년생 / 더프레젠트컴퍼니"
+                            break;
+                    case "jg":
+                        resultTitle = "여진구"
+                        resultExplain = "당신은 배우 여진구와 닮은꼴 입니다."
+                        resultCeleb = "여진구 - 1997년생 / JANUS ENT"
+                            break;
+    	   case "sh":
+                        resultTitle = "유승호"
+                        resultExplain = "당신은 배우 유승호와 닮은꼴 입니다."
+                        resultCeleb = "유승호 - 1993년생 / YG엔터테인먼트"
+                            break;
+
+
+    	   case "dh":
+                        resultTitle = "이도현"
+                        resultExplain = "당신은 배우 이도현과 닮은꼴 입니다."
+                        resultCeleb = "이도현 - 1995년생 / 위에화엔터테인먼트코리아"
+                            break;
+
+    	   case "js":
+                        resultTitle = "이종석"
+                        resultExplain = "당신은 배우 이종석과 닮은꼴 입니다."
+                        resultCeleb = "이종석 - 1989년생 / 하이지음스튜디오"
+                            break;
+
+    	   case "sy":
+                        resultTitle = "임시완"
+                        resultExplain = "당신은 배우 임시완과 닮은꼴 입니다."
+                        resultCeleb = "임시완 - 1988년생 / 플럼에이앤씨"
+                            break;
+    	   case "hi":
+                        resultTitle = "정해인"
+                        resultExplain = "당신은 배우 정해인과 닮은꼴 입니다."
+                        resultCeleb = "정해인 - 1988년생 / FNC엔터테인먼트"
+                            break;
+
+    	   case "ew":
+                        resultTitle = "차은우"
+                        resultExplain = "당신은 배우 차은우와 닮은꼴 입니다."
+                        resultCeleb = "차은우 - 1997년생 / 판타지오"
+                            break;
+    	   case "us":
+                        resultTitle = "최우식"
+                        resultExplain = "당신은 배우 최우식과 닮은꼴 입니다."
+                        resultCeleb = "최우식 - 1990년생 / 매니지먼트 숲"
+                            break;
+    	
+
+
+                        
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            } else {
+                switch (prediction[0].className) {
+                               case "ks":
+                        resultTitle = "김수현"
+                        resultExplain = "당신은 배우 김수현과 닮은꼴 입니다."
+                        resultCeleb = "김수현 - 1988년생 / 골드메달리스트"
+                        break;
+                    case "bg":
+                        resultTitle = "박보검"
+                        resultExplain = "당신은 배우 박보검과 닮은꼴 입니다."
+                        resultCeleb = "박보검 - 1993년생 / 더블랙레이블"
+                        break;
+                    case "sj":
+                        resultTitle = "박서준"
+                        resultExplain = "당신은 배우 박서준과 닮은꼴 입니다."
+                        resultCeleb = "박서준 - 1988년생 / 어썸이엔티"
+                        break;
+                    case "kj":
+                        resultTitle = "서강준"
+                        resultExplain = "당신은 배우 서강준과 닮은꼴 입니다."
+                        resultCeleb = "서강준 - 1993년생 / 맨오브크리에이션"
+                            break;
+                        
+                    case "ss":
+                        resultTitle = "손석구"
+                        resultExplain = "당신은 배우 손석구와 닮은꼴 입니다."
+                        resultCeleb = "손석구 - 1983년생 / 샛별당엔터테인먼트"
+                        break;
+                    case "sk":
+                        resultTitle = "송강"
+                        resultExplain = "당신은 배우 송강과 닮은꼴 입니다."
+                        resultCeleb = "송강 - 1994년생 / 나무엑터스"
+                            break;
+                        case "bh":
+                        resultTitle = "안보현"
+                        resultExplain = "당신은 배우 안보현과 닮은꼴 입니다."
+                        resultCeleb = "안보현 - 1988년생 / FN엔터테인먼트"
+                        break;
+                    case "hs":
+                        resultTitle = "안효섭"
+                        resultExplain = "당신은 배우 안효섭과 닮은꼴 입니다."
+                        resultCeleb = "안효섭 - 1995년생 / 더프레젠트컴퍼니"
+                            break;
+                    case "jg":
+                        resultTitle = "여진구"
+                        resultExplain = "당신은 배우 여진구와 닮은꼴 입니다."
+                        resultCeleb = "여진구 - 1997년생 / JANUS ENT"
+                            break;
+    	   case "sh":
+                        resultTitle = "유승호"
+                        resultExplain = "당신은 배우 유승호와 닮은꼴 입니다."
+                        resultCeleb = "유승호 - 1993년생 / YG엔터테인먼트"
+                            break;
+
+
+    	   case "dh":
+                        resultTitle = "이도현"
+                        resultExplain = "당신은 배우 이도현과 닮은꼴 입니다."
+                        resultCeleb = "이도현 - 1995년생 / 위에화엔터테인먼트코리아"
+                            break;
+
+    	   case "js":
+                        resultTitle = "이종석"
+                        resultExplain = "당신은 배우 이종석과 닮은꼴 입니다."
+                        resultCeleb = "이종석 - 1989년생 / 하이지음스튜디오"
+                            break;
+
+    	   case "sy":
+                        resultTitle = "임시완"
+                        resultExplain = "당신은 배우 임시완과 닮은꼴 입니다."
+                        resultCeleb = "임시완 - 1988년생 / 플럼에이앤씨"
+                            break;
+    	   case "hi":
+                        resultTitle = "정해인"
+                        resultExplain = "당신은 배우 정해인과 닮은꼴 입니다."
+                        resultCeleb = "정해인 - 1988년생 / FNC엔터테인먼트"
+                            break;
+
+    	   case "ew":
+                        resultTitle = "차은우"
+                        resultExplain = "당신은 배우 차은우와 닮은꼴 입니다."
+                        resultCeleb = "차은우 - 1997년생 / 판타지오"
+                            break;
+    	   case "us":
+                        resultTitle = "최우식"
+                        resultExplain = "당신은 배우 최우식과 닮은꼴 입니다."
+                        resultCeleb = "최우식 - 1990년생 / 매니지먼트 숲"
+                            break;
+    	
+
+
+
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            }
+            var title = "<div class='" + prediction[0].className + "-gg-title'>" + resultTitle + "</div>"
+            var explain = "<div class='gg-explain pt-2'>" + resultExplain + "</div>"
+            var celeb = "<div class='" + prediction[0].className + "-gg-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+            $('.result-message').html(title + explain + celeb);
+            var barWidth;
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability.toFixed(2) > 0.1) {
+                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                    barWidth = "4%"
+                } else {
+                    barWidth = "2%"
+                }
+                var labelTitle;
+                switch (prediction[i].className) {
+                    case "ks":
+                        labelTitle = "김수현"
+                        break;
+                    case "bg":
+                        labelTitle = "박보검"
+                        break;
+                    case "sj":
+                        labelTitle = "박서준"
+                        break;
+                    case "kj":
+                        labelTitle = "서강준"
+                         break;
+                        case "ss":
+                        labelTitle = "손석구"
+                        break;
+                    case "sk":
+                        labelTitle = "송강"
+                        break;
+                    case "bh":
+                        labelTitle = "안보현"
+                        break;
+                    case "hs":
+                        labelTitle = "안효섭"
+                         break;
+                    case "jg":
+                        labelTitle = "여진구"
+                        break;
+                    case "sh":
+                        labelTitle = "유승호"
+                         break;
+                   case "dh":
+                        labelTitle = "이도현"
+                         break;
+                   case "js":
+                        labelTitle = "이종석"
+                         break;
+                   case "sy":
+                        labelTitle = "임시완"
+                         break;
+                   case "hi":
+                        labelTitle = "정해인"
+                         break;
+                   case "ew":
+                        labelTitle = "차은우"
+                         break;
+                               case "us":
+                        labelTitle = "최우식"
+                         break;
+              
+
+
+
+                    default:
+                        labelTitle = "알수없음"
+            }
+                var label = "<div class='gg-label d-flex align-items-center'>" + labelTitle + "</div>"
+                var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                labelContainer.childNodes[i].innerHTML = label + bar;
+            }
+        }
+    </script>
+    <script>
+        function iosApp() {
+            document.getElementById("coupang").style.display="none";
+            $("#coupang ins").hide();
+            document.getElementById("addThis").style.display="none";
+            document.getElementById("disqus_thread").style.display="none";
+            var kakao = document.getElementsByClassName("kakao_ad_area");
+            for (var i = 0; i < kakao.length; i++) {
+              if(kakao[i]) {
+                  kakao[i].style.display="none";
+              }
+            }
+            document.getElementById("yotube-top-link").style.display="none";
+            document.getElementById("yotube-mid-link").style.display="none";
+            document.getElementById("yotube-bottom-link").style.display="none";
+        }
+    </script>
+</body>
+<!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+</html>
