@@ -1,0 +1,1278 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="naver-site-verification" content="76081b74cd43245d89a4160aeb9fc9a827be455d" />
+
+
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+     crossorigin="anonymous"></script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta ht-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>얼굴로 보는 직업 테스트</title>
+    <meta name="description" content="얼굴로 보는 직업 테스트">
+    <meta name="title" content="내 얼굴은 어떤 직업이 어울릴까?">
+    <meta name="subject" content="내 얼굴은 어떤 직업이 어울릴까?">
+    <meta name="keywords" content="얼굴테스트,mbti테스트,직업테스트,얼굴직업테스트,테스트잇,닮은꼴테스트">
+
+    <meta name="author" content="test it">
+   
+    <link rel="canonical" href="https://test-it.co.kr/test55.html" />
+    <meta property="og:url" content="https://test-it.co.kr/test55.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="얼굴로 보는 직업 테스트" />
+    <meta property="og:description" content="얼굴로 보는 직업 테스트"/>
+
+       <link rel="icon" type="image/png" href="favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+ 
+
+<style>
+
+
+
+.logo {
+    width: 100px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+.main-nav a{
+    color: #432;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+    
+
+body {
+  font-family: 'Jua', sans-serif;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #9A9A9A;
+}
+
+.file-upload {
+    padding: 3% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #ffffff;
+    background-color: #ffffff;
+    
+}
+
+.img {
+    margin: 0 auto;
+     text-align: center;
+
+}
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #F2E7FA;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+#loading {
+  display: none;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.image-upload-wrap {
+    width: 70%;
+        height: 70%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 5px;
+    border: dashed 1.5px #ffffff;
+    background-color: #ec9ec4;
+    
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #ec9ec4;
+    border: 1.5px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+.file-upload-image {
+  max-height:50%;
+  max-width: 50%;
+  margin: auto;
+  padding: 10px;
+}
+
+.try-again-btn {
+  border-radius: 40px;
+  border: solid 1.5px #ec9ec4;
+  background-color: #ec9ec4;
+}
+
+.try-again-text {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 4px 15px;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.section {
+    margin-top: 50px;
+}
+
+.title {
+  line-height: 1.67;
+  text-align: center;
+  color: #bfbbf2;
+        font-size: 25px;
+}
+
+.subtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #948bd3;
+        font-size: 30px;
+}
+.sbtitle {
+  line-height: 1.53;
+  text-align: center;
+  color: #BDBDBD;
+        font-size: 20px;
+}
+
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+
+
+
+.upload {
+    width: 20%;
+}
+
+.upload-text {
+    width: 58%;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #35465d;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: initial;
+    color: initial;
+}
+
+.bar-container {
+  height: 2.7rem;
+}
+.gh-box {
+ position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(154, 0, 255, 0.2);
+}
+.gh-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(154, 0, 255, 1);
+}
+.gb-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+ background-color: rgba(117, 204, 84, 0.2);
+}
+.gb-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+     background-color: rgba(117, 204, 84, 1);
+}
+.gs-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+ background-color: rgba(255, 166, 166, 0.2);
+}
+.gs-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+background-color: rgba(255, 166, 166, 1);
+}
+.pl-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+background-color: rgba(4, 146, 255, 0.2);
+}
+.pl-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(4, 146, 255, 1);
+}
+.gm-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+background-color: rgba(255, 128, 0, 0.2);
+}
+.gm-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 128, 0, 1);
+}
+.dj-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(255, 206, 7, 0.2);
+}
+.dj-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+    background-color: rgba(255, 206, 7, 1);
+}
+.bh-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(113, 174, 206, 0.2);
+}
+.bh-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+   background-color: rgba(113, 174, 206, 1);
+}
+.ss-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(255, 102, 102, 0.2);
+}
+.ss-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 102, 102, 1);
+}
+.sm-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(27, 145, 9, 0.2);
+}
+.sm-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(27, 145, 9, 1);
+}
+.st-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(255, 229, 138, 0.2);
+}
+.st-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(255, 229, 138, 1);
+}
+.yr-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(204, 153, 255, 0.2);
+}
+.yr-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(204, 153, 255, 1);
+}
+.ud-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(249, 77, 255, 0.2);
+}
+.ud-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(249, 77, 255, 1);
+}
+.dt-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(100, 191, 164, 0.2);
+}
+.dt-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(100, 191, 164, 1);
+}
+.cr-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(5, 191, 238, 0.2);
+}
+.cr-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(5, 191, 238, 1);
+}
+.gr-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(221, 10, 10, 0.2);
+}
+.gr-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(221, 10, 10, 1);
+}
+.hk-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+   background-color: rgba(8, 38, 123, 0.2);
+}
+.hk-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+ background-color: rgba(8, 38, 123, 1);
+}
+
+
+
+
+.percent-text {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.gg-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+#label-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.result-message {
+    font-size: 2rem;
+}
+
+
+.gg-explain {
+    color: #23231e;
+    font-size: 1.5rem;
+}
+.gh-gg-title {
+    color:  #9A00FF;
+}
+.gh-gg-celeb {
+    color: #9A00FF;
+    font-size: 1.2rem;
+}
+.gb-gg-title {
+      color: #75CC54;
+}
+.gb-gg-celeb {
+    color: #75CC54;
+    font-size: 1.2rem;
+}
+.gs-gg-title {
+ color: #FFA6A6;
+}
+.gs-gg-celeb {
+       color: #FFA6A6;
+    font-size: 1.2rem;
+}
+.pl-gg-title {
+    color: #0492FF;
+}
+.pl-gg-celeb {
+    color: #0492FF;
+    font-size: 1.2rem;
+}
+.gm-gg-title {
+   color: #FF9C07;
+}
+.gm-gg-celeb {
+  color: #FF9C07;
+     font-size: 1.2rem;
+}
+.dj-gg-title {
+  color: #FFCE07;
+}
+.dj-gg-celeb {
+    color: #FFCE07;
+    font-size: 1.2rem;
+}
+.bh-gg-title {
+   color: #71aece;
+}
+.bh-gg-celeb {
+ color: #71aece;
+    font-size: 1.2rem;
+}
+.ss-gg-title {
+    color: #FF6666;
+}
+.ss-gg-celeb {
+     color: #FF6666;
+    font-size: 1.2rem;
+}
+.sm-gg-title {
+    color: #1B9109;
+}
+.sm-gg-celeb {
+     color: #1B9109;
+    font-size: 1.2rem;
+}
+.st-gg-title {
+    color: #ffe58a;
+}
+.st-gg-celeb {
+     color: #ffe58a;
+    font-size: 1.2rem;
+}
+.yr-gg-title {
+    color: #CC99FF;
+}
+.yr-gg-celeb {
+     color: #CC99FF;
+    font-size: 1.2rem;
+}
+.ud-gg-title {
+    color: #f94dff;
+}
+.ud-gg-celeb {
+     color: #f94dff;
+    font-size: 1.2rem;
+}
+.dt-gg-title {
+    color: #64bfa4;
+}
+.dt-gg-celeb {
+     color: #64bfa4;
+    font-size: 1.2rem;
+}
+.cr-gg-title {
+    color: #05bfee;
+}
+.cr-gg-celeb {
+     color: #05bfee;
+    font-size: 1.2rem;
+}
+.gr-gg-title {
+    color: #dd0a0a;
+}
+.gr-gg-celeb {
+     color: #dd0a0a;
+    font-size: 1.2rem;
+}
+.hk-gg-title {
+    color: #08267b;
+}
+.hk-gg-celeb {
+     color: #08267b;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+/* gender */
+input#gender {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  width: 90px;
+  height: 41px;
+  box-shadow: 0 0 0 8px #e5e9ea inset;
+  border-radius: 30px;
+  position: relative;
+}
+
+.knob {
+  position: absolute;
+  width: 41px;
+  top: 0;
+  left: 0;
+  height: 41px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #f470a7 inset;
+  background-color: #fbd4e6;
+  transition: 0.3s;
+}
+
+.knob > i {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  top: 100%;
+  background-color: #f470a7;
+  left: calc(50% - 2px);
+}
+
+.knob > i:before,
+.knob > i:after {
+  width: 6px;
+  position: absolute;
+  top: 42%;
+  content: "";
+  height: 4px;
+  background-color: #f470a7;
+}
+
+.knob > i:before {
+  left: 4px;
+}
+.knob > i:after {
+  left: -6px;
+}
+
+input:checked + label > .knob {
+  box-shadow: 0 0 0 8px #a1c6dd inset;
+  background-color: #e2ecf4;
+  transform: translateX(49px) rotate(-140deg);
+}
+
+input:checked + label > .knob > i {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after,
+input:checked + label > .knob > i:before {
+  background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after {
+  top: 14.5px;
+  width: 12px;
+  left: -7px;
+  transform: rotate(45deg);
+}
+input:checked + label > .knob > i:before {
+  top: 13px;
+  width: 12px;
+  left: 0px;
+  transform: rotate(134deg);
+}
+
+.ad-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+.coupang-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <meta property="og:image" content="face55.png" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+
+    <script data-ad-client="ca-pub-5522499110435321" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+</head>
+
+
+
+<body>
+ 
+
+    <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img_logo.png" alt="test it"></a>
+        </h1>
+    <nav>
+        <u1 class="main-nav">
+            <li> <a href="https://test-it.co.kr/test.html">성격</a></li>
+            <li> <a href="https://test-it.co.kr/face.html">얼굴</a></li>
+            <li> <a href="https://test-it.co.kr/etc.html">그외</a></li>
+        </u1>
+    </nav>
+        
+        
+    </header>
+    
+    <section class="section">
+  </section>
+
+
+<div class="ad-banner">
+    <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-4mtwZ5BrHz02FHCF" 
+ data-ad-width   = "320" 
+ data-ad-height  = "50"></ins> 
+</div>
+
+
+
+    <section class="section">
+
+        <h2 class="sr-only">얼굴로 보는 나의 직업은?</h2>
+        <h3 class="sr-only">인공지능으로 파악한 직업 찾기 테스트</h3>
+        <h4 class="sr-only">본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.</h4>
+        <p class="sr-only">얼굴로 보는 직업 테스트</p>
+    </section>
+
+  <div class="img"> 
+<img class="up mt-3 pb-5" src="face55.png" alt="up">
+</div>
+
+    <h3 class="sbtitle""d-flex justify-content-center">성별 선택</h3>
+    <section class="d-flex justify-content-center">
+        <p class="d-flex align-items-center pr-3">여</p>
+        <div>
+            <input type="checkbox" id="gender">
+            <label for="gender">
+                <span class="knob">
+                    <i></i>
+                </span>
+            </label>
+        </div>
+        <p class="d-flex align-items-center pl-3">남</p>
+    </section>
+   
+   <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <div class="mt-3 container file-upload">
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+                <h3 class="mb-5 pb-4 pt-5  upload-text">사진을 올려놓거나<br>눌러서 파일 업로드</h3>
+            </div>
+        </div>
+        <div class="file-upload-content">
+            <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+            <div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading</span>
+                </div>
+                <p class="text-center">직업을 찾고 있어요...</p>
+            </div>
+                <p class="result-message"></p>
+            <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox_bzap"></div>
+            
+
+            <div class="pt-3 image-title-wrap">
+                <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
+                    <span class="try-again-text">다른 사진으로 해보기</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+<div class="ad-banner mt-5">
+
+  <ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-rznRlLGekxNQxYIM" 
+ data-ad-width   = "320" 
+ data-ad-height  = "100"></ins> 
+</div>
+
+    <div class="ad-banner mt-1">
+<a href="https://link.coupang.com/a/OI6Y9" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
+  
+
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+
+
+
+<footer class="footer pt-5 container d-flex justify-content-center">
+        <div>
+            <p>&copy; test it 2023. All Rights Reserved. </p>
+        </div>
+    </footer>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('.image-upload-wrap').hide();
+                    $('.img').hide();
+                    $('#loading').show();
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show();
+                    $('.image-title').html(input.files[0].name);
+                };
+                reader.readAsDataURL(input.files[0]);
+                init().then(function() {
+                    console.log("hello");
+                    predict();
+                    $('#loading').hide();
+                });
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function() {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function() {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+        let URL;
+        const urlMale = "https://teachablemachine.withgoogle.com/models/eK5ydSRwk/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/eK5ydSRwk/";
+        let model, webcam, labelContainer, maxPredictions;
+       async function init() {
+            if (document.getElementById("gender").checked) {
+                URL = urlMale;
+            } else {
+                URL = urlFemale;
+            }
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                var element = document.createElement("div")
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+            }
+        }
+        async function predict() {
+            var image = document.getElementById("face-image")
+            const prediction = await model.predict(image, false);
+            prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+            console.log(prediction[0].className);
+            var resultTitle, resultExplain, resultCeleb;
+            if (document.getElementById("gender").checked) {
+                switch (prediction[0].className) {
+                                        case "gh":
+                        resultTitle = "간호사"
+                        resultExplain = "당신은 간호사 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "의사의 진료를 돕고 환자를 돌보는 사람"
+                        break;
+                    case "gb":
+                        resultTitle = "개발자"
+                        resultExplain = "당신은 개발자 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "새로운 물건을 만들거나 새로운 생각을 내놓는 직업"
+                        break;
+                    case "gs":
+                        resultTitle = "검사"
+                        resultExplain = "당신은 검사 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "검찰권을 행사하는 사법관. 범죄를 수사하고 공소를 제기하며 재판을 집행하는 사람"
+                        break;
+                    case "pl":
+                        resultTitle = "경찰"
+                        resultExplain = "당신은 경찰 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "사회의 공공 안전과 법 질서를 유지하기 위한 행정작용 또는 그러한 목적을 위해 조직된 기관"
+                            break;
+                        
+                    case "gm":
+                        resultTitle = "공무원"
+                        resultExplain = "당신은 공무원 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "국가 또는 지방 공공 단체의 사무를 맡아보는 사람"
+                        break;
+                    case "dj":
+                        resultTitle = "디자이너"
+                        resultExplain = "당신은 디자이너 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "디자인을 전문으로 하는 사람"
+                            break;
+                        case "bh":
+                        resultTitle = "변호사"
+                        resultExplain = "당신은 변호사 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "법률에 규정된 자격을 가지고 소송 당사자나 관계인의 의뢰 또는 법원의 명령에 따라 피고나 원고를 변론하며 그 밖의 법률에 관한 업무에 종사하는 사람"
+                        break;
+                    case "ss":
+                        resultTitle = "교사"
+                        resultExplain = "당신은 교사 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "주로 학교에서 일정한 자격을 가지고 학생을 가르치는 사람"
+                            break;
+                    case "sm":
+                        resultTitle = "승무원"
+                        resultExplain = "당신은 승무원 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "운행 중인 차, 기차, 배, 비행기 따위의 안에서 운행과 관련된 직무와 승객에 관한 사무를 맡아서 하는 사람"
+                            break;
+    	   case "st":
+                        resultTitle = "연예인"
+                        resultExplain = "당신은 연예인 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "연예에 종사하는 배우, 가수, 무용가 등을 통틀어 이르는 말"
+                            break;
+
+    	   case "yr":
+                        resultTitle = "요리사"
+                        resultExplain = "당신은 요리사 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "요리를 전문으로 하는 사람"
+                            break;
+
+    	   case "ud":
+                        resultTitle = "운동선수"
+                        resultExplain = "당신은 운동선수 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "운동 경기에 뛰어난 재주가 있거나 전문적으로 운동을 하는 사람"
+                            break;
+    	   case "dt":
+                        resultTitle = "의사"
+                        resultExplain = "당신은 의사 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "일정한 자격을 가지고 병을 고치는 것을 직업으로 하는 사람"
+                            break;
+
+    	   case "cr":
+                        resultTitle = "크리에이터"
+                        resultExplain = "당신은 크리에이터 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "새로운 광고를 처음으로 만들어 내는 사람"
+                            break;
+    	   case "gr":
+                        resultTitle = "프로게이머"
+                        resultExplain = "당신은 프로게이머 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "컴퓨터 네트워크에서 벌어지는 게임 대회에 출전하는 사람"
+                            break;
+    	   case "hk":
+                        resultTitle = "회계사"
+                        resultExplain = "당신은 회계사 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "회계에 관한 감사, 감정, 계산, 정리, 입안, 세무 대리 따위를 전문적으로 처리할 수 있는 법적 자격을 갖춘 사람"
+                            break;
+    	   
+
+
+                        
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            } else {
+                switch (prediction[0].className) {
+                           case "gh":
+                        resultTitle = "간호사"
+                        resultExplain = "당신은 간호사 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "의사의 진료를 돕고 환자를 돌보는 사람"
+                        break;
+                    case "gb":
+                        resultTitle = "개발자"
+                        resultExplain = "당신은 개발자 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "새로운 물건을 만들거나 새로운 생각을 내놓는 직업"
+                        break;
+                    case "gs":
+                        resultTitle = "검사"
+                        resultExplain = "당신은 검사 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "검찰권을 행사하는 사법관. 범죄를 수사하고 공소를 제기하며 재판을 집행하는 사람"
+                        break;
+                    case "pl":
+                        resultTitle = "경찰"
+                        resultExplain = "당신은 경찰 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "사회의 공공 안전과 법 질서를 유지하기 위한 행정작용 또는 그러한 목적을 위해 조직된 기관"
+                            break;
+                        
+                    case "gm":
+                        resultTitle = "공무원"
+                        resultExplain = "당신은 공무원 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "국가 또는 지방 공공 단체의 사무를 맡아보는 사람"
+                        break;
+                    case "dj":
+                        resultTitle = "디자이너"
+                        resultExplain = "당신은 디자이너 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "디자인을 전문으로 하는 사람"
+                            break;
+                        case "bh":
+                        resultTitle = "변호사"
+                        resultExplain = "당신은 변호사 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "법률에 규정된 자격을 가지고 소송 당사자나 관계인의 의뢰 또는 법원의 명령에 따라 피고나 원고를 변론하며 그 밖의 법률에 관한 업무에 종사하는 사람"
+                        break;
+                    case "ss":
+                        resultTitle = "교사"
+                        resultExplain = "당신은 교사 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "주로 학교에서 일정한 자격을 가지고 학생을 가르치는 사람"
+                            break;
+                    case "sm":
+                        resultTitle = "승무원"
+                        resultExplain = "당신은 승무원 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "운행 중인 차, 기차, 배, 비행기 따위의 안에서 운행과 관련된 직무와 승객에 관한 사무를 맡아서 하는 사람"
+                            break;
+    	   case "st":
+                        resultTitle = "연예인"
+                        resultExplain = "당신은 연예인 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "연예에 종사하는 배우, 가수, 무용가 등을 통틀어 이르는 말"
+                            break;
+
+    	   case "yr":
+                        resultTitle = "요리사"
+                        resultExplain = "당신은 요리사 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "요리를 전문으로 하는 사람"
+                            break;
+
+    	   case "ud":
+                        resultTitle = "운동선수"
+                        resultExplain = "당신은 운동선수 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "운동 경기에 뛰어난 재주가 있거나 전문적으로 운동을 하는 사람"
+                            break;
+    	   case "dt":
+                        resultTitle = "의사"
+                        resultExplain = "당신은 의사 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "일정한 자격을 가지고 병을 고치는 것을 직업으로 하는 사람"
+                            break;
+
+    	   case "cr":
+                        resultTitle = "크리에이터"
+                        resultExplain = "당신은 크리에이터 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "새로운 광고를 처음으로 만들어 내는 사람"
+                            break;
+    	   case "gr":
+                        resultTitle = "프로게이머"
+                        resultExplain = "당신은 프로게이머 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "컴퓨터 네트워크에서 벌어지는 게임 대회에 출전하는 사람"
+                            break;
+    	   case "hk":
+                        resultTitle = "회계사"
+                        resultExplain = "당신은 회계사 직업이 어울리는 얼굴을 갖고 있네요"
+                        resultCeleb = "회계에 관한 감사, 감정, 계산, 정리, 입안, 세무 대리 따위를 전문적으로 처리할 수 있는 법적 자격을 갖춘 사람"
+                            break;
+    	   
+
+
+
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            }
+            var title = "<div class='" + prediction[0].className + "-gg-title'>" + resultTitle + "</div>"
+            var explain = "<div class='gg-explain pt-2'>" + resultExplain + "</div>"
+            var celeb = "<div class='" + prediction[0].className + "-gg-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+            $('.result-message').html(title + explain + celeb);
+            var barWidth;
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability.toFixed(2) > 0.1) {
+                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                    barWidth = "4%"
+                } else {
+                    barWidth = "2%"
+                }
+                var labelTitle;
+                switch (prediction[i].className) {
+                    case "gh":
+                        labelTitle = "간호사"
+                        break;
+                    case "gb":
+                        labelTitle = "개발자"
+                        break;
+                    case "gs":
+                        labelTitle = "검사"
+                        break;
+                    case "pl":
+                        labelTitle = "경찰"
+                         break;
+                        case "gm":
+                        labelTitle = "공무원"
+                        break;
+                    case "dj":
+                        labelTitle = "디자이너"
+                        break;
+                    case "bh":
+                        labelTitle = "변호사"
+                        break;
+                    case "ss":
+                        labelTitle = "교사"
+                         break;
+                    case "sm":
+                        labelTitle = "승무원"
+                        break;
+                    case "st":
+                        labelTitle = "연예인"
+                         break;
+                   case "yr":
+                        labelTitle = "요리사"
+                         break;
+                   case "ud":
+                        labelTitle = "운동선수"
+                         break;
+                   case "dt":
+                        labelTitle = "의사"
+                         break;
+                   case "cr":
+                        labelTitle = "크리에이터"
+                         break;
+                   case "gr":
+                        labelTitle = "프로게이머"
+                         break;
+                   case "hk":
+                        labelTitle = "회계사"
+                         break;
+              
+
+
+
+                    default:
+                        labelTitle = "알수없음"
+            }
+                var label = "<div class='gg-label d-flex align-items-center'>" + labelTitle + "</div>"
+                var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                labelContainer.childNodes[i].innerHTML = label + bar;
+            }
+        }
+    </script>
+    <script>
+        function iosApp() {
+            document.getElementById("coupang").style.display="none";
+            $("#coupang ins").hide();
+            document.getElementById("addThis").style.display="none";
+            document.getElementById("disqus_thread").style.display="none";
+            var kakao = document.getElementsByClassName("kakao_ad_area");
+            for (var i = 0; i < kakao.length; i++) {
+              if(kakao[i]) {
+                  kakao[i].style.display="none";
+              }
+            }
+            document.getElementById("yotube-top-link").style.display="none";
+            document.getElementById("yotube-mid-link").style.display="none";
+            document.getElementById("yotube-bottom-link").style.display="none";
+        }
+    </script>
+</body>
+<!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+</html>
