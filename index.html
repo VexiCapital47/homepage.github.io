@@ -848,10 +848,37 @@
     </div>     
         
      
-    
+    <div class="kakao-channel-wrapper">
+  <a href="kakaotalk://kl/plusfriend/testit">
+    <img src="kakao-channel-icon.png" alt="카카오톡 채널 추가" />
+  </a>
+</div>
+    <!-- HTML 코드 -->
+<div id="kakao-channel-icon">
+  <!-- 카카오톡 채널 추가 아이콘 이미지 -->
+  <img src="kakao-channel-icon.png" alt="카카오톡 채널 추가 아이콘">
+</div>
+
+<!-- JavaScript 코드 -->
+<script>
+  // 아이콘 클릭 시 채널로 이동하는 함수
+  function navigateToKakaoChannel() {
+    // 카카오톡 채널 URL
+    var kakaoChannelUrl = "http://pf.kakao.com/_xffjxmxj";
+
+    // 새 창에서 카카오톡 채널로 이동
+    window.open(kakaoChannelUrl);
+  }
+
+  // 아이콘 요소를 가져와서 클릭 이벤트를 추가
+  var iconElement = document.getElementById("kakao-channel-icon");
+  iconElement.addEventListener("click", navigateToKakaoChannel);
+</script>
+
         
         </div>
     
+
     <footer>
  <div style="wrapper">
              <p>제작/광고문의-tktkrh2@gmail.com</p>
