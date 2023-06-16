@@ -97,22 +97,27 @@ img {
     margin-top: 6%
         margin-bottom: 50px;
 }
+    /* 아이콘 스타일 */
     #kakao-channel-icon {
       position: fixed;
       right: 20px;
       bottom: 20px;
       z-index: 9999;
-      width: 95px;
-      height: 95px;
-      background-color: transparent;
-      border-radius: 50%;
+      width: 100px;
+      height: 100px;
       text-align: center;
       line-height: 50px;
       color: #FFFFFF;
       font-size: 24px;
       cursor: pointer;
+      background-color: transparent;
+      border: none;
     }
 
+    /* 아이콘 이미지 스타일 */
+    #kakao-channel-icon img {
+      background-color: transparent;
+    }
 .kakao_ad{
     width: 320px;
     margin: 0 auto;
