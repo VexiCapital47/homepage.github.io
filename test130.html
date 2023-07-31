@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+     crossorigin="anonymous"></script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>너 T야? 나의 T 성향 테스트</title>
+    <meta name="description" content="내 안에 T 성향은 어느 정도일까?">
+<meta name="keywords" content="테스트잇,성격테스트,너t야테스트,t성향테스트,f성향테스트,tf테스트,연애mbti,연애성격테스트, 심리테스트, mbti테스트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="너 T야? 나의 T 성향 테스트">
+    <meta property="og:description" content="내 안에 T 성향은 어느 정도일까?">
+    <meta property="og:image" content="img_main130.png">
+    <meta property="og:url" content="https://test-it.co.kr/test130.html">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+
+
+<style>
+
+/* start 태그와 question 태그 모두 article 태그라서 article 태그에 속성을 주면 동시에 적용됨
+.start{
+    display: flex;
+    flex-direction: column;
+}
+*/
+    @media (max-width: 600px) {
+  .result-image img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+    
+.logo {
+    width: 100px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+.main-nav a{
+    color: #432;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+    
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+ 
+.progress-bar {
+    background-color: #cbcbcb;
+}
+.progress {
+    background-color: #ffffff;
+}
+#img{
+    width: 500px;
+    height: 900px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img_main{
+    width: 500px;
+    height: 600px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.btn {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+    .at-share-btn-elements{
+        text-align: center;
+    }
+.share{
+    margin: 0 auto;
+}
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.kakao_ad2{
+    width: 320px;
+    margin: 0 auto;
+}
+.coupang_ad {
+    width: 320px;
+    margin: 0 auto;
+}
+    
+
+    #container {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+             #start-button {
+        display: block;
+        margin: 0 auto;
+        font-size: 20px;
+        background-color: #cecece;
+        color: black;
+        border: none;
+        padding: 10px 100px;
+        cursor: pointer;
+        border-radius: 5px;
+          margin-top: 20px;        
+      }
+
+      #start-button:hover {
+        background-color: #cecece;
+      }
+
+      #start-button:focus {
+        outline: none;
+      }
+   .question {
+  margin-top: 40px;
+  font-size: 16px;
+  margin: 0 auto; /* 추가 */
+  text-align: center;
+       font-weight: bold;
+         margin-bottom: 40px;
+}
+.result {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+  margin: 0 auto;
+  display: block; 
+}
+
+.result-image {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.result-image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+      #progress {
+        margin-top: 20px;
+        height: 20px;
+        background-color: #ffffff;
+          margin-bottom: 50px;
+      }
+      #progress-bar {
+        height: 100%;
+        background-color: #cbcbcb;
+        width: 0%;
+          margin-top: 10px;
+
+      }
+.choices {
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.choice {
+  display: block;
+  font-size: 15px;
+  background-color: #f8f0c2;
+  color: black;
+  border-color: #f8f0c2;
+  border: none;
+  font-weight: bold;
+  padding: 10px 10px;
+  width: 350px;
+  height: 100px;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.result button {
+  /* 추가 스타일 */
+  display: block;
+  margin: 0 auto;
+}
+    .button {
+          margin-top: 10px;
+  text-align: center;
+        display: block; 
+    }
+    .btn.btn-info.mt-3 {
+  /* 추가 스타일 */
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+    </style>
+  </head>
+  <!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#ffffff">
+            
+    <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img_logo.png" alt="test it"></a>
+        </h1>
+    <nav>
+        <u1 class="main-nav">
+            <li> <a href="https://test-it.co.kr/test.html">성격</a></li>
+            <li> <a href="https://test-it.co.kr/face.html">얼굴</a></li>
+            <li> <a href="https://test-it.co.kr/etc.html">그외</a></li>
+        </u1>
+    </nav>
+        
+        
+    </header>
+
+    
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#ffffff">
+
+
+
+        <div id="main">
+  <article class="start">
+        <img id="img_main" class="mt-3" src="img_main130.png">
+         <button id="start-button">시작하기</button>
+    </article>
+
+    
+    </div>
+    
+      <!-- 테스트 화면 -->
+      <div id="test" style="display:none">
+                  <div id="progress">
+          <div id="progress-bar"></div>
+        </div>
+        <h1> <span id="question-number"></span></h1>
+        <div class="question"></div>
+        <div class="choices">
+          <button class="choice"></button>
+          <button class="choice"></button>
+        </div>
+
+      </div>
+      
+      <!-- 결과 화면 -->
+      <div id="result" style="display:none">
+        <h1></h1>
+        <div class="result"></div>
+        <div class="result-image"></div>
+             <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox_ougq"></div>
+                
+        <button type="button" class="btn btn-info mt-3" onclick="location.href='test130.html'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 208, 208); border-color: rgb(255, 208, 208); width: 350px; height: 50px; margin: 0 auto; text-align: center;">다시 해보기</button>
+                <button type="button" class="btn btn-info mt-3" onclick="location.href='/'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 208, 208); border-color: rgb(255, 208, 208); width: 350px; height: 50px; margin: 0 auto;">다른 테스트 해보기</button>
+         
+      </div>
+
+
+    <article class="coupang_ad mt-3">
+<a href="https://link.coupang.com/a/UDUwa" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
+
+    
+    <script>
+      // JavaScript 코드
+      var questions = [
+        {
+          question: "친구가 몸이 안 좋다고 한다\n\n바로 튀어나올 나의 말은?",
+          choices: ["어디 아픈데? 병원은? 약은?", "괜찮아? 왜 아파 빨리 나아ㅠㅠ"]
+        },
+        {
+          question: "와 나 열심히 했는데 시험 망쳤어\n\n친구의 말에 나는?",
+          choices: ["얼마나 망했는데? 다음 시험은 언제야?", "다음엔 잘 볼 거야! 돼 맛있는 거 먹으러 가자"]
+        },
+        {
+          question: "회사에서 이런 후배가 더 좋다",
+          choices: ["무뚝뚝하지만 일을 잘하는 후배", "일은 좀 못하지만 살갑게 구는 후배"]
+        },
+   {
+          question: "친구를 만났는데 갑자기 엉엉 울 때\n\n내 반응은?",
+          choices: ["무슨 일이야? 너 왜 울어?", "다 괜찮다며 일단 안아준다"]
+        },
+   {
+          question: "말없이 약속시간에 1시간 늦은 친구\n\n내 화가 풀리려면?",
+          choices: ["늦은 이유를 정확히 설명해야 할 것", "진심이 담긴 사과를 해야 할 것"]
+        },
+   {
+          question: "누가 내 욕을 했다고 전해준다면?",
+          choices: ["그래? 그러든가 말든가..", "듣자마자 상처를 받는다"]
+        },
+   {
+          question: "하늘이 너무 이뻐서 연락했다는 친구\n\n내 반응은?",
+          choices: ["하늘이 이쁜 거랑 연락이랑 무슨 상관이지?", "감동을 받는다"]
+        },
+   {
+          question: "친구가 이유 없이 욕을 먹었다고 하소연을 한다면?",
+          choices: ["누가 그랬어? 걔 지금 어딨어?", "미친 거 아니야? 같이 열심히 욕해준다"]
+        },
+   {
+          question: "친구가 옷을 샀다고 신나서 보여주는데\n\n너무 안 어울린다면?",
+          choices: ["안 어울린다고 솔직히 말해준다", "친구가 상처받을까 봐 잘 어울린다고 해준다"]
+        },
+   {
+          question: "대충 한 것 같은데 결과는 좋네\n\n라는 말을 들었을 때 내 반응은?",
+          choices: ["역시 난 천재인가 봐", "뭘 안다고 대충 했다고 말하는 거지?"]
+        }
+      ];
+      
+      var currentQuestionIndex = 0;
+      var score = 0;
+      
+      var startButton = document.getElementById("start-button");
+      var questionNumber = document.getElementById("question-number");
+      var question = document.querySelector(".question");
+      var choices = document.querySelector(".choices");
+      var choiceButtons = document.querySelectorAll(".choice");
+      var result = document.querySelector(".result");
+      var resultImage = document.querySelector(".result-image");
+      var progressBar = document.getElementById("progress-bar");
+      
+      startButton.addEventListener("click", startTest);
+      for (var i = 
+0; i < choiceButtons.length; i++) {
+choiceButtons[i].addEventListener("click", selectAnswer);
+}  function startTest() {
+    // 메인화면을 숨기고 테스트 화면을 보여줌
+    document.getElementById("main").style.display = "none";
+    document.getElementById("test").style.display = "block";
+    
+    showQuestion();
+  }
+  
+  
+  function showQuestion() {
+    // 현재 문제 번호를 업데이트
+    // questionNumber.innerText = currentQuestionIndex + 1;
+
+    
+    // 문제와 선택지를 보여줌
+    question.innerText = questions[currentQuestionIndex].question;
+    for (var i = 0; i < choiceButtons.length; i++) {
+      choiceButtons[i].innerText = questions[currentQuestionIndex].choices[i];
+    }
+    
+    // 프로그래스 바를 업데이트
+    var progressPercent = (currentQuestionIndex + 1) / questions.length * 100;
+    progressBar.style.width = progressPercent + "%";
+  }
+  
+  function selectAnswer(event) {
+    // 사용자가 선택한 답변을 가져옴
+    var selectedChoiceIndex = Array.prototype.indexOf.call(choiceButtons, event.target);
+    
+    // 정답인지 확인하고 점수를 계산함
+    if (selectedChoiceIndex === 0) {
+      score++;
+    }
+    
+    // 다음 문제로 넘어감 또는 결과 화면을 보여줌
+    currentQuestionIndex++;
+    if (currentQuestionIndex === questions.length) {
+      showResult();
+    } else {
+      showQuestion();
+    }
+  }
+  
+  function showResult() {
+    // 테스트 화면을 숨기고 결과 화면을 보여줌
+    document.getElementById("test").style.display = "none";
+    document.getElementById("result").style.display = "block";
+    
+    // 결과를 계산하고 보여줌
+
+    
+    // 결과에 따른 이미지를 보여줌
+    if (score === 10) {
+      resultImage.innerHTML = '<img src="img_100t.png">';
+    } else if (score === 9) {
+      resultImage.innerHTML = '<img src="img_90t.png">';
+} else if (score === 8) {
+      resultImage.innerHTML = '<img src="img_80t.png">';
+} else if (score === 7) {
+      resultImage.innerHTML = '<img src="img_70t.png">';
+} else if (score === 6) {
+      resultImage.innerHTML = '<img src="img_60t.png">';
+} else if (score === 5) {
+      resultImage.innerHTML = '<img src="img_50t.png">';
+} else if (score === 4) {
+      resultImage.innerHTML = '<img src="img_40t.png">';
+} else if (score === 3) {
+      resultImage.innerHTML = '<img src="img_30t.png">';
+} else if (score === 2) {
+      resultImage.innerHTML = '<img src="img_20t.png">';
+} else if (score === 1) {
+      resultImage.innerHTML = '<img src="img_10t.png">';
+
+    } else {
+      resultImage.innerHTML = '<img src="img_0t.png">';
+    }
+  }
+</script>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+
+    </body>
+</html>
