@@ -872,42 +872,26 @@ input:checked + label > .knob > i:before {
             var resultTitle, resultExplain, resultCeleb;
             if (document.getElementById("gender").checked) {
                 switch (prediction[0].className) {
-                                        case "ej":
-                        resultTitle = "영자"
-                        resultExplain = "당신은 나는 솔로의 [영자]로 출연하게 됩니다."
-                        resultCeleb = "기존 [영자] 출연자와 가장 닮은 얼굴입니다."
-                        break;
+                            
+                       
                     case "es":
                         resultTitle = "영식"
                         resultExplain = "당신은 나는 솔로의 [영식]으로 출연하게 됩니다."
                         resultCeleb = "기존 [영식] 출연자와 가장 닮은 얼굴입니다."
                         break;
-                    case "hs":
+                    case "gs":
                         resultTitle = "광수"
                         resultExplain = "당신은 나는 솔로의 [광수]로 출연하게 됩니다."
                         resultCeleb = "기존 [광수] 출연자와 가장 닮은 얼굴입니다."
                         break;
-                    case "js":
-                        resultTitle = "정숙"
-                        resultExplain = "당신은 나는 솔로의 [정숙]으로 출연하게 됩니다."
-                        resultCeleb = "기존 [정숙] 출연자와 가장 닮은 얼굴입니다."
-                            break;
-                        
-                    case "os":
-                        resultTitle = "옥순"
-                        resultExplain = "당신은 나는 솔로의 [옥순]으로 출연하게 됩니다."
-                        resultCeleb = "기존 [옥순] 출연자와 가장 닮은 얼굴입니다."
-                        break;
+                   
+                  
                     case "sc":
                         resultTitle = "상철"
                         resultExplain = "당신은 나는 솔로의 [상철]로 출연하게 됩니다."
                         resultCeleb = "기존 [상철] 출연자와 가장 닮은 얼굴입니다."
                             break;
-                        case "sj":
-                        resultTitle = "순자"
-                        resultExplain = "당신은 나는 솔로의 [순자]로 출연하게 됩니다."
-                        resultCeleb = "기존 [순자] 출연자와 가장 닮은 얼굴입니다."
-                        break;
+                   
                     case "yc":
                         resultTitle = "영철"
                         resultExplain = "당신은 나는 솔로의 [영철]로 출연하게 됩니다."
@@ -918,23 +902,14 @@ input:checked + label > .knob > i:before {
                         resultExplain = "당신은 나는 솔로의 [영호]로 출연하게 됩니다."
                         resultCeleb = "기존 [영호] 출연자와 가장 닮은 얼굴입니다."
                             break;
-    	   case "yk":
-                        resultTitle = "영숙"
-                        resultExplain = "당신은 나는 솔로의 [영숙]으로 출연하게 됩니다."
-                        resultCeleb = "기존 [영숙] 출연자와 가장 닮은 얼굴입니다."
-                            break;
-
+    	  
     	   case "ys":
                         resultTitle = "영수"
                         resultExplain = "당신은 나는 솔로의 [영수]로 출연하게 됩니다."
                         resultCeleb = "기존 [영수] 출연자와 가장 닮은 얼굴입니다."
                             break;
 
-    	   case "hs":
-                        resultTitle = "현숙"
-                        resultExplain = "당신은 나는 솔로의 [현숙]으로 출연하게 됩니다."
-                        resultCeleb = "기존 [현숙] 출연자와 가장 닮은 얼굴입니다."
-                            break;
+    	   
     	
 
                         
@@ -950,16 +925,8 @@ input:checked + label > .knob > i:before {
                         resultExplain = "당신은 나는 솔로의 [영자]로 출연하게 됩니다."
                         resultCeleb = "기존 [영자] 출연자와 가장 닮은 얼굴입니다."
                         break;
-                    case "es":
-                        resultTitle = "영식"
-                        resultExplain = "당신은 나는 솔로의 [영식]으로 출연하게 됩니다."
-                        resultCeleb = "기존 [영식] 출연자와 가장 닮은 얼굴입니다."
-                        break;
-                    case "hs":
-                        resultTitle = "광수"
-                        resultExplain = "당신은 나는 솔로의 [광수]로 출연하게 됩니다."
-                        resultCeleb = "기존 [광수] 출연자와 가장 닮은 얼굴입니다."
-                        break;
+                
+                  
                     case "js":
                         resultTitle = "정숙"
                         resultExplain = "당신은 나는 솔로의 [정숙]으로 출연하게 됩니다."
@@ -971,26 +938,13 @@ input:checked + label > .knob > i:before {
                         resultExplain = "당신은 나는 솔로의 [옥순]으로 출연하게 됩니다."
                         resultCeleb = "기존 [옥순] 출연자와 가장 닮은 얼굴입니다."
                         break;
-                    case "sc":
-                        resultTitle = "상철"
-                        resultExplain = "당신은 나는 솔로의 [상철]로 출연하게 됩니다."
-                        resultCeleb = "기존 [상철] 출연자와 가장 닮은 얼굴입니다."
-                            break;
+                   
                         case "sj":
                         resultTitle = "순자"
                         resultExplain = "당신은 나는 솔로의 [순자]로 출연하게 됩니다."
                         resultCeleb = "기존 [순자] 출연자와 가장 닮은 얼굴입니다."
                         break;
-                    case "yc":
-                        resultTitle = "영철"
-                        resultExplain = "당신은 나는 솔로의 [영철]로 출연하게 됩니다."
-                        resultCeleb = "기존 [영철] 출연자와 가장 닮은 얼굴입니다."
-                            break;
-                    case "yh":
-                        resultTitle = "영호"
-                        resultExplain = "당신은 나는 솔로의 [영호]로 출연하게 됩니다."
-                        resultCeleb = "기존 [영호] 출연자와 가장 닮은 얼굴입니다."
-                            break;
+                
     	   case "yk":
                         resultTitle = "영숙"
                         resultExplain = "당신은 나는 솔로의 [영숙]으로 출연하게 됩니다."
