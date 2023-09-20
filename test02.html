@@ -191,7 +191,17 @@ article{
 .close-btn:hover {
   background-color: #f0f0f0; /* 호버 상태 배경색 (원하는 색상으로 변경 가능) */
 }
-
+    
+/* 모바일 화면 스타일 */
+@media screen and (max-width: 767px) {
+  .close-btn {
+    position: fixed;
+    bottom: 20%; /* 모바일에서 버튼 위치를 조정 */
+    left: 50%;
+    transform: translateX(-50%);
+    /* 다른 모바일 화면용 스타일 설정들... */
+  }
+}
 
 </style>
 
