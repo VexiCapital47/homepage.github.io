@@ -100,28 +100,32 @@ article{
             background-color: rgba(0, 0, 0, 0.7);
         }
 
-        /* 모달 콘텐츠 스타일 */
-        .modal-content {
-            position: absolute;
-            top: 50%; /* 화면 세로 중앙에 배치 */
-            left: 50%; /* 화면 가로 중앙에 배치 */
-            transform: translate(-50%, -50%); /* 가운데 정렬을 위한 변형 */
-            background-color: #ffdbdb;
-            margin: auto;
-            padding: 5px;
-            border: 1px solid #888;
-            width: 50%;
-            max-width: 400px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-             border-radius: 10px; /* 모달 창 모서리를 10px만큼 둥글게 만듭니다. */
-        }
-        
-        /* 모바일 화면에 대한 미디어 쿼리 */
-@media (max-width: 768px) {
-    .modal-content {
-        width: 90%; /* 모바일 화면에서 모달 창 너비를 더 좁게 조절 */
-    }
+/* 기본 모달 콘텐츠 스타일 */
+.modal-content {
+    position: absolute;
+    top: 50%; /* 화면 세로 중앙에 배치 */
+    left: 50%; /* 화면 가로 중앙에 배치 */
+    transform: translate(-50%, -50%); /* 가운데 정렬을 위한 변형 */
+    background-color: #ffdbdb;
+    margin: auto;
+    padding: 20px; /* 내용에 맞게 조절 */
+    border: 1px solid #888;
+    width: 50%; /* 모달 창의 가로 너비를 조절합니다. */
+     height: 10%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* 모달 창 모서리를 10px만큼 둥글게 만듭니다. */
 }
+        /* 모달 텍스트 스타일 */
+#modalText {
+    text-align: center; /* 가로 가운데 정렬 */
+    position: absolute; /* 위치 지정 */
+    top: 50%; /* 세로 중앙에 배치 */
+    left: 50%; /* 가로 중앙에 배치 */
+    transform: translate(-50%, -50%); /* 가운데 정렬을 위한 변형 */
+}
+
+        
 /* 닫기 버튼 스타일 */
 .close {
     position: absolute; /* 모달 내부에서 절대 위치로 설정 */
@@ -166,7 +170,7 @@ opacity: 1; /* 투명도를 완전히 없애기 */
        .start-button {
         background-color: #ffd3e2;
         color: black;
-        padding: 20px 150px;
+        padding: 10px 150px;
             border-color: #000000;
  
         cursor: pointer;
@@ -201,7 +205,7 @@ opacity: 1; /* 투명도를 완전히 없애기 */
 .question-button {
     background-color: #ffcede;
     color: black;
-    padding: 20px 0; /* 상하 패딩만 지정 */
+    padding: 10px 0; /* 상하 패딩만 지정 */
     border-color: #000000;
     cursor: pointer;
     display: block;
@@ -387,9 +391,9 @@ opacity: 1; /* 투명도를 완전히 없애기 */
     <p id="result-text"></p>
     <img id="result-image" src="" alt="결과 이미지" width="500">
     <div style="margin-top: 20px;">
-        <button type="button" class="btn btn-info" onclick="location.href='test151.html'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 253, 220); border-color: rgb(255, 242, 33); width: 350px; height: 50px;">다시 해보기</button>
+        <button type="button" class="btn btn-info" onclick="location.href='test151.html'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 220, 240); border-color: rgb(255, 220, 240); width: 350px; height: 50px;">다시 해보기</button>
         <br><br>
-        <button type="button" class="btn btn-info" onclick="location.href='/'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(248, 255, 213); border-color: rgb(223, 255, 65); width: 350px; height: 50px; margin-top: 0;">다른 테스트 해보기</button>
+        <button type="button" class="btn btn-info" onclick="location.href='/'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 220, 240); border-color: rgb(255, 220, 240); width: 350px; height: 50px; margin-top: 0;">다른 테스트 해보기</button>
     </div>
 </div>
 
