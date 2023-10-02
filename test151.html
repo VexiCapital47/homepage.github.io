@@ -398,14 +398,22 @@ opacity: 1; /* 투명도를 완전히 없애기 */
    <article class="coupang_ad mt-3">
 <a href="https://link.coupang.com/a/UJY9K" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
     <script>
+        
         let currentQuestion = 0;
         let score = 0;
 
-        function startQuiz() {
-            document.querySelector("div").style.display = "none";
-            document.getElementById("progress-container").style.display = "block";
-            showQuestion(1);
-        }
+ function startQuiz() {
+    const startButton = document.querySelector(".start-button");
+    const startImage = document.querySelector(".start-image");
+    const progressContainer = document.getElementById("progress-container");
+    
+    if (startButton && startImage && progressContainer) {
+        startButton.style.display = "none"; // 시작 버튼 숨김
+        startImage.style.display = "none";   // 시작 이미지 숨김
+        progressContainer.style.display = "block";
+        showQuestion(1);
+    }
+}
 
         function showQuestion(questionNumber) {
             document.querySelector(`#quiz-container-${questionNumber}`).style.display = "block";
