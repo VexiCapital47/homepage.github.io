@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+     crossorigin="anonymous"></script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>테스트잇 2024년 행운의 카드 뽑기</title>
+    <meta name="description" content="2024년 내가 갖게 될 행운은?">
+<meta name="keywords" content="테스트잇,성격테스트,2024년 운세,신년운세,테스트잇2024년,테스트잇행운,연애테스트,연애mbti,연애성격테스트, 심리테스트, mbti테스트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="테스트잇 2024년 행운의 카드 뽑기">
+    <meta property="og:description" content="2024년 내가 갖게 될 행운은?">
+    <meta property="og:image" content="img_main166.png">
+    <meta property="og:url" content="https://test-it.co.kr/test166">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+    
+    
+    <style>
+        
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 요소를 배치하도록 수정 */
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+    font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+.main-nav a {
+    color: #432;
+    font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+.page-header {
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+
+        
+#main-image {
+    max-width: 100%;
+    height: auto; /* 이미지의 가로 너비에 맞게 높이를 자동 조절 */
+    margin-top: 20px;
+}
+#result-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100vh;
+    margin-top: 20px;
+    object-fit: contain;
+}
+
+
+
+
+        #start-container, #card-container, #result-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #start-container {
+            text-align: center;
+        }
+
+        #start-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #start-button:hover {
+            background-color: #45a049;
+        }
+
+
+          #main-image {
+            max-width: 100%;
+            margin-top: 20px;
+        }
+#card-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    overflow: hidden;
+    margin-top: 20px;
+    text-align: center; /* 가운데 정렬 스타일 추가 */
+}
+
+#card-selection-text {
+    font-size: 18px; /* 원하는 폰트 크기로 조절하세요 */
+    margin-bottom: 10px; /* 텍스트 아래 여백 조절 */
+}
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            transition: transform 0.5s ease;
+        }
+
+        .card-container-inner {
+            display: flex;
+            align-items: center;
+        }
+
+      .card {
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    border: none; /* 테두리 제거 */
+}
+
+        .arrow-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 500px;
+            margin-top: 20px;
+        }
+
+        .arrow-buttons button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .arrow-buttons button:hover {
+            background-color: #45a049;
+        }
+
+        
+      
+
+/* 모달 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #ffe3e3;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+    border: 1px solid #ccc;
+      border-radius: 10px; /* 팝업의 테두리를 둥글게 만듦 */
+    z-index: 3;
+    text-align: center;
+    max-width: 15%;
+    max-height: 15vh;
+}
+
+#modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* 추가 스타일 */
+.modal-open #modal-overlay {
+    display: block;
+}
+
+.modal-open body {
+    overflow: hidden;
+}
+
+
+#modal-close {
+    display: none; /* X 버튼을 숨깁니다. */
+}
+
+#modal-content {
+    margin-bottom: 20px;
+}
+        
+        #confirm-button, #cancel-button {
+            background-color: #ffeda5;
+            color: black;
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+    
+        }
+
+        #confirm-button:hover, #cancel-button:hover {
+            background-color: #ffeda5;
+        }
+        
+#loading-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 10px; /* 테두리 둥글게 만듦 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    z-index: 1;
+    text-align: center;
+}
+
+#loading-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    display: none;
+    filter: blur(5px);
+}
+
+#loading-text {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+    animation: moveText 1.5s infinite;
+    text-shadow: none; /* 텍스트의 검은 테두리 제거 */
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+        
+     @media only screen and (max-width: 600px) {
+    /* 화면 너비가 600px 이하일 때 적용되는 스타일 */
+    #card-container {
+        width: 90%;
+    }
+
+    .card {
+        width: 80px;
+        height: 120px;
+        margin: 5px;
+    }
+
+    #main-image {
+        max-width: 90%;
+    }
+
+    #result-img {
+        max-width: 90%;
+    }
+}
+
+..coupang_ad {
+    width: 320px;
+    margin: 20px auto; /* 상단 여백만 설정 */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}  
+    </style>
+</head>
+<body>
+    <body class="container" style="background-color:#ffffff">
+        
+   <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img_logo.png" alt="test it"></a>
+        </h1>
+    <nav>
+        <u1 class="main-nav">
+            <li> <a href="https://test-it.co.kr/test.html">성격</a></li>
+            <li> <a href="https://test-it.co.kr/face.html">얼굴</a></li>
+            <li> <a href="https://test-it.co.kr/etc.html">그외</a></li>
+        </u1>
+    </nav>
+        
+        
+    </header>
+
+     <div id="start-container">
+        <img id="main-image" src="img_main166.png" alt="Main Image">
+        <button id="start-button" onclick="startTest()">시작하기</button>
+    </div>
+
+  <div id="card-container" style="display: none;">
+    <div id="card-selection-text">신중하게 한 장의 카드를 골라주세요</div>
+    <div class="cards" id="cards"></div>
+    <div class="arrow-buttons">
+        <button onclick="prevCard()">❮</button>
+        <button onclick="nextCard()">❯</button>
+    </div>
+</div>
+
+
+<!-- 로딩 창 -->
+<div id="loading-background"></div>
+<div id="loading-container" style="display: none;">
+    <p id="loading-text">결과를 찾는 중입니다...</p>
+</div>
+    
+    
+    <div id="result-container" style="display: none;">
+
+        <img id="result-img" src="" alt="Result">
+        
+           <button type="button" class="btn btn-info mt-3" onclick="location.href='test166.html'" style="font-size:large; font-weight: bold; color: black;background-color: rgb(255, 255, 255); border-radius: 0px; border-width: 3px; border-color: rgb(255, 0, 0); width: 350px; height: 50px; margin: 0 auto;">다시 해보기</button>
+                <button type="button" class="btn btn-info mt-3" onclick="location.href='/'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 255, 255); border-radius: 0px; border-width: 3px; border-color: rgb(16, 178, 4); width: 350px; height: 50px; margin: 0 auto;">다른 테스트 해보기</button>
+        
+    </div>
+        
+     
+
+    <!-- 모달 창 -->
+    <div id="modal-overlay"></div>
+    <div id="confirmation-modal" class="modal">
+        <span id="modal-close" onclick="closeConfirmationModal()">X</span>
+        <div id="modal-content">
+            <p>정말 이 카드로 하시겠습니까?</p>
+            <button id="confirm-button" onclick="closeConfirmationModal(); showResult();">확인</button>
+            <button id="cancel-button" onclick="closeConfirmationModal();">취소</button>
+        </div>
+    </div>
+       <article class="coupang_ad mt-3">
+<a href="https://link.coupang.com/a/UJY9K" target="_blank" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/471299?subId=&traceId=V0-301-bae0f72e5e59e45f-I471299&w=320&h=100" alt=""></a>
+                
+  <script>
+    const numberOfCards = 30;
+    let cards = Array.from({ length: numberOfCards }, (_, i) => i + 1);
+    let selectedCardIndex = 0;
+
+
+        function startTest() {
+            document.getElementById("start-container").style.display = "none";
+            shuffleCards();
+            displayCards();
+        }
+
+        function shuffleCards() {
+            for (let i = cards.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [cards[i], cards[j]] = [cards[j], cards[i]];
+            }
+        }
+
+        function displayCards() {
+            const cardContainer = document.getElementById("card-container");
+            cardContainer.style.display = "flex";
+
+            updateCardDisplay();
+        }
+
+     function selectCard(index) {
+        selectedCardIndex = index;
+        openConfirmationModal();
+    }
+      
+      function showResult() {
+        const cardContainer = document.getElementById("card-container");
+        cardContainer.style.display = "none";
+
+        // 로딩 창 표시
+        const loadingContainer = document.getElementById("loading-container");
+        loadingContainer.style.display = "block";
+
+        // 3초 후에 실행 (임의로 설정)
+        setTimeout(function () {
+            // 로딩 창 숨김
+            loadingContainer.style.display = "none";
+
+            const resultContainer = document.getElementById("result-container");
+            resultContainer.style.display = "flex";
+            
+            }, 3000);
+          
+          
+        // 수정: 랜덤으로 선택된 카드의 인덱스를 사용합니다.
+        const randomSelectedCardIndex = Math.floor(Math.random() * cards.length);
+
+        const resultImg = document.getElementById("result-img");
+        resultImg.src = `cardresult_${randomSelectedCardIndex + 1}.png`;
+        resultImg.alt = `Result Card`;
+    }
+
+      function prevCard() {
+            if (selectedCardIndex > 0) {
+                selectedCardIndex--;
+                updateCardDisplay();
+            }
+        }
+
+        function nextCard() {
+            if (selectedCardIndex < cards.length - 4) {
+                selectedCardIndex++;
+                updateCardDisplay();
+            }
+        }
+
+        function updateCardDisplay() {
+            const cardContainer = document.getElementById("cards");
+            cardContainer.style.transition = 'transform 0.5s ease';
+            cardContainer.style.transform = `translateX(${-selectedCardIndex * 120}px)`;
+
+        
+
+            for (let i = selectedCardIndex; i < selectedCardIndex + 4; i++) {
+                if (i < cards.length) {
+                    const cardElement = document.createElement("img");
+                    cardElement.src = `card_${cards[i]}.png`;
+                    cardElement.alt = `Card ${cards[i]}`;
+                    cardElement.classList.add("card");
+                    cardElement.onclick = () => selectCard(i);
+                    cardContainer.appendChild(cardElement);
+                }
+            }
+
+            const arrowContainer = document.getElementById("arrow-container");
+            arrowContainer.style.display = "flex";
+
+            const resultContainer = document.getElementById("result-container");
+            resultContainer.style.display = "none";
+
+            const resultImg = document.getElementById("result-img");
+            resultImg.src = "";
+        }
+
+        function openConfirmationModal() {
+            const modal = document.getElementById("confirmation-modal");
+            const overlay = document.getElementById("modal-overlay");
+            modal.style.display = "block";
+            overlay.style.display = "block";
+        }
+
+        function closeConfirmationModal() {
+            const modal = document.getElementById("confirmation-modal");
+            const overlay = document.getElementById("modal-overlay");
+            modal.style.display = "none";
+            overlay.style.display = "none";
+        }
+    </script>
+</body>
+</html>
