@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+     crossorigin="anonymous"></script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>테스트잇 나의 라떼력 테스트</title>
+    <meta name="description" content="라떼는 말이야~ 직장인 라떼력 지수 테스트?">
+<meta name="keywords" content="테스트잇,성격테스트,e성향,i성향,ei테스트,너t야테스트,t성향테스트,f성향테스트,tf테스트,연애mbti,연애성격테스트, 심리테스트, mbti테스트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="테스트잇 나의 라떼력 테스트">
+    <meta property="og:description" content="라떼는 말이야~ 직장인 라떼력 지수 테스트">
+    <meta property="og:image" content="img_main145.png">
+    <meta property="og:url" content="https://test-it.co.kr/test03.html">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+
+
+<style>
+
+/* start 태그와 question 태그 모두 article 태그라서 article 태그에 속성을 주면 동시에 적용됨
+.start{
+    display: flex;
+    flex-direction: column;
+}
+*/
+    @media (max-width: 600px) {
+  .result-image img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+    
+.logo {
+    width: 100px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+.main-nav a{
+    color: #432;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+    
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+ 
+.progress-bar {
+    background-color: #cbcbcb;
+}
+.progress {
+    background-color: #ffffff;
+}
+#img{
+    width: 500px;
+    height: 900px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img_main{
+    width: 500px;
+    height: 600px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.btn {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+    .at-share-btn-elements{
+        text-align: center;
+    }
+.share{
+    margin: 0 auto;
+}
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.kakao_ad2{
+    width: 320px;
+    margin: 0 auto;
+}
+.coupang_ad {
+    width: 320px;
+    margin: 0 auto;
+}
+    
+
+    #container {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+             #start-button {
+        display: block;
+        margin: 0 auto;
+        font-size: 20px;
+        background-color: #cecece;
+        color: black;
+        border: none;
+        padding: 10px 100px;
+        cursor: pointer;
+        border-radius: 5px;
+          margin-top: 20px;        
+      }
+
+      #start-button:hover {
+        background-color: #cecece;
+      }
+
+      #start-button:focus {
+        outline: none;
+      }
+   .question {
+  margin-top: 40px;
+  font-size: 16px;
+  margin: 0 auto; /* 추가 */
+  text-align: center;
+       font-weight: bold;
+         margin-bottom: 40px;
+}
+.result {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+  margin: 0 auto;
+  display: block; 
+}
+
+.result-image {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.result-image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+      #progress {
+        margin-top: 20px;
+        height: 20px;
+        background-color: #ffffff;
+          margin-bottom: 50px;
+      }
+      #progress-bar {
+        height: 100%;
+        background-color: #ffd2d2;
+        width: 0%;
+          margin-top: 10px;
+
+      }
+.choices {
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.choice {
+  display: block;
+  font-size: 15px;
+  background-color: #f8f0c2;
+  color: black;
+  border-color: #f8f0c2;
+  border: none;
+  font-weight: bold;
+  padding: 10px 10px;
+  width: 350px;
+  height: 100px;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.result button {
+  /* 추가 스타일 */
+  display: block;
+  margin: 0 auto;
+}
+    .button {
+          margin-top: 10px;
+  text-align: center;
+        display: block; 
+    }
+    .btn.btn-info.mt-3 {
+  /* 추가 스타일 */
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.popupBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.img-wrapper {
+  max-width: 360px;
+  max-height: 360px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.popupBanner img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.close-btn {
+  position: fixed;
+  bottom: 23%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 10px 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #f0f0f0; /* 호버 상태 배경색 (원하는 색상으로 변경 가능) */
+}
+    
+/* 모바일 화면 스타일 */
+@media screen and (max-width: 767px) {
+  .close-btn {
+    position: fixed;
+    bottom: 20%; /* 모바일에서 버튼 위치를 조정 */
+    left: 50%;
+    transform: translateX(-50%);
+    /* 다른 모바일 화면용 스타일 설정들... */
+  }
+}
+
+
+    </style>
+  </head>
+  <!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#ffffff">
+            
+    <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img_logo.png" alt="test it"></a>
+        </h1>
+    <nav>
+        <u1 class="main-nav">
+            <li> <a href="https://test-it.co.kr/test.html">성격</a></li>
+            <li> <a href="https://test-it.co.kr/face.html">얼굴</a></li>
+            <li> <a href="https://test-it.co.kr/etc.html">그외</a></li>
+        </u1>
+    </nav>
+        
+        
+    </header>
+
+    
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#ffffff">
+
+
+
+        <div id="main">
+  <article class="start">
+        <img id="img_main" class="mt-3" src="img_main03.png">
+         <button id="start-button">시작하기</button>
+    </article>
+
+    
+    </div>
+
+    
+      <!-- 테스트 화면 -->
+      <div id="test" style="display:none">
+                  <div id="progress">
+          <div id="progress-bar"></div>
+        </div>
+        <h1> <span id="question-number"></span></h1>
+        <div class="question"></div>
+        <div class="choices">
+          <button class="choice"></button>
+          <button class="choice"></button>
+        </div>
+
+      </div>
+      
+      <!-- 결과 화면 -->
+      <div id="result" style="display:none">
+        <h1></h1>
+        <div class="result"></div>
+        <div class="result-image"></div>
+             <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox_ougq"></div>
+                
+        <button type="button" class="btn btn-info mt-3" onclick="location.href='test03.html'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 208, 208); border-color: rgb(255, 208, 208); width: 350px; height: 50px; margin: 0 auto; text-align: center;">다시 해보기</button>
+                <button type="button" class="btn btn-info mt-3" onclick="location.href='/'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 208, 208); border-color: rgb(255, 208, 208); width: 350px; height: 50px; margin: 0 auto;">다른 테스트 해보기</button>
+         
+             <!-- 팝업 배너 -->
+<div id="popupBanner" class="popupBanner" style="display:none;">
+      <a href="" target="_blank">
+    <img src="pop03.png" alt="Popup Banner Image" style="max-width: 100%; height: auto;">
+             </a>
+    <button onclick="closePopupBanner()" class="close-btn">닫기</button>
+ </div>
+
+          
+      </div>
+
+
+    
+    <script>
+      // JavaScript 코드
+   var questions = [
+  {
+    question: "<a href='' target='_blank'><img class='question-image' src='banner03.png'></a><br><br><br>들어온 지 얼마 안 된 신입이<br><br>자꾸 호칭 실수를 한다",
+    choices: ["호칭 정도는 제대로 알아야 하지 않나?", "아직 입에 안 붙나 보다 그럴 수 있지"]
+  },
+        {
+          question: "<a href='' target='_blank'><img class='question-image' src='banner03.png'></a><br><br><br>업무 인수인계를 하고 있는데<br><br>아무것도 적지 않고 듣기만 하는 신입",
+          choices: ["이러고 나중에 또 물어볼 거 같은데..", "이해가 빠른 친구네"]
+        },
+        {
+          question: "<a href='' target='_blank'><img class='question-image' src='banner03.png'></a><br><br><br>신입 환영 회식 자리<br><br>분위기가 너무 조용하다",
+          choices: ["신입에게 건배사를 시킨다", "힘든 일은 없는지 물어본다"]
+        },
+   {
+          question: "<a href='' target='_blank'><img class='question-image' src='banner03.png'></a><br><br><br>신입들에게 커피 4잔을 사 오라고 시켰는데<br><br>둘이 가서 사 온다고 한다",
+          choices: ["충분히 혼자 사 올 수 있지 않나?", "그래 갔다 오면서 머리 좀 식혀라"]
+        },
+   {
+          question: "<a href='' target='_blank'><img class='question-image' src='banner03.png'></a><br><br><br>출근 시간 9시<br><br>신입이 딱 9시에 맞춰서 출근을 한다",
+          choices: ["10분이라도 일찍 오지", "지각만 안 하면 되지 뭘"]
+        },
+   {
+          question: "<a href='' target='_blank'><img class='question-image' src='banner03.png'></a><br><br><br>신입에게 자료 보내달라고 메일을 보냈는데<br><br>정말 딱 자료만 보내왔다",
+          choices: ["예의상 인사말이라도 넣지 않나", "자료가 필요한 거였기 때문에 괜찮다"]
+        },
+   {
+          question: "<a href='' target='_blank'><img class='question-image' src='banner03.png'></a><br><br><br>동기가 놀러 왔는지<br><br>자리에서 동기와 떠드는 신입",
+          choices: ["떠드는 소리가 거슬린다", "바쁠 때만 아니면 괜찮다"]
+        },
+   {
+          question: "<a href='' target='_blank'><img class='question-image' src='banner03.png'></a><br><br><br>신입에게 회의한다고 들어오라고 했는데<br><br>슬리퍼를 질질 끌고 들어온다",
+          choices: ["태도가 영...", "그럴 수도 있지 뭐"]
+        },
+   {
+          question: "<a href='' target='_blank'><img class='question-image' src='banner03.png'></a><br><br><br>부서 일이 많아 다들 야근하는데<br><br>6시 땡 하자마자 퇴근한다고 가는 신입",
+          choices: ["퇴근시간 맞긴 한데 기분이 좀 그렇네", "있어봤자 크게 도움 안 되는데 뭐 어때"]
+        },
+   {
+          question: "<a href='' target='_blank'><img class='question-image' src='banner03.png'></a><br><br><br>신입에게 안녕하세요 인사를 건넸는데<br><br>네~라고 한다",
+          choices: ["인사는 인사로 받는 게 맞지 않나", "네~했으면 됐지"]
+        }
+      ];
+      
+         var currentQuestionIndex = 0;
+        var score = 0;
+
+        var startButton = document.getElementById("start-button");
+        var questionNumber = document.getElementById("question-number");
+        var question = document.querySelector(".question");
+        var choices = document.querySelector(".choices");
+        var choiceButtons = document.querySelectorAll(".choice");
+        var result = document.querySelector(".result");
+        var resultImage = document.querySelector(".result-image");
+        var progressBar = document.getElementById("progress-bar");
+
+        startButton.addEventListener("click", startTest);
+        for (var i = 0; i < choiceButtons.length; i++) {
+            choiceButtons[i].addEventListener("click", selectAnswer);
+        }
+
+        function startTest() {
+            document.getElementById("main").style.display = "none";
+            document.getElementById("test").style.display = "block";
+            showQuestion();
+        }
+        
+  function restartTest() {
+    currentQuestionIndex = 0;
+    score = 0;
+    document.getElementById("main").style.display = "none";
+    document.getElementById("test").style.display = "block";
+    document.getElementById("result").style.display = "none"; // 결과 화면 감추기
+    showQuestion();
+    closePopupBanner(); // 이 부분을 추가
+    showPopup(); // 수정된 부분
+}
+
+
+        
+
+        function showQuestion() {
+            question.innerText = questions[currentQuestionIndex].question;
+            for (var i = 0; i < choiceButtons.length; i++) {
+                choiceButtons[i].innerText = questions[currentQuestionIndex].choices[i];
+            }
+ var questionContainer = document.querySelector('.question');
+    questionContainer.innerHTML = questions[currentQuestionIndex].question;
+
+            var progressPercent = (currentQuestionIndex + 1) / questions.length * 100;
+            progressBar.style.width = progressPercent + "%";
+        }
+
+        function selectAnswer(event) {
+            var selectedChoiceIndex = Array.prototype.indexOf.call(choiceButtons, event.target);
+
+            if (selectedChoiceIndex === 0) {
+                score++;
+            }
+
+            currentQuestionIndex++;
+            if (currentQuestionIndex === questions.length) {
+                showResult();
+            } else {
+                showQuestion();
+            }
+        }
+
+     function showPopupBanner() {
+    document.querySelector("#popupBanner").style.display = "flex";
+}
+
+function closePopupBanner() {
+  document.querySelector("#popupBanner").style.display = "none";
+  document.getElementById("result").style.display = "block";
+}
+
+
+        function resetTest() {
+    currentQuestionIndex = 0;
+    score = 0;
+    document.getElementById("main").style.display = "block";
+    document.getElementById("test").style.display = "none";
+    document.getElementById("result").style.display = "none";
+    progressBar.style.width = "0%";
+}
+        
+
+        function showResult() {
+            document.getElementById("test").style.display = "none";
+            document.getElementById("result").style.display = "block";
+
+            if (score === 10) {
+                resultImage.innerHTML = '<img src="img03_100.png">';
+            } else if (score === 9) {
+                resultImage.innerHTML = '<img src="img03_90.png">';
+            } else if (score === 8) {
+                resultImage.innerHTML = '<img src="img03_80.png">';
+            } else if (score === 7) {
+                resultImage.innerHTML = '<img src="img03_70.png">';
+            } else if (score === 6) {
+                resultImage.innerHTML = '<img src="img03_60.png">';
+            } else if (score === 5) {
+                resultImage.innerHTML = '<img src="img03_50.png">';
+            } else if (score === 4) {
+                resultImage.innerHTML = '<img src="img03_40.png">';
+            } else if (score === 3) {
+                resultImage.innerHTML = '<img src="img03_30.png">';
+            } else if (score === 2) {
+                resultImage.innerHTML = '<img src="img03_20.png">';
+            } else if (score === 1) {
+                resultImage.innerHTML = '<img src="img03_10.png">';
+            } else {
+                resultImage.innerHTML = '<img src="img03_0.png">';
+            }
+
+            showPopupBanner(); // 결과를 보여준 후 팝업을 표시
+        }
+    </script>
+
+    </body>
+</html>
