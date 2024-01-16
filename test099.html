@@ -172,7 +172,11 @@ button:hover {
 .close-btn:hover {
   background-color: #f0f0f0;
 }
-       
+         .custom-button {
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+        }
     
 
  /* 모바일 화면 스타일 */
@@ -226,8 +230,11 @@ button:hover {
   <p id="result"></p>
   <img id="result-image" src="" alt="Result Image">
     
-      <button type="button" class="btn btn-info mt-3" onclick="location.href='test099.html'" style="font-size:large; font-weight: bold; color: black;background-color: rgb(255, 211, 211); border-radius: 0px; border-width: 1px; border-color: rgb(0, 0, 0); width: 350px; height: 50px; margin: 0 auto;">다시 해보기</button>
-                <button type="button" class="btn btn-info mt-3" onclick="location.href='/'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 211, 211); border-radius: 0px; border-width: 1px; border-color: rgb(0, 0, 0); width: 350px; height: 50px; margin: 0 auto;">다른 테스트 해보기</button>
+        <!-- 다시해보기 버튼에 클래스 추가 -->
+        <button type="button" class="btn btn-info mt-3 custom-button" onclick="location.href='test099.html'" style="font-size:large; font-weight: bold; color: black;background-color: rgb(255, 211, 211); border-radius: 0px; border-width: 1px; border-color: rgb(0, 0, 0);">다시 해보기</button>
+
+        <!-- 다른테스트해보기 버튼에 클래스 추가 -->
+        <button type="button" class="btn btn-info mt-3 custom-button" onclick="location.href='/'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 211, 211); border-radius: 0px; border-width: 1px; border-color: rgb(0, 0, 0);">다른 테스트 해보기</button>
         
     
     <!-- 팝업 배너 -->
