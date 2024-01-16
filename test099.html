@@ -174,35 +174,7 @@ button:hover {
 }
        
        
-       #retry-button,
-#other-test-button {
-  background-color: #ffcccc;
-  color: #000000;
-  padding: 15px 25px;
-  font-size: 18px;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  margin: 15px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-}#retry-button,
-#other-test-button {
-  background-color: #ffcccc;
-  color: #000000;
-  padding: 15px 25px;
-  font-size: 18px;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  margin: 15px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-}#retry-button,
+#retry-button,
 #other-test-button {
   background-color: #ffcccc;
   color: #000000;
@@ -217,8 +189,7 @@ button:hover {
   justify-content: center;
   transition: background-color 0.3s ease;
 }
-       
-       
+
        
     
 
@@ -231,7 +202,11 @@ button:hover {
     transform: translateX(-50%);
     /* 다른 모바일 화면용 스타일 설정들... */
   }
-    
+    @media screen and (max-width: 767px) {
+  #retry-button,
+  #other-test-button {
+    width: 80%;
+  }
    
 }
 
@@ -273,9 +248,10 @@ button:hover {
   <p id="result"></p>
   <img id="result-image" src="" alt="Result Image">
     
-      <button type="button" class="btn btn-info mt-3" onclick="location.href='test099.html'" style="font-size:large; font-weight: bold; color: black;background-color: rgb(255, 211, 211); border-radius: 0px; border-width: 1px; border-color: rgb(0, 0, 0); width: 350px; height: 50px; margin: 0 auto;">다시 해보기</button>
-                <button type="button" class="btn btn-info mt-3" onclick="location.href='/'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 211, 211); border-radius: 0px; border-width: 1px; border-color: rgb(0, 0, 0); width: 350px; height: 50px; margin: 0 auto;">다른 테스트 해보기</button>
-        
+ <button type="button" id="retry-button" class="btn btn-info mt-3" onclick="location.href='test099.html'" style="font-size:large; font-weight: bold; color: black;background-color: rgb(255, 211, 211); border-radius: 0px; border-width: 1px; border-color: rgb(0, 0, 0); width: 350px; height: 50px; margin: 0 auto;">다시 해보기</button>
+
+<button type="button" id="other-test-button" class="btn btn-info mt-3" onclick="location.href='/'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 211, 211); border-radius: 0px; border-width: 1px; border-color: rgb(0, 0, 0); width: 350px; height: 50px; margin: 0 auto;">다른 테스트 해보기</button>
+
     
     <!-- 팝업 배너 -->
 <div id="popupBanner" class="popupBanner" style="display:none;">
