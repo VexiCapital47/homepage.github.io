@@ -253,26 +253,28 @@ body {
         font-size: 20px;
 }
 .result-message {
+    max-width: 80%;
+    margin: 0 auto;
     text-align: center;
-    font-size: 1.5rem;
-    margin-top: 20px;
 }
+
 /* 결과 이미지 부모 요소 스타일 추가 */
 .result-title {
     text-align: center;
-    max-width: 80%; /* 최대 너비를 조절하세요. 필요에 따라 변경 가능 */
+    max-width: 80%;
     margin: 0 auto;
-    overflow: hidden; /* 내용이 너무 커도 가리지 않도록 설정 */
+    overflow: hidden;
 }
 
-/* 결과 이미지 스타일 수정 */
 .result-title img {
-    width: 100%;
+    max-width: 80%;
     height: auto;
     display: block;
-    margin: 0 auto; /* 이미지를 수평 가운데 정렬 */
-    max-width: 100%; /* 이미지가 부모 요소에 맞게 축소되도록 설정 */
+    margin: 0 auto;
+    max-height: 100%;
 }
+
+
 
 
 /* On screens that are 600px or less, set the background color to olive */
@@ -285,7 +287,10 @@ body {
     }
 }
 
-
+  .result-message img {
+    width: 100%; /* 화면 너비에 맞게 이미지 크기 조절 */
+    height: auto;
+  }
 
 .upload {
     width: 20%;
