@@ -275,7 +275,12 @@ body {
 }
 
 
-
+    .custom-button {
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+    
 
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
@@ -424,6 +429,8 @@ input:checked + label > .knob > i:before {
     margin: 0 auto;
 }
 
+    
+ 
 
 </style>
 
@@ -519,17 +526,12 @@ input:checked + label > .knob > i:before {
                 <div class="addthis_inline_share_toolbox_bzap"></div>
             
 
-  <div class="pt-3 image-title-wrap">
-    <div style="display: block; text-align: center;">
-        <button type="button" class="try-again-btn mt-3" onclick="window.location.reload();" style="white-space: nowrap; width: 270px; font-size: 13px;">
-            <span class="try-again-text">다른 사진으로 해보기</span>
-        </button>
-    </div>
-    <div style="display: block; text-align: center;">
-        <button type="button" class="try-again-btn mt-3" onclick="location.href='/';" style="white-space: nowrap; width: 270px; margin-top: 10px; font-size: 13px;">
-            <span class="try-again-text">다른 테스트 하러가기</span>
-        </button>
-    </div>
+<div style="display: flex; flex-direction: column; align-items: center;">
+      <!-- 다시해보기 버튼에 클래스 추가 -->
+        <button type="button" class="btn btn-info mt-3 custom-button" onclick="location.href='test182.html'" style="font-size:large; font-weight: bold; color: black;background-color: rgb(255, 220, 80); border-radius: 0px; border-width: 1px; border-color: rgb(0, 0, 0);">다시 해보기</button>
+
+        <!-- 다른테스트해보기 버튼에 클래스 추가 -->
+        <button type="button" class="btn btn-info mt-3 custom-button" onclick="location.href='/'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 220, 80); border-radius: 0px; border-width: 1px; border-color: rgb(0, 0, 0);">다른 테스트 해보기</button>
                         
                         
             </div>
