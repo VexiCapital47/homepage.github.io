@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+     crossorigin="anonymous"></script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>테스트잇X삼첩분식 새학기 성격 테스트</title>
+    <meta name="description" content="테스트잇X삼첩분식 새학기 성격 테스트">
+<meta name="keywords" content="테스트잇,성격테스트,삼첩분식테스트,테스트잇삼첩분식,삼첩분식성격테스트,삼첩분식성격테스트결과,새학기테스트,새학기성격테스트,테스트잇새학기,연애테스트,연애mbti,연애성격테스트, 심리테스트, mbti테스트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="테스트잇X삼첩분식 새학기 성격 테스트">
+    <meta property="og:description" content="테스트잇X삼첩분식 새학기 성격 테스트">
+    <meta property="og:image" content="img_main990.png">
+    <meta property="og:url" content="https://test-it.co.kr/test990">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+
+
+<style>
+
+/* start 태그와 question 태그 모두 article 태그라서 article 태그에 속성을 주면 동시에 적용됨
+.start{
+    display: flex;
+    flex-direction: column;
+}
+*/
+.logo {
+    width: 100px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+.main-nav a{
+    color: #432;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+    
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+ 
+    
+.question{
+    display: none;
+}
+
+.result{
+    display: none;
+}
+.progress-bar {
+    background-color: #ffdada;
+}
+.progress {
+    background-color: #ffffff;
+}
+#img{
+    width: 500px;
+    height: 900px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img_main{
+    width: 500px;
+    height: 600px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+    
+.btn-info.focus, .btn-info:focus {
+    box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+    .btn-info:hover {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+            box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+    .btn-info.focus, .btn-info:focus {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+    .btn-info {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+            box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+    .btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+   
+      .question-image {
+    max-width: 350px; /* 최대 가로 너비 설정 */
+    max-height: 91px; /* 최대 세로 높이 설정 */
+    width: 100%; /* 너비 100%로 조절 */
+    height: auto; /* 가로세로 비율을 유지하며 조절 */
+    margin: 0 auto;
+}
+    
+    
+    .at-share-btn-elements{
+        text-align: center;
+    }
+.share{
+    margin: 0 auto;
+}
+
+.additional-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.img-wrapper {
+  position: relative;
+  max-width: 360px; /* 팝업 이미지의 최대 너비 */
+  max-height: 360px; /* 팝업 이미지의 최대 높이 */
+  width: 100%;
+  height: 100%;
+  text-align: center; /* 이미지를 가운데 정렬합니다. */
+}
+
+.additional-img-container img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block; /* 이미지를 부모 컨테이너 내에서 중앙에 오도록 설정합니다. */
+  margin: 0 auto; /* 이미지를 수평 중앙으로 정렬합니다. */
+}
+
+/* 닫기 버튼 스타일 */
+.close-btn {
+  position: fixed;
+  bottom: 18%; /* 아래에 위치하도록 설정 */
+  left: 50%; /* 가운데 정렬 */
+  transform: translateX(-50%); /* 가운데 정렬 */
+  background-color: #fff; /* 배경색 지정 (원하는 색상으로 변경 가능) */
+  padding: 10px 10px; /* 버튼 크기 조절 (원하는 크기로 변경 가능) */
+  border: 1px solid #000; /* 테두리 스타일 (원하는 스타일로 변경 가능) */
+  border-radius: 5px; /* 버튼 모서리 둥글게 (원하는 정도로 조절 가능) */
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #f0f0f0; /* 호버 상태 배경색 (원하는 색상으로 변경 가능) */
+}
+    
+           .custom-button {
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+    
+    
+/* 모바일 화면 스타일 */
+@media screen and (max-width: 767px) {
+  .close-btn {
+    position: fixed;
+    bottom: 20%; /* 모바일에서 버튼 위치를 조정 */
+    left: 50%;
+    transform: translateX(-50%);
+    /* 다른 모바일 화면용 스타일 설정들... */
+  }
+}
+
+</style>
+
+
+
+
+
+</head>
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#ffffff">
+            
+    <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img_logo.png" alt="test it"></a>
+        </h1>
+    <nav>
+        <u1 class="main-nav">
+            <li> <a href="https://test-it.co.kr/test.html">성격</a></li>
+            <li> <a href="https://test-it.co.kr/face.html">얼굴</a></li>
+            <li> <a href="https://test-it.co.kr/etc.html">그외</a></li>
+        </u1>
+    </nav>
+        
+        
+    </header>
+
+    
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#fed7e0">
+
+
+     <!--시작화면-->
+    <article class="start">
+        <img id="img_main" class="mt-3" src="img_main990.png">
+         <button type="button" class="btn btn-info mt-3" onclick='start();' style="font-size:large; font-weight: bold; color: black; background-color: rgb(245, 207, 255); border-color: rgb(0, 0, 0); width: 350px; height: 50px; margin: 0 auto;">테스트 시작하기</button>
+    </article>
+    <!--문제화면-->
+    <article class="question">
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h6 style="font-weight: bold; color: black;" class="text-center mt-5" id="title">문제</h6>
+        <input id="type" type="hidden" value="EI">
+        <button id="A" type="button" class="btn btn-info mt-5" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(221, 251, 221); border-color: rgb(69, 253, 69); width: 350px; height: 100px; margin: 0 auto;">Primary</button>
+        <button id="B" type="button" class="btn btn-info mt-3" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(224, 244, 248); border-color: rgb(119, 234, 255); width: 350px; height: 100px; margin: 0 auto;">Primary</button>
+
+        </article>
+    <!--결과화면-->
+    <article class="result">
+        <img id="img" class="mt-5" src="" alt="animal">
+        
+
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox_ougq mt-3"></div>
+                
+       <!-- 다시해보기 버튼에 클래스 추가 -->
+        <button type="button" class="btn btn-info mt-3 custom-button" onclick="location.href='test990.html'" style="font-size:large; font-weight: bold; color: black;background-color: rgb(255, 211, 211); border-radius: 0px; border-width: 1px; border-color: rgb(0, 0, 0);">다시 해보기</button>
+
+        <!-- 다른테스트해보기 버튼에 클래스 추가 -->
+        <button type="button" class="btn btn-info mt-3 custom-button" onclick="location.href='/'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 211, 211); border-radius: 0px; border-width: 1px; border-color: rgb(0, 0, 0);">다른 테스트 해보기</button>
+        
+        
+<!-- 추가 이미지 -->
+<div class="additional-img-container">
+  <a href="" target="_blank">
+    <div class="img-wrapper">
+      <img id="additionalImg" src="pop990.png" alt="팝업 이미지">
+    </div>
+  </a>
+   <button class="close-btn" onclick="closePopup()">닫기</button>
+</div>
+        
+  </article>
+
+      
+
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <!--각 타입의 점수를 저장하는 input 태그(hidden으로 안보임)-->
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+        // 문제 번호를 나타내는 num 변수
+          var num = 1;
+        // 문제 번호별 질문을 저장하는 자바스크립트 객체 q
+                      var q = {
+              1: {"title": "<a href='' target='_blank'><img class='question-image' src='banner990.png'></a><br><br><br>새 학기가 되었다<br><br>지금 내 마음 상태는?", "type": "EI", "A": "새로운 사람들을 만나는 게 설렘", "B": "누군갈 만나서 친해질 생각에 조금 피곤"},
+             2: {"title": "<a href='' target='_blank'><img class='question-image' src='banner990.png'></a><br><br><br>친구와 밥을 먹으러 내리막길을 가는데<br><br>학생들이 신나게 뛰어간다", "type": "SN", "A": "어딜 가길래 저렇게 뛰지?", "B": "내리막길 뛰어가다 넘어지는 상상중"},
+             3: {"title": "<a href='' target='_blank'><img class='question-image' src='banner990.png'></a><br><br><br>점심으로 떡볶이를 먹기로 했는데<br><br>모르는 친구를 불러도 되냐고 묻는다", "type": "EI", "A": "그래! 불러 같이 먹자", "B": "갑자기 왜 친구를 불러..."},
+             4: {"title": "<a href='' target='_blank'><img class='question-image' src='banner990.png'></a><br><br><br>분식집에서 신메뉴를 주며<br><br>먹어보고 맛이 어떤지 평가해달라고 할 때", "type": "TF", "A": "아쉬운 점이 있더라도 그냥 맛있다고 한다", "B": "장점과 단점을 솔직하게 이야기한다"},
+             5: {"title": "<a href='' target='_blank'><img class='question-image' src='banner990.png'></a><br><br><br>수업 시작 15분 전 잠에서 깬 나<br><br>학교까진 뛰어서 10분이 걸린다", "type": "JP", "A": "아 오늘은 자체 휴강이다", "B": "늦어도 가긴 가야지"},
+            6: {"title": "<a href='' target='_blank'><img class='question-image' src='banner990.png'></a><br><br><br>인사를 안 해본 옆자리 친구가<br><br>힐끔힐끔 나를 보는 시선이 느껴질 때", "type": "EI", "A": "이때다 싶어 말을 걸어본다", "B": "모른 척 내 할 일을 한다"},
+             7: {"title":"<a href='' target='_blank'><img class='question-image' src='banner990.png'></a><br><br><br>운전면허 실기시험에서 떨어졌다며<br><br>시무룩해진 친구에게 나는", "type": "TF", "A": "야 괜찮아 다음엔 무조건 붙을 거야", "B": "어려워? 어느 코스에서 틀렸어?"},
+             8: {"title": "<a href='' target='_blank'><img class='question-image' src='banner990.png'></a><br><br><br>매일 기본 떡볶이만 먹던 친구가<br><br>바질 크림 떡볶이를 먹자고 할 때", "type": "SN", "A": "안 먹어본 메뉴라 망설인다", "B": "맛있겠다 거기에 콘치즈 넣어먹으면<br>더 맛있을 거 같은데?"},
+            9: {"title": "<a href='' target='_blank'><img class='question-image' src='banner990.png'></a><br><br><br>밥 먹고 다시 수업 들으러 가는 길<br><br>이대로 걸어가면 좀 늦을 것 같은데", "type": "JP", "A": "그냥 좀 늦지 뭐", "B": "아 뛰어야겠다"},
+         10: {"title": "<a href='' target='_blank'><img class='question-image' src='banner990.png'></a><br><br><br>스터디 카페에서 공부하기로 한 나<br><br>나의 공부 방법은?", "type": "JP", "A": "하고 싶은 거부터 공부한다", "B": "공부 계획을 먼저 세운다"},
+            11: {"title": "<a href='' target='_blank'><img class='question-image' src='banner990.png'></a><br><br><br>문구점에서 귀여운 스티커를 발견했을때", "type": "TF", "A": "쓸모없어도 귀엽잖아!<br>살지 말지 고민한다", "B": "귀엽지만 필요한 건 아니야<br>그냥 지나간다"},
+              12: {"title": "<a href='' target='_blank'><img class='question-image' src='banner990.png'></a><br><br><br>친구가 밴드 동아리에 같이 가입하자고 할 때", "type": "SN", "A": "안 해본 거라 잘할 수 있을까?", "B": "밴드 동아리에 들어가서 공연하는 상상을 해본다"}
+        }
+
+
+        // MBTI 결과별 동물&설명을 저장하는 자바스크립트 객체 result
+        var result = {
+            "ISTJ": {"img":"img_istj990.png"},
+            "ISFJ": {"img":"img_isfj990.png"},
+            "INFJ": {"img":"img_infj990.png"},
+            "INTJ": {"img":"img_intj990.png"},
+
+            "ISTP": {"img":"img_istp990.png"},
+            "ISFP": {"img":"img_isfp990.png"},
+            "INFP": {"img":"img_infp990.png"},
+            "INTP": {"img":"img_intp990.png"},
+
+            "ESTP": {"img":"img_estp990.png"},
+            "ESFP": {"img":"img_esfp990.png"},
+            "ENFP": {"img":"img_enfp990.png"},
+            "ENTP": {"img":"img_entp990.png"},
+
+            "ESTJ": {"img":"img_estj990.png"},
+            "ESFJ": {"img":"img_esfj990.png"},
+            "ENFJ": {"img":"img_enfj990.png"},
+            "ENTJ": {"img":"img_entj990.png"},
+        }
+        // 시작 버튼을 클릭하면 시작화면 숨기고 질문화면 보여주기
+        function start(){
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+        // A 버튼 클릭하면 해당 타입 값을 가져와서 값 1 증가 후 next()
+        $("#A").click(function(){
+            var type = $("#type").val();
+            var preValue = $("#"+type).val();
+            $("#"+type).val(parseInt(preValue)+1);
+            next();
+        });
+        // B 버튼 클릭하면 값 증가 없이 next()
+        $("#B").click(function(){
+            next();
+        });
+        function showPopupBanner() {
+  // 팝업 이미지 보여주기
+  $(".additional-img-container").show();
+  $("#additionalImg").attr("src", "pop990.png");
+}
+function closePopup() {
+  $(".additional-img-container").hide();
+}
+        function next(){
+            // 마지막 문제인 경우
+            if(num==13){
+                // 질문은 숨기고 결과 화면 보여주기
+                $(".question").hide();
+                $(".result").show();
+
+     // 결과 화면이 나타난 후 팝업 배너를 보여주는 함수 호출
+    showPopupBanner();
+                var mbti = "";
+                
+                // 삼항 연산자를 사용해서 MBTI 계산
+                ($("#EI").val()<2) ? mbti+="I" : mbti+="E";
+                ($("#SN").val()<2) ? mbti+="N" : mbti+="S";
+                ($("#TF").val()<2) ? mbti+="T" : mbti+="F";
+                ($("#JP").val()<2) ? mbti+="J" : mbti+="P";
+                
+                // 계산된 MBTI로 이미지, 동물, 설명 값 변경
+                $("#img").attr("src",result[mbti]["img"]);
+                $("#animal").html(result[mbti]["animal"]);
+                $("#explain").html(result[mbti]["explain"]);
+                  // 팝업 이미지 보여주기
+    $(".additional-img-container").show();
+            } // 마지막 문제가 아닌 경우
+            else{
+                // 프로그래스 바 1/12씩 차오르도록 구현
+                $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)');
+                // 각 문제별 문제&선택지 출력
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+// 팝업 배너를 보여주는 함수
+function showPopupBanner() {
+  // 팝업 이미지 보여주기
+  $(".additional-img-container").show();
+  $("#additionalImg").attr("src", "pop990.png");
+}
+
+        }
+    </script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+
+    </article>
+
+</body>
+    </body>
+    
+</html>
+
