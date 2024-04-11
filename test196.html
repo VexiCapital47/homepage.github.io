@@ -43,6 +43,8 @@
 
 
 
+
+
 .logo {
     width: 100px;
     margin-top: 14px;
@@ -108,6 +110,14 @@ body {
      text-align: center;
 
 }
+    
+    .img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* 이미지를 수평 가운데 정렬 */
+}
+    
 .file-upload-btn {
   width: 100%;
   margin: 0;
@@ -197,8 +207,8 @@ body {
 
 .try-again-btn {
   border-radius: 40px;
-  border: solid 1.5px #fffbbf;
-  background-color: #fffbbf;
+  border: solid 1.5px #ffeafd;
+  background-color: #ffeafd;
 }
 
 .try-again-text {
@@ -244,7 +254,35 @@ body {
   color: #BDBDBD;
         font-size: 20px;
 }
+.result-message {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
 
+/* 결과 이미지 부모 요소 스타일 추가 */
+.result-title {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.result-title img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+}
+
+
+    .custom-button {
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+    
 
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
@@ -256,7 +294,10 @@ body {
     }
 }
 
-
+  .result-message img {
+    width: 100%; /* 화면 너비에 맞게 이미지 크기 조절 */
+    height: auto;
+  }
 
 .upload {
     width: 20%;
@@ -294,9 +335,7 @@ body {
     width: 80%;
     margin: 0 auto;
 }
-.result-message {
-    font-size: 2rem;
-}
+
 
 
 
@@ -392,6 +431,8 @@ input:checked + label > .knob > i:before {
     margin: 0 auto;
 }
 
+    
+ 
 
 </style>
 
@@ -439,13 +480,15 @@ input:checked + label > .knob > i:before {
 
 
 
-    <section class="section">
+ <section class="section">
 
         <h2 class="sr-only">테스트잇 얼굴 서사 테스트</h2>
         <h3 class="sr-only">인공지능으로 파악한 나의 얼굴 서사 테스트</h3>
         <h4 class="sr-only">본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.</h4>
         <p class="sr-only">테스트잇 얼굴 서사 테스트</p>
     </section>
+
+
 
   <div class="img"> 
 <img class="up mt-3 pb-5" src="img_main196.png" alt="up">
@@ -479,7 +522,7 @@ input:checked + label > .knob > i:before {
                 <div class="spinner-border" role="status">
                     <span class="sr-only">Loading</span>
                 </div>
-                <p class="text-center">얼굴 서사 찾는 중..</p>
+                <p class="text-center">얼굴 서사 찾는 중...</p>
             </div>
                 <p class="result-message"></p>
             <div id="label-container" class="d-flex flex-column justify-content-around"></div>
@@ -487,17 +530,12 @@ input:checked + label > .knob > i:before {
                 <div class="addthis_inline_share_toolbox_bzap"></div>
             
 
-  <div class="pt-3 image-title-wrap">
-    <div style="display: block; text-align: center;">
-        <button type="button" class="try-again-btn mt-3" onclick="window.location.reload();" style="white-space: nowrap; width: 270px; font-size: 13px;">
-            <span class="try-again-text">다른 사진으로 해보기</span>
-        </button>
-    </div>
-    <div style="display: block; text-align: center;">
-        <button type="button" class="try-again-btn mt-3" onclick="location.href='/';" style="white-space: nowrap; width: 270px; margin-top: 10px; font-size: 13px;">
-            <span class="try-again-text">다른 테스트 하러가기</span>
-        </button>
-    </div>
+<div style="display: flex; flex-direction: column; align-items: center;">
+      <!-- 다시해보기 버튼에 클래스 추가 -->
+        <button type="button" class="btn btn-info mt-3 custom-button" onclick="location.href='test196.html'" style="font-size:large;  color: black;background-color: rgb(255, 252, 214); border-radius: 0px; border-width: 1px; border-color: rgb(0, 0, 0);">다시 해보기</button>
+
+        <!-- 다른테스트해보기 버튼에 클래스 추가 -->
+        <button type="button" class="btn btn-info mt-3 custom-button" onclick="location.href='/'" style="font-size:large; color: black; background-color: rgb(255, 252, 214); border-radius: 0px; border-width: 1px; border-color: rgb(0, 0, 0);">다른 테스트 해보기</button>
                         
                         
             </div>
@@ -518,7 +556,7 @@ input:checked + label > .knob > i:before {
 
 <footer class="footer pt-5 container d-flex justify-content-center">
         <div>
-            <p>&copy; test it 2023. All Rights Reserved. </p>
+            <p>&copy; test it 2024. All Rights Reserved. </p>
         </div>
     </footer>
     <script>
@@ -588,7 +626,7 @@ input:checked + label > .knob > i:before {
             var resultTitle;
             if (document.getElementById("gender").checked) {
                 switch (prediction[0].className) {
-                            case "1a":
+                                 case "1a":
                        resultTitle = '<img src="fy196_1a.png">';
                      
                         break;
@@ -902,6 +940,7 @@ input:checked + label > .knob > i:before {
                        resultTitle = '<img src="fy196_38a.png">';
                      
                         break;
+
 
 
 
