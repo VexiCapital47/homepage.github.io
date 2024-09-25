@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+     crossorigin="anonymous"></script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>테스트잇 분노 속성 테스트</title>
+    <meta name="description" content="테스트잇 분노 속성 테스트">
+    <meta name="keywords" content="테스트잇,분노속성테스트,분노속성테스트,분노테스트,테스트잇분노속성,연애테스트,연애mbti,연애성격테스트, 심리테스트, mbti테스트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="테스트잇 분노 속성 테스트">
+    <meta property="og:description" content="테스트잇 분노 속성 테스트">
+    <meta property="og:image" content="img_main221.png">
+    <meta property="og:url" content="https://test-it.co.kr/test221">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+   <style>
+        
+        
+.start{
+    display: flex;
+    flex-direction: column;
+}
+*/.logo {
+      width: 100px !important; /* 우선적으로 적용 */
+    max-width: 100%; /* 부모 요소에 맞춰 조정 */
+    height: auto; /* 비율 유지 */
+}
+
+
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+.main-nav a{
+    color: #432;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+    
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+ 
+        /* 스타일링을 위한 CSS 코드 */
+        
+        body {
+            font-family: Noto Sans KR, sans-serif;
+            text-align: center;
+        }
+            /* 이미지에 아래 여백을 주어 버튼을 내립니다. */
+    /* 이미지 스타일 */
+        /* 모달 스타일 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+/* 기본 모달 콘텐츠 스타일 */
+.modal-content {
+    position: absolute;
+    top: 50%; /* 화면 세로 중앙에 배치 */
+    left: 50%; /* 화면 가로 중앙에 배치 */
+    transform: translate(-50%, -50%); /* 가운데 정렬을 위한 변형 */
+    background-color: #ffffff;
+    margin: auto;
+    padding: 20px; /* 내용에 맞게 조절 */
+    border: 1px solid #888;
+    width: 50%; /* 모달 창의 가로 너비를 조절합니다. */
+     height: 10%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* 모달 창 모서리를 10px만큼 둥글게 만듭니다. */
+}
+        /* 모달 텍스트 스타일 */
+#modalText {
+    text-align: center; /* 가로 가운데 정렬 */
+    position: absolute; /* 위치 지정 */
+    top: 50%; /* 세로 중앙에 배치 */
+    left: 50%; /* 가로 중앙에 배치 */
+    transform: translate(-50%, -50%); /* 가운데 정렬을 위한 변형 */
+}
+
+        
+/* 닫기 버튼 스타일 */
+.close {
+    position: absolute; /* 모달 내부에서 절대 위치로 설정 */
+    bottom: -50px; /* 모달 내부 아래에 여백을 둡니다. */
+    left: 50%; /* 모달 내부 가로 중앙에 배치 */
+    transform: translateX(-50%); /* 수평 가운데 정렬 */
+  background-color: #ffffff; /* 불투명한 배경색으로 설정 */
+opacity: 1; /* 투명도를 완전히 없애기 */
+
+    color: #000;
+    padding: 10px 10px;
+    border: none;
+  cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 15px; /* 원하는 글씨 크기로 조절합니다. */
+}
+.close:hover {
+    background-color: #ffffff; /* 마우스 호버 상태일 때도 배경색을 원래 색으로 유지 */
+    color: #000; /* 마우스 호버 상태일 때도 글자색을 원래 색으로 유지 */
+}
+
+        
+    .start-image {
+        max-width: 100%; /* 이미지의 최대 너비를 100%로 설정하여 부모 요소에 맞게 조절 */
+        height: auto; /* 이미지의 높이를 자동으로 조절하여 가로세로 비율 유지 */
+        display: block; /* 이미지를 블록 요소로 표시하여 위아래 여백을 생성 */
+        margin: 0 auto 10px; /* 이미지 아래에 20px 여백을 추가하고 수평 가운데 정렬 */
+    }
+
+        .quiz-container {
+            display: none;
+        }
+
+        /* 객관식 버튼의 스타일 */
+        .quiz-container button {
+            display: block;
+            margin: 5px auto; /* 왼쪽과 오른쪽 마진을 자동으로 조절하여 가운데 정렬 */
+            width: 40%; /* 버튼의 가로 길이를 조절 */
+        }
+
+       .start-button {
+        background-color: #fffcce;
+        color: black;
+        padding: 10px 150px;
+            border-color: #ff94ec;
+
+        cursor: pointer;
+            font-size: 18px; /* 버튼 글꼴 크기 조절 */
+        display: block;
+        margin: 0 auto;
+              border-radius: 5px; /* 버튼 모서리를 둥글게 만듭니다. */
+    }
+/* 질문 이미지 스타일링 */
+.quiz-container img {
+    width: 500px;
+    height: 900px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+        /* 질문 이미지 스타일링 */
+.quiz-container img {
+    width: 500px; /* 기본 이미지의 가로 크기를 500px로 설정 */
+
+    /* 미디어 쿼리를 사용하여 모바일 화면 크기에서 이미지 크기 조절 */
+    @media (max-width: 768px) { /* 모바일 화면 크기를 기준으로 조절 */
+        width: 100%; /* 모바일 화면에서 이미지를 화면 가로 너비에 맞게 조절 */
+    }
+    
+    height: auto; /* 이미지의 세로 크기를 자동으로 조절하여 비율 유지 */
+    display: block;
+    margin: 0 auto; /* 이미지를 가운데 정렬 */
+}
+
+/* 질문 버튼 스타일 */
+.question-button {
+    background-color: #fffcce;
+    color: black;
+    padding: 10px 0; /* 상하 패딩만 지정 */
+    border-color: #000000;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+    font-size: 15px;
+    border-radius: 5px;
+    min-width: 300px; /* 최소 가로 길이를 350px로 설정 */
+    box-sizing: border-box; /* 가로 길이를 고정한 상태에서 padding과 border를 포함한 전체 요소 크기 유지 */
+    text-align: center; /* 가운데 정렬 */
+}
+
+
+
+
+        #result-image {
+          width: 500px;
+    height: 900px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+        }
+
+        /* 프로그래스 바 스타일 */
+        .progress-container {
+            width: 100%;
+            background-color: #fffcce;
+            height: 10px;
+            position: relative;
+            display: none;
+                margin-bottom: 20px; /* 하단에 20px의 마진 추가 */
+        }
+
+        .progress-bar {
+            width: 0;
+          height: 10px;
+            background-color: #ff94ec;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+        }
+
+        .coupang_ad {
+    width: 320px;
+    margin: 0 auto;
+}
+    
+      .custom-button {
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+    
+
+
+
+    </style>
+
+</head>
+<body>
+    <header class="page-header wrapper">
+        <h1><a href='/'><img class="logo" src="img_logo.png"width="100" alt="test it"></a></h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href='https://test-it.co.kr/test'>성격</a></li>
+                <li><a href='https://test-it.co.kr/face'>얼굴</a></li>
+                <li><a href='https://test-it.co.kr/etc'>그외</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="start">
+        <img src="img_main221.png" alt="시작 이미지" class="start-image mt-3" width="500">
+        <button onclick="startQuiz()" class="start-button">시작하기</button>
+    </div>
+
+    <div class="progress-container" id="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <!-- Quiz Containers -->
+    <div class="quiz-container" id="quiz-container-1">
+        <p><img src="q1_221.png" alt="문제1"></p>
+        <button onclick="checkAnswer(1, 1)" class="question-button">짜증 나지만 참는다</button>
+        <button onclick="checkAnswer(1, 2)" class="question-button">가서 사과하라고 한다</button>
+        <button onclick="checkAnswer(1, 3)" class="question-button">날 못 봤나...</button>
+        <button onclick="checkAnswer(1, 4)" class="question-button">좋게좋게 생각하자~!</button>
+    </div>
+    <div class="quiz-container" id="quiz-container-2">
+        <p><img src="q2_221.png" alt="문제2"></p>
+        <button onclick="checkAnswer(2, 1)" class="question-button">금방 탈거니까 신경 쓰지 않는다</button>
+        <button onclick="checkAnswer(2, 2)" class="question-button">새치기하지 말라고 불같이 따진다</button>
+        <button onclick="checkAnswer(2, 3)" class="question-button">그냥 못 본척한다</button>
+        <button onclick="checkAnswer(2, 4)" class="question-button">실제로 전혀 기분이 나쁘지 않다</button>
+    </div>
+    <div class="quiz-container" id="quiz-container-3">
+        <p><img src="q3_221.png" alt="문제3"></p>
+        <button onclick="checkAnswer(3, 1)" class="question-button">다음엔 더 맛있는 거 사준다고 한다</button>
+        <button onclick="checkAnswer(3, 2)" class="question-button">그만하라고 가족들에게 화를 낸다</button>
+        <button onclick="checkAnswer(3, 3)" class="question-button">쥐 죽은 듯이 음식만 먹는다</button>
+        <button onclick="checkAnswer(3, 4)" class="question-button">좋은 점을 찾아내서 분위기를 바꾼다</button>
+    </div>
+    <div class="quiz-container" id="quiz-container-4">
+        <p><img src="q4_221.png" alt="문제4"></p>
+        <button onclick="checkAnswer(4, 1)" class="question-button">같이 먹자고 말할 걸 그랬나?</button>
+        <button onclick="checkAnswer(4, 2)" class="question-button">참을 수 없이 화가 난다</button>
+        <button onclick="checkAnswer(4, 3)" class="question-button">그냥 그러려니 한다</button>
+        <button onclick="checkAnswer(4, 4)" class="question-button">잘 찾아 먹었네 생각한다</button>
+    </div>
+    <div class="quiz-container" id="quiz-container-5">
+        <p><img src="q5_221.png" alt="문제5"></p>
+        <button onclick="checkAnswer(5, 1)" class="question-button">내가 너무 편하게 입고 왔나?</button>
+        <button onclick="checkAnswer(5, 2)" class="question-button">기분 나빠서 매장을 나온다</button>
+        <button onclick="checkAnswer(5, 3)" class="question-button">오히려 좋다</button>
+        <button onclick="checkAnswer(5, 4)" class="question-button">내가 먼저 말 걸면 되니까 괜찮다</button>
+    </div>
+    <div class="quiz-container" id="quiz-container-6">
+        <p><img src="q6_221.png" alt="문제6"></p>
+        <button onclick="checkAnswer(6, 1)" class="question-button">아무렇지 않게 나도 폰을 본다</button>
+        <button onclick="checkAnswer(6, 2)" class="question-button">폰 좀 그만 보라고 뭐라 한다</button>
+        <button onclick="checkAnswer(6, 3)" class="question-button">날 보는 거보단 낫다</button>
+        <button onclick="checkAnswer(6, 4)" class="question-button">혹시 무슨 일 있나? 걱정된다</button>
+    </div>
+    <div class="quiz-container" id="quiz-container-7">
+        <p><img src="q7_221.png" alt="문제7"></p>
+        <button onclick="checkAnswer(7, 1)" class="question-button">얼룩을 지울 방법을 찾는다</button>
+        <button onclick="checkAnswer(7, 2)" class="question-button">더 강하게 나가서 환불을 받는다</button>
+        <button onclick="checkAnswer(7, 3)" class="question-button">사실 환불 전화 안 하는 편</button>
+        <button onclick="checkAnswer(7, 4)" class="question-button">나만의 특별한 옷이 생겼다 생각한다</button>
+    </div>
+    <div class="quiz-container" id="quiz-container-8">
+        <p><img src="q8_221.png" alt="문제8"></p>
+        <button onclick="checkAnswer(8, 1)" class="question-button">내가 뭐 실수했나 생각한다</button>
+        <button onclick="checkAnswer(8, 2)" class="question-button">대놓고 왜 그러냐고 말한다</button>
+        <button onclick="checkAnswer(8, 3)" class="question-button">그냥 그러려니 한다</button>
+        <button onclick="checkAnswer(8, 4)" class="question-button">그 친구에게 질문을 하며 말을 건다</button>
+    </div>
+    <div class="quiz-container" id="quiz-container-9">
+        <p><img src="q9_221.png" alt="문제9"></p>
+        <button onclick="checkAnswer(9, 1)" class="question-button">따라 하는 것 같지만 그냥 둔다</button>
+        <button onclick="checkAnswer(9, 2)" class="question-button">따라 하지 말라고 말한다</button>
+        <button onclick="checkAnswer(9, 3)" class="question-button">거리를 두고 멀어진다</button>
+        <button onclick="checkAnswer(9, 4)" class="question-button">내 스타일이 그렇게 좋은가? 뿌듯</button>
+    </div>
+    <div class="quiz-container" id="quiz-container-10">
+        <p><img src="q10_221.png" alt="문제10"></p>
+        <button onclick="checkAnswer(10, 1)" class="question-button">기분 나쁘지만 따지진 않는다</button>
+        <button onclick="checkAnswer(10, 2)" class="question-button">우주가 폭파될 듯 화를 낸다</button>
+        <button onclick="checkAnswer(10, 3)" class="question-button">그냥 탑100 듣는다</button>
+        <button onclick="checkAnswer(10, 4)" class="question-button">아무렇지 않게 새로운 플리를 만든다</button>
+    </div>
+<div id="result-container" style="display: none; text-align: center;">
+    <p id="result-text"></p>
+    <img id="result-image" src="" alt="결과 이미지" width="500">
+    <div style="margin-top: 20px;">
+      
+         
+         <!-- 다시해보기 버튼 -->
+        <button type="button" class="btn btn-info mt-1 custom-button" onclick="location.href='test221.html'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 252, 206); border-color: rgb(164, 164, 164); border-radius: 0px; border-width: 1px;">다시 해보기</button>
+    </div>
+    <div style="margin-top: 20px;">
+        <!-- 다른테스트해보기 버튼 -->
+        <button type="button" class="btn btn-info mt-1 custom-button" onclick="location.href='/'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 252, 206); border-color: rgb(164, 164, 164); border-radius: 0px; border-width: 1px;">다른 테스트 해보기</button>
+    </div>
+</div>
+
+      <article class="coupang_ad mt-3">
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":798186,"template":"carousel","trackingCode":"AF4391881","width":"350","height":"140","tsource":""});
+
+        let currentQuiz = 1;
+        let answers = [0, 0, 0, 0]; // 선택된 답변 수를 저장하는 배열
+
+        function startQuiz() {
+            document.querySelector('.start').style.display = 'none';
+            document.getElementById('progress-container').style.display = 'block';
+            showQuiz(currentQuiz);
+        }
+
+        function showQuiz(quizNumber) {
+            const quizContainer = document.getElementById('quiz-container-' + quizNumber);
+            quizContainer.style.display = 'block';
+            updateProgress(quizNumber);
+        }
+
+        function checkAnswer(quizNumber, answer) {
+            answers[answer - 1]++;
+            document.getElementById('quiz-container-' + quizNumber).style.display = 'none';
+            currentQuiz++;
+            if (currentQuiz <= 10) {
+                showQuiz(currentQuiz);
+            } else {
+                showResult();
+            }
+        }
+
+        function updateProgress(quizNumber) {
+            const progressBar = document.getElementById('progress-bar');
+            const progressPercentage = (quizNumber / 10) * 100;
+            progressBar.style.width = progressPercentage + '%';
+        }
+
+    function showResult() {
+    const maxCount = Math.max(...answers);
+    const mostSelectedAnswers = answers.map((count, index) => count === maxCount ? index + 1 : null).filter(num => num !== null);
+
+    // 동점 여부를 확인
+    if (mostSelectedAnswers.length > 1) {
+        // 동점 상황
+        const tieImageFile = getTieImage(mostSelectedAnswers);
+        document.getElementById('result-image').src = tieImageFile;
+  
+    } else {
+        // 가장 많이 선택된 답변
+        const selectedAnswer = mostSelectedAnswers[0];
+        document.getElementById('result-image').src = `img221_choice${selectedAnswer}.png`;
+
+    }
+    document.getElementById('result-container').style.display = 'block';
+}
+
+// 동점 상황에 따른 이미지 파일을 결정하는 함수
+function getTieImage(mostSelectedAnswers) {
+    const ties = {
+        '1,2': 'img221_choice12.png',
+        '1,3': 'img221_choice13.png',
+        '1,4': 'img221_choice14.png',
+        '2,3': 'img221_choice23.png',
+        '2,4': 'img221_choice24.png',
+        '3,4': 'img221_choice34.png',
+        '1,2,3': 'img221_choice123.png',
+        '1,2,4': 'img221_choice124.png',
+        '1,3,4': 'img221_choice124.png',
+        '2,3,4': 'img221_choice234.png',
+    };
+
+    // 동점 답변 조합 문자열 생성
+    const tieKey = mostSelectedAnswers.sort().join(',');
+
+    return ties[tieKey] || 'default_tie_image.png'; // 기본 동점 이미지 설정
+}
+
+    </script>
+</body>
+</html>
