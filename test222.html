@@ -254,12 +254,11 @@ body {
   color: #BDBDBD;
         font-size: 20px;
 }
-.result-message {
-    width: 60%;
-    margin: 0 auto;
-    text-align: center;
+.result-message img, 
+.result-title img {
+    max-width: 60%; /* 화면에 맞게 이미지 크기 조정 */
+    height: auto;
 }
-
 /* 결과 이미지 부모 요소 스타일 추가 */
 .result-title {
     text-align: center;
@@ -294,10 +293,14 @@ body {
     }
 }
 
+ @media screen and (max-width: 600px) {
+  .result-title img,
   .result-message img {
-    width: 100%; /* 화면 너비에 맞게 이미지 크기 조절 */
+    max-width: 100%; /* 이미지를 부모 요소에 맞게 조정 */
+    width: 100%; /* 화면 너비에 맞게 이미지 크기 조정 */
     height: auto;
   }
+}
 
 .upload {
     width: 20%;
