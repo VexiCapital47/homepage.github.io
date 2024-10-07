@@ -71,7 +71,13 @@
     color: #0bd;
 }
 
-
+#img_main{
+    width: 500px;
+    height: 600px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
 
     
 article{
@@ -204,6 +210,13 @@ article{
                 font-size: 14px;
             }
 
+        
+         @media (max-width: 768px) {
+        #img_main {
+            max-width: 100%; /* 작은 화면에서는 최대 너비를 100%로 설정 */
+        }
+    }
+        
             .input-field {
                 font-size: 24px; /* 작은 화면에서는 폰트 크기를 조금 줄임 */
             }
@@ -215,7 +228,16 @@ article{
           select.input-field {
             font-size: 20px; /* 모바일 화면에서 드롭다운 폰트 크기 줄임 */
         }
-        
+                .coupang_ad {
+    width: 320px;
+    margin: 0 auto;
+}
+    
+      .custom-button {
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+        }
         }
     </style>
 </head>
