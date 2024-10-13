@@ -20,8 +20,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link href="https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css" rel="stylesheet">
 
     <style>
+        body {
+            font-family: 'Galmuri9', sans-serif;
+        }
         .logo {
             width: 100px;
             margin-top: 14px;
@@ -35,13 +39,11 @@
         }
         .main-nav li {
             margin-left: 36px;
-            font-family: 'Do Hyeon', sans-serif;
             line-height: 1.7;
             color: #432;
         }
         .main-nav a{
             color: #432;
-            font-family: 'Do Hyeon', sans-serif;
             line-height: 1.7;
         }
         .main-nav a:hover {
@@ -54,6 +56,7 @@
         article{
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
         .question, .nickname, .result {
             display: none;
@@ -64,7 +67,6 @@
         .progress {
             background-color: #ffffff;
         }
-        @import url('https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
         
         #img {
             width: 100%;
@@ -82,7 +84,7 @@
 
         #nicknameOverlay {
             position: absolute;
-            top: 22%; /* 이미지 내에서 고정된 위치 */
+            top: 17%; /* 이미지 내에서 고정된 위치 */
             left: 83%; /* 왼쪽에서 83% 지점 */
             transform: translate(-50%, -50%);
             font-size: 16px;
@@ -96,7 +98,6 @@
 
         #img_main{
             width: 500px;
-            height: 600px;
             max-width: 100%;
             height: auto;
             margin: 0 auto;
@@ -104,13 +105,15 @@
         .custom-button {
             width: 100%;
             max-width: 350px;
-            margin: 0 auto;
+            margin: 10px auto;
         }
-        .nickname {
-            margin-top: 100px;
-            margin-left: 50px;
+        .nickname-input {
+            max-width: 350px;
+            width: 100%;
+            margin-top: 20px;
         }
     </style>
+
 
 </head>
 <body class="container" style="background-color:#ffffff">
@@ -118,26 +121,25 @@
         <h1><a href="index.html"><img class="logo" src="img_logo.png" alt="test it"></a>
         </h1>
         <nav>
-            <u1 class="main-nav">
+            <ul class="main-nav">
                 <li> <a href="https://test-it.co.kr/test.html">성격</a></li>
                 <li> <a href="https://test-it.co.kr/face.html">얼굴</a></li>
                 <li> <a href="https://test-it.co.kr/etc.html">그외</a></li>
-            </u1>
+            </ul>
         </nav>
     </header>
 
-    
     <!-- 시작화면 -->
     <article class="start">
         <img id="img_main" class="mt-3" src="img_main226.png">
-        <button type="button" class="btn btn-info mt-3" onclick='showNicknameInput();' style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 181, 39); border-color: rgb(255, 181, 39); width: 350px; height: 50px; margin: 0 auto;">테스트 시작하기</button>
+        <button type="button" class="btn btn-info mt-3 custom-button" onclick='showNicknameInput();' style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 181, 39); border-color: rgb(255, 181, 39);">테스트 시작하기</button>
     </article>
 
     <!-- 닉네임 입력 화면 -->
     <article class="nickname">
         <img id="img_nickname" class="mt-1" src="img_nickname226.png" style="max-width: 100%; height: auto; margin: 0 auto; display: block;">
-           <input type="text" id="nicknameInput" class="form-control mt-3" style="max-width: 350px; margin: 0 auto;">
-        <button type="button" class="btn btn-info mt-3" onclick='start();' style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 181, 39); border-color: rgb(255, 181, 39); width: 350px; height: 50px; margin: 0 auto;">다음~</button>
+        <input type="text" id="nicknameInput" class="form-control nickname-input" placeholder="닉네임을 입력하세요">
+        <button type="button" class="btn btn-info custom-button" onclick='start();' style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 181, 39); border-color: rgb(255, 181, 39);">다음~</button>
     </article>
     
     <!-- 문제 화면 -->
@@ -151,12 +153,14 @@
         <button id="B" type="button" class="btn btn-info mt-3" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(255, 240, 210); border-color: rgb(255, 177, 27); width: 350px; height: 100px; margin: 0 auto; display: block;">Primary</button>
     </article>
 
-    <!-- 결과 화면 -->
+
+   <!-- 결과 화면 -->
     <article class="result">
-        <div class="image-container">
-            <img id="img" class="mt-5" src="" alt="animal">
+        <div class="image-container" id="resultContainer">
+            <img id="resultImage" src="" alt="result image" style="width: 100%; height: auto;">
             <div id="nicknameOverlay">닉네임</div>
         </div>
+        <button type="button" class="btn btn-info mt-3 custom-button" onclick="saveResult()" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 240, 210);  border-color: rgb(255, 177, 27); border-radius: 0px; border-width: 1px;">결과 저장하기</button>
         <button type="button" class="btn btn-info mt-3 custom-button" onclick="location.href='test226.html'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 240, 210);  border-color: rgb(255, 177, 27); border-radius: 0px; border-width: 1px;">다시 해보기</button>
         <button type="button" class="btn btn-info mt-3 custom-button" onclick="location.href='/'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 240, 210);  border-color: rgb(255, 177, 27); border-radius: 0px; border-width: 1px;">다른 테스트 해보기</button>
     </article>
@@ -250,7 +254,7 @@
                 ($("#SN").val()<2) ? mbti+="N" : mbti+="S";
                 ($("#TF").val()<2) ? mbti+="T" : mbti+="F";
                 ($("#JP").val()<2) ? mbti+="J" : mbti+="P";
-                $("#img").attr("src", result[mbti]["img"]);
+                $("#resultImage").attr("src", result[mbti]["img"]);
             } else{
                 $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)');
                 $("#title").html(q[num]["title"]);
@@ -259,6 +263,33 @@
                 $("#B").html(q[num]["B"]);
                 num++;
             }
+        }
+
+           function saveResult() {
+            var canvas = document.createElement("canvas");
+            var img = document.getElementById("resultImage");
+            var nicknameOverlay = document.getElementById("nicknameOverlay");
+            canvas.width = img.naturalWidth;
+            canvas.height = img.naturalHeight;
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0);
+            ctx.font = window.getComputedStyle(nicknameOverlay).font;
+            ctx.fillStyle = window.getComputedStyle(nicknameOverlay).color;
+            var bounds = nicknameOverlay.getBoundingClientRect();
+            var containerBounds = img.getBoundingClientRect();
+            var nicknamePositionX = bounds.left - containerBounds.left;
+            var nicknamePositionY = bounds.top - containerBounds.top + bounds.height;
+            ctx.fillText(nicknameOverlay.innerText, nicknamePositionX, nicknamePositionY);
+
+            var link = document.createElement("a");
+            link.download = "result.png";
+            link.href = canvas.toDataURL();
+            link.click();
+
+            var link = document.createElement("a");
+            link.download = "result.png";
+            link.href = canvas.toDataURL();
+            link.click();
         }
     </script>
 </body>
