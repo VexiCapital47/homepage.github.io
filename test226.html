@@ -74,13 +74,26 @@
             display: block;
         }
 
-        .image-container {
-            position: relative;
-            display: block;
-            width: 500px;
-            max-width: 100%;
-            margin: 0 auto;
-        }
+  .image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden; /* 컨테이너 내에서 이미지가 넘치지 않도록 설정 */
+}
+
+#resultImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#resultContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 
         #nicknameOverlay {
             position: absolute;
@@ -113,7 +126,6 @@
             margin-top: 20px;
         }
     </style>
-
 
 </head>
 <body class="container" style="background-color:#ffffff">
@@ -153,7 +165,6 @@
         <button id="B" type="button" class="btn btn-info mt-3" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(255, 240, 210); border-color: rgb(255, 177, 27); width: 350px; height: 100px; margin: 0 auto; display: block;">Primary</button>
     </article>
 
-
    <!-- 결과 화면 -->
     <article class="result">
         <div class="image-container" id="resultContainer">
@@ -175,10 +186,12 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
 
     <script>
         var num = 1;
-        var q = {
+        var EI = 0, SN = 0, TF = 0, JP = 0;
+          var q = {
             1: {"title": "단풍축제 날, 사람들로 북적이는 광장<br><br> 다양한 공연과 푸드트럭이 열려 있다<br><br>나는 어디로 갈까?", "type": "EI", "A": "사람들 틈에 섞여서 축제 분위기를 만끽함", "B": "조용한 길로 빠져서 친구와 조용히 단풍 구경"},
             2: {"title": "축제 전체를 다 보기엔 좀 큰 공원<br><br>어떤 식으로 단풍축제를 구경할까?", "type": "JP", "A": "일단 발길 닿는 대로 출발하자", "B": "어디 어디 갈지 순서를 정해서 가자"},
             3: {"title": "단풍이 화려하게 물든 숲길<br><br>단풍잎이 바람에 흔들리며<br><br>눈앞에 흩날리고 있다", "type": "SN", "A": "와 이거 누가 다 치워", "B": "가을 감성에 흠뻑 젖어듦"},
@@ -192,27 +205,7 @@
             11: {"title": "축제 구경을 다 하고<br><br>친구가 어디 가서 더 놀자고 할 때 나는?", "type": "EI", "A": "한번 나오면 제대로 놀아야지<br>더 놀고 가자!", "B": "너무 많은 사람을 봐서 지쳤어<br>다음에 또 놀자!"},
             12: {"title": "집에 가기 전에 살게 있어서<br><br>편의점에 잠깐 들렸다<br><br>어떤 걸 살까?", "type": "JP", "A": "둘러보면서 사고 싶은걸 산다", "B": "생각해둔 물건만 사고 바로 간다"}
         };
-
-        var result = {
-            "ISTJ": {"img":"img_istj226.png"},
-            "ISFJ": {"img":"img_isfj226.png"},
-            "INFJ": {"img":"img_infj226.png"},
-            "INTJ": {"img":"img_intj226.png"},
-            "ISTP": {"img":"img_istp226.png"},
-            "ISFP": {"img":"img_isfp226.png"},
-            "INFP": {"img":"img_infp226.png"},
-            "INTP": {"img":"img_intp226.png"},
-            "ESTP": {"img":"img_estp226.png"},
-            "ESFP": {"img":"img_esfp226.png"},
-            "ENFP": {"img":"img_enfp226.png"},
-            "ENTP": {"img":"img_entp226.png"},
-            "ESTJ": {"img":"img_estj226.png"},
-            "ESFJ": {"img":"img_esfj226.png"},
-            "ENFJ": {"img":"img_enfj226.png"},
-            "ENTJ": {"img":"img_entj226.png"}
-        };
-
-        function showNicknameInput() {
+  function showNicknameInput() {
             $(".start").hide();
             $(".nickname").show();
         }
@@ -229,34 +222,24 @@
             var hasBatchim = (lastChar.charCodeAt(0) - 0xAC00) % 28 !== 0;
             var particle = hasBatchim ? "은" : "는";
 
-            $("#nicknameDisplay").text(nickname + particle);
             $("#nicknameOverlay").text(nickname + particle);
             $(".nickname").hide();
             $(".question").show();
             next();
         }
 
-        $("#A").click(function(){
-            var type = $("#type").val();
-            var preValue = $("#"+type).val();
-            $("#"+type).val(parseInt(preValue)+1);
-            next();
-        });
-        $("#B").click(function(){
-            next();
-        });
-        function next(){
-            if(num==13){
+        function next() {
+            if (num == 13) {
                 $(".question").hide();
                 $(".result").show();
                 var mbti = "";
-                ($("#EI").val()<2) ? mbti+="I" : mbti+="E";
-                ($("#SN").val()<2) ? mbti+="N" : mbti+="S";
-                ($("#TF").val()<2) ? mbti+="T" : mbti+="F";
-                ($("#JP").val()<2) ? mbti+="J" : mbti+="P";
-                $("#resultImage").attr("src", result[mbti]["img"]);
-            } else{
-                $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)');
+                mbti += (EI >= 2) ? "E" : "I";
+                mbti += (SN >= 2) ? "S" : "N";
+                mbti += (TF >= 2) ? "F" : "T";
+                mbti += (JP >= 2) ? "P" : "J";
+                $("#resultImage").attr("src", "img_" + mbti.toLowerCase() + "226.png");
+            } else {
+                $(".progress-bar").css('width', `calc(100/12*${num}%)`);
                 $("#title").html(q[num]["title"]);
                 $("#type").val(q[num]["type"]);
                 $("#A").html(q[num]["A"]);
@@ -265,32 +248,34 @@
             }
         }
 
-           function saveResult() {
-            var canvas = document.createElement("canvas");
-            var img = document.getElementById("resultImage");
-            var nicknameOverlay = document.getElementById("nicknameOverlay");
-            canvas.width = img.naturalWidth;
-            canvas.height = img.naturalHeight;
-            var ctx = canvas.getContext("2d");
-            ctx.drawImage(img, 0, 0);
-            ctx.font = window.getComputedStyle(nicknameOverlay).font;
-            ctx.fillStyle = window.getComputedStyle(nicknameOverlay).color;
-            var bounds = nicknameOverlay.getBoundingClientRect();
-            var containerBounds = img.getBoundingClientRect();
-            var nicknamePositionX = bounds.left - containerBounds.left;
-            var nicknamePositionY = bounds.top - containerBounds.top + bounds.height;
-            ctx.fillText(nicknameOverlay.innerText, nicknamePositionX, nicknamePositionY);
+        $("#A").click(function () {
+            var type = $("#type").val();
+            if (type == "EI") EI++;
+            else if (type == "SN") SN++;
+            else if (type == "TF") TF++;
+            else if (type == "JP") JP++;
+            next();
+        });
 
-            var link = document.createElement("a");
-            link.download = "result.png";
-            link.href = canvas.toDataURL();
-            link.click();
+        $("#B").click(function () {
+            next();
+        });
 
-            var link = document.createElement("a");
-            link.download = "result.png";
-            link.href = canvas.toDataURL();
-            link.click();
-        }
+function saveResult() {
+    window.scrollTo(0, 0); // 페이지 상단으로 스크롤
+    html2canvas(document.querySelector("#resultContainer"), {
+        useCORS: true,
+        scale: 2, 
+        backgroundColor: null 
+    }).then(function (canvas) {
+        var link = document.createElement("a");
+        link.download = "result.png";
+        link.href = canvas.toDataURL();
+        link.click();
+    });
+}
+
+
     </script>
 </body>
 </html>
