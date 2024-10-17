@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+     crossorigin="anonymous"></script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>테스트잇 버블 성격 테스트</title>
+    <meta name="description" content="테스트잇 버블 성격 테스트">
+<meta name="keywords" content="테스트잇,성격테스트,버블성격테스트,버블성격테스트,테스트잇연애,테스트잇버블성격,버블성격테스트결과,연애테스트,연애mbti,연애성격테스트, 심리테스트, mbti테스트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="테스트잇 버블 성격 테스트">
+    <meta property="og:description" content="테스트잇 버블 성격 테스트">
+    <meta property="og:image" content="img_main227.png">
+    <meta property="og:url" content="https://test-it.co.kr/test227">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+
+
+<style>
+
+/* start 태그와 question 태그 모두 article 태그라서 article 태그에 속성을 주면 동시에 적용됨
+.start{
+    display: flex;
+    flex-direction: column;
+}
+*/
+    
+   @font-face {
+    font-family: 'LeeSeoyun';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+    
+        body {
+        font-family: 'LeeSeoyun', sans-serif;
+    }
+
+    
+    
+.logo {
+    width: 100px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+
+.main-nav a{
+    color: #432;
+       font-family: 'Do Hyeon', sans-serif;
+    line-height: 1.7;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+    
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+     .custom-jelly-button {
+        width: 100%; /* 모바일에서 화면 너비에 맞춤 */
+        max-width: 350px; /* 버튼 최대 너비 */
+        height: 60px; /* 원하는 세로 크기 */
+        font-size: 17px; !important;
+        font-weight: bold;
+        color: black !important;
+        background: linear-gradient(145deg, #ffe6eb, #ffc2c9);
+        border: none;
+        border-radius: 25px;
+        box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.7), 
+                    inset 4px 4px 10px rgba(0, 0, 0, 0.1),
+                    2px 2px 8px rgba(0, 0, 0, 0.15);
+        margin: 0 auto;
+        display: block;
+    }
+
+    .custom-jelly-button:hover {
+        background: linear-gradient(145deg, #ffd7df, #ffb0b8);
+    }
+    
+    .jelly-question-box {
+        width: 100%;
+        max-width: 400px;
+        min-height: 150px;
+        padding: 30px 20px;
+        margin: 20px auto;
+        background: linear-gradient(145deg, #fff9d6, #ffdf7e);
+        border-radius: 25px;
+        box-shadow: inset -6px -6px 12px rgba(255, 255, 255, 0.8), 
+                    inset 6px 6px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        color: #432;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* h6 요소의 폰트 크기 강제 적용 */
+    .jelly-question-box h6 {
+        font-size: 18px !important;
+    }
+    
+    
+.question{
+    display: none;
+}
+
+.result{
+    display: none;
+}
+    .progress {
+        height: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+
+    .progress-bar {
+        background: linear-gradient(145deg, #ffd1dc, #ffb3c6); /* 연한 분홍색 그라디언트 */
+        border-radius: 10px;
+        box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.7), 
+                    inset 2px 2px 5px rgba(0, 0, 0, 0.1); /* 부드러운 내부 그림자 */
+        transition: width 0.4s ease; /* 부드러운 진행 애니메이션 */
+    }
+#img{
+    width: 500px;
+    height: 900px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#img_main{
+    width: 500px;
+    height: 600px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#question-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.question-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+    
+.btn-info.focus, .btn-info:focus {
+    box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+    .btn-info:hover {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+            box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+    .btn-info.focus, .btn-info:focus {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+    .btn-info {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+            box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+    .btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgb(255 255 255);
+}
+   
+    
+    
+    .at-share-btn-elements{
+        text-align: center;
+    }
+.share{
+    margin: 0 auto;
+}
+
+.kakao_ad{
+    width: 320px;
+    margin: 0 auto;
+}
+
+.kakao_ad2{
+    width: 320px;
+    margin: 0 auto;
+}
+.coupang_ad {
+    width: 320px;
+    margin: 0 auto;
+}
+        .custom-button {
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+    
+
+  
+</style>
+
+
+
+
+
+</head>
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#ffffff">
+            
+    <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img_logo.png" alt="test it"></a>
+        </h1>
+    <nav>
+        <u1 class="main-nav">
+            <li> <a href="https://test-it.co.kr/test.html">성격</a></li>
+            <li> <a href="https://test-it.co.kr/face.html">얼굴</a></li>
+            <li> <a href="https://test-it.co.kr/etc.html">그외</a></li>
+        </u1>
+    </nav>
+        
+        
+    </header>
+
+    
+<!-- body 태그 style background-color 지정으로 배경색 변경-->
+<body class="container" style="background-color:#fed7e0">
+
+
+     <!--시작화면-->
+    <article class="start">
+        <img id="img_main" class="mt-3" src="img_main227.png">
+         <button type="button" class="btn btn-info mt-3 custom-jelly-button" onclick='start();' style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 197, 197); border-color: rgb(0, 0, 0); width: 350px; height: 50px; margin: 0 auto;">테스트 시작하기</button>
+    </article>
+    <!--문제화면-->
+    <article class="question">
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      <div class="jelly-question-box">
+    <h6 style="font-weight: bold; color: black;" class="text-center" id="title">문제</h6>
+</div>
+
+    
+        <input id="type" type="hidden" value="EI">
+    <button id="A" type="button" class="btn btn-info mt-3 custom-jelly-button">Primary</button>
+    <button id="B" type="button" class="btn btn-info mt-3 custom-jelly-button">Primary</button>
+</article>
+    
+    
+    <!--결과화면-->
+    <article class="result">
+        <img id="img" class="mt-5" src="" alt="animal">
+        
+
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox_ougq mt-3"></div>
+        
+<button type="button" class="btn btn-info mt-3 custom-jelly-button" onclick="location.href='test227.html'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(247, 205, 132); border-color: rgb(255, 181, 181); margin: 0 auto; display: block;">다시 해보기</button>
+
+<button type="button" class="btn btn-info mt-3 custom-jelly-button" onclick="location.href='/'" style="font-size:large; font-weight: bold; color: black; background-color: rgb(247, 205, 132); border-color: rgb(255, 213, 66); margin: 0 auto; display: block;">다른 테스트 해보기</button>
+
+
+  
+            
+    </article>
+
+
+      <article class="coupang_ad mt-3">
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":798186,"template":"carousel","trackingCode":"AF4391881","width":"350","height":"140","tsource":""});
+</script>
+        
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <!--각 타입의 점수를 저장하는 input 태그(hidden으로 안보임)-->
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+        // 문제 번호를 나타내는 num 변수
+          var num = 1;
+        // 문제 번호별 질문을 저장하는 자바스크립트 객체 q
+             var q = {
+              1: {"title": "친구랑 떠들다가 갑자기 찾아오는<br><br>어색한 침묵의 순간<br><br>이때 나는?", "type": "EI", "A": "이런 분위기 못 참아<br>내가 먼저 말을 꺼낸다", "B": "침묵 아무렇지도 않음<br>조용함을 즐긴다"},
+
+             2: {"title": "간만에 마음에 드는 영화를 봐서<br><br>친구에게 추천하려는데<br><br>어떤 식으로 추천할까?", "type": "SN", "A": "구체적인 내용을 말하면서 추천", "B": "비슷한 작품을 얘기하며 추천"},
+
+             3: {"title": "친구가 아르바이트하다 실수해서<br><br>우울해하고 있을 때 나는?", "type": "TF", "A": "에이 괜찮아 누구나 실수는 해<br>우울함을 풀어주려고 노력", "B": "다음엔 이렇게 하는 거 어때?<br>실수 없게 방법을 제시"},
+
+             4: {"title": "같이 여행 가기로 한 친구가<br><br>이번엔 무계획으로 떠나보자 할 때 나는?", "type": "JP", "A": "오히려 재밌겠다 바로 OK", "B": "위험하지 않아? 생각 좀 해볼게"},
+
+             5: {"title": "오랜만에 쉬는 날이 생겼다<br><br>제일 먼저 생각나는 건?", "type": "EI", "A": "소중한 사람들과 함께하기", "B": "누구의 방해도 없이 푹 쉬기"},
+
+            6: {"title": "다큐멘터리를 보는데 출연자가<br><br>너무 슬프게 오열을 한다<br><br>이때 나는?", "type": "TF", "A": "그냥 누가 슬프게 우니까 나도 슬퍼짐", "B": "뭐 때문에 우는 건지 상황을 분석함"},
+
+                7: {"title":"오늘을 일기로 남기고 싶다<br><br>나의 일기 쓰는 방식은?", "type": "SN", "A": "오늘 있었던 일을 구체적으로 작성", "B": "오늘 느꼈던 감정과 기분이 주가 되게"},
+
+             8: {"title": "중요한 물건을 집에서 잃어버렸을 때<br><br>찾는 방법은?", "type": "JP", "A": "기억을 더듬으며 여기저기 찾음", "B": "어디서부터 찾을지 정하고 찾음"},
+
+            9: {"title": "드라마를 보는데<br><br>주인공이 초능력을 갖게 됐다<br><br>이걸 보는 나는?", "type": "SN", "A": "역시 드라마는 드라마구나<br>그냥 드라마에 집중함", "B": "내가 저 초능력을 갖게 된다면?<br>머릿속에서 상상이 시작됨"},
+
+         10: {"title": "친구가 도전하려는 일이<br><br>성공하기 힘들다는 걸 알게 됐을 때<br><br>나는 어떻게 할까?", "type": "TF", "A": "친구의 결정을 존중하고 응원함", "B": "왜 성공하기 힘든건지 알려주며<br>다시 생각해 볼 수 없냐고 권유함"},
+
+            11: {"title": "지나가다 좋아하는 인플루언서를 봤다<br><br>나의 반응은?", "type": "EI", "A": "가까이 다가가서<br>팬이라고 인사를 한다", "B": "멀리서 조용히 보고<br>나중에 DM을 한다"},
+
+              12: {"title": "해외여행 중 일기예보와는 다르게<br><br>갑자기 비가 쏟아질 때 나는?", "type": "JP", "A": "갑자기 내리는 비가 좋아서<br>일정을 그대로 진행함", "B": "예보랑 다른 날씨에 당황하며<br>실내로 이동하고 계획을 변경함"}
+        }
+
+
+
+
+
+
+
+        // MBTI 결과별 동물&설명을 저장하는 자바스크립트 객체 result
+        var result = {
+            "ISTJ": {"img":"img_istj227.png"},
+            "ISFJ": {"img":"img_isfj227.png"},
+            "INFJ": {"img":"img_infj227.png"},
+            "INTJ": {"img":"img_intj227.png"},
+
+            "ISTP": {"img":"img_istp227.png"},
+            "ISFP": {"img":"img_isfp227.png"},
+            "INFP": {"img":"img_infp227.png"},
+            "INTP": {"img":"img_intp227.png"},
+
+            "ESTP": {"img":"img_estp227.png"},
+            "ESFP": {"img":"img_esfp227.png"},
+            "ENFP": {"img":"img_enfp227.png"},
+            "ENTP": {"img":"img_entp227.png"},
+
+            "ESTJ": {"img":"img_estj227.png"},
+            "ESFJ": {"img":"img_esfj227.png"},
+            "ENFJ": {"img":"img_enfj227.png"},
+            "ENTJ": {"img":"img_entj227.png"},
+        }
+        // 시작 버튼을 클릭하면 시작화면 숨기고 질문화면 보여주기
+        function start(){
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+        // A 버튼 클릭하면 해당 타입 값을 가져와서 값 1 증가 후 next()
+        $("#A").click(function(){
+            var type = $("#type").val();
+            var preValue = $("#"+type).val();
+            $("#"+type).val(parseInt(preValue)+1);
+            next();
+        });
+        // B 버튼 클릭하면 값 증가 없이 next()
+        $("#B").click(function(){
+            next();
+        });
+        function next(){
+            // 마지막 문제인 경우
+            if(num==13){
+                // 질문은 숨기고 결과 화면 보여주기
+                $(".question").hide();
+                $(".result").show();
+
+                var mbti = "";
+                
+                // 삼항 연산자를 사용해서 MBTI 계산
+                ($("#EI").val()<2) ? mbti+="I" : mbti+="E";
+                ($("#SN").val()<2) ? mbti+="N" : mbti+="S";
+                ($("#TF").val()<2) ? mbti+="T" : mbti+="F";
+                ($("#JP").val()<2) ? mbti+="J" : mbti+="P";
+                
+                // 계산된 MBTI로 이미지, 동물, 설명 값 변경
+                $("#img").attr("src",result[mbti]["img"]);
+                $("#animal").html(result[mbti]["animal"]);
+                $("#explain").html(result[mbti]["explain"]);
+            } // 마지막 문제가 아닌 경우
+            else{
+                // 프로그래스 바 1/12씩 차오르도록 구현
+                $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)');
+                // 각 문제별 문제&선택지 출력
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+
+        }
+    </script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6076fc88e5b8b134"></script>
+
+    </article>
+
+</body>
+    </body>
+    
+</html>
+
