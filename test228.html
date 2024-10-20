@@ -289,50 +289,24 @@
             $(".nickname").show();
         }
 
- function start() {
+function start() {
     var nickname = $("#nicknameInput").val().trim();
     if (nickname === "") {
         alert("닉네임을 입력해주세요.");
         return;
     }
 
-    // 접미사 목록 (사람을 지칭하는 접미사들)
-    var honorifics = ['님', '씨', '양', '군'];
+    // 닉네임과 고정된 접미사 '친구의 그림일기'를 결합
+    var suffix = "그림일기";
+    $("#nicknameOverlay").text(nickname + " " + suffix);
 
-    // 닉네임 마지막 두 글자 추출
-    var lastChar = nickname[nickname.length - 1];
-    var lastTwoChars = nickname.slice(-2);  // 닉네임의 마지막 두 글자
-
-    // 닉네임이 특정 접미사로 끝나는지 확인
-    var suffix;
-    if (honorifics.some(honorific => lastTwoChars.endsWith(honorific))) {
-        // 이미 접미사로 끝나는 경우, 중복 방지를 위해 추가하지 않음
-        suffix = "의 그림일기";
-    } else {
-        // 한글인지 여부를 확인하는 함수
-        function isHangul(char) {
-            return char >= '가' && char <= '힣';
-        }
-
-        // 마지막 글자가 한글일 경우 받침 여부를 판단
-        if (isHangul(lastChar)) {
-            var lastCharCode = lastChar.charCodeAt(0);
-            var lastCharIndex = (lastCharCode - 0xAC00) % 28;
-
-            // 받침이 없으면 '의', 받침이 있으면 '이의'
-            suffix = lastCharIndex === 0 ? "의 그림일기" : "이의 그림일기";
-        } else {
-            // 한글이 아닌 경우 무조건 '의'
-            suffix = "의 그림일기";
-        }
-    }
-
-    // 닉네임과 접미사를 결합해서 표시
-    $("#nicknameOverlay").text(nickname + suffix);
     $(".nickname").hide();
     $(".question").show();
     next();
 }
+설명:
+
+
 
 
         function next() {
