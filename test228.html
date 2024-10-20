@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+     crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>테스트잇 나의 그림일기 테스트</title>
+    <meta name="description" content="테스트잇 나의 그림일기 테스트">
+    <meta name="keywords" content="테스트잇,성격테스트,나의그림일기테스트,나의그림일기테스트,테스트잇연애,테스트잇나의그림일기,나의그림일기테스트결과,연애테스트,연애mbti,연애성격테스트, 심리테스트, mbti테스트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="테스트잇 나의 그림일기 테스트">
+    <meta property="og:description" content="테스트잇 나의 그림일기 테스트">
+    <meta property="og:image" content="img_main228.png">
+    <meta property="og:url" content="https://test-it.co.kr/test228">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+    <style>
+        
+        @font-face {
+    font-family: 'YoonChildfundkoreaManSeh';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/YoonChildfundkoreaManSeh.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+        
+        body {
+            font-family: 'YoonChildfundkoreaManSeh', sans-serif;
+        }
+        .logo {
+            width: 100px;
+            margin-top: 14px;
+        }
+        .main-nav {
+            display: flex;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            margin-top: 34px;
+            list-style: none;
+        }
+        .main-nav li {
+            margin-left: 36px;
+            line-height: 1.7;
+            color: #432;
+        }
+        .main-nav a{
+            color: #432;
+            line-height: 1.7;
+        }
+        .main-nav a:hover {
+            color: #0bd;
+        }
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+        }
+        article{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .question, .nickname, .result {
+            display: none;
+        }
+        .progress-bar {
+            background-color: #ffb527;
+        }
+        .progress {
+            background-color: #ffffff;
+        }
+        
+        #img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+ .custom-jelly-button {
+    width: 100%; /* 모바일에서 화면 너비에 맞춤 */
+    max-width: 350px; /* 버튼 최대 너비 */
+    height: 60px; /* 원하는 세로 크기 */
+    font-size: 15px !important;
+    font-weight: bold;
+    color: black !important;
+    background: linear-gradient(145deg, #fff9a6, #ffdf3e); /* 노란색으로 변경 */
+    border: none;
+    border-radius: 17px;
+    box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.7), 
+                inset 4px 4px 10px rgba(0, 0, 0, 0.1),
+                2px 2px 8px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    display: block;
+}
+
+.custom-jelly-button:hover {
+    background: linear-gradient(145deg, #ffef87, #ffd633); /* 호버 시 더 진한 노란색 */
+}
+    
+  .jelly-question-box {
+    width: 100%;
+    max-width: 400px;
+    min-height: 150px;
+    padding: 30px 20px;
+    margin: 20px auto;
+  background: linear-gradient(145deg, #fff5f8, #ffebf0);
+    border-radius: 25px;
+    box-shadow: inset -6px -6px 12px rgba(255, 255, 255, 0.8), 
+                inset 6px 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #432;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+    /* h6 요소의 폰트 크기 강제 적용 */
+    .jelly-question-box h6 {
+        font-size: 18px !important;
+    }
+    
+        
+        .save-result-button {
+    width: 100%;
+    max-width: 350px;
+    height: 60px;
+    font-size: 15px !important;
+    font-weight: bold;
+    color: black !important;
+    background: linear-gradient(145deg, #ffe6eb, #ffc2c9); /* 연한 핑크색 */
+    border: none;
+    border-radius: 17px;
+    box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.7), 
+                inset 4px 4px 10px rgba(0, 0, 0, 0.1),
+                2px 2px 8px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    display: block;
+}
+
+.save-result-button:hover {
+    background: linear-gradient(145deg, #ffef87, #ffd633); /* 호버 시 색상 유지 */
+}
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden; /* 컨테이너 내에서 이미지가 넘치지 않도록 설정 */
+}
+
+#resultImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#resultContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#nicknameOverlay {
+    position: absolute;
+    top: 10%; /* 이미지 내에서 더 위로 이동 */
+    left: 50%; /* 왼쪽에서 50% 지점 (가운데 정렬) */
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    z-index: 10;
+    white-space: nowrap;
+    pointer-events: none;
+    font-family: 'YoonChildfundkoreaManSeh', sans-serif; /* 폰트 적용 */
+}
+
+        #img_main{
+            width: 500px;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .custom-button {
+            width: 100%;
+            max-width: 350px;
+            margin: 10px auto;
+        }
+        .nickname-input {
+            max-width: 350px;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body class="container" style="background-color:#ffffff">
+    <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img_logo.png" alt="test it"></a>
+        </h1>
+        <nav>
+            <ul class="main-nav">
+                <li> <a href="https://test-it.co.kr/test.html">성격</a></li>
+                <li> <a href="https://test-it.co.kr/face.html">얼굴</a></li>
+                <li> <a href="https://test-it.co.kr/etc.html">그외</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- 시작화면 -->
+<article class="start">
+    <img id="img_main" class="mt-3" src="img_main228.png">
+    <button type="button" class="btn btn-info mt-1 custom-jelly-button" onclick='showNicknameInput();' style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 197, 197); border-color: rgb(0, 0, 0); width: 350px; height: 50px; margin: 0 auto;">테스트 시작하기</button>
+</article>
+
+
+    <!-- 닉네임 입력 화면 -->
+    <article class="nickname">
+        <img id="img_nickname" class="mt-1" src="img_nickname228.png" style="max-width: 100%; height: auto; margin: 0 auto; display: block;">
+        <input type="text" id="nicknameInput" class="form-control nickname-input" placeholder="여기에 입력해요!">
+     <button type="button" class="btn btn-info mt-3 custom-jelly-button" onclick='start();' style="font-size: 16px; font-weight: bold; color: black; background-color: rgb(180, 170, 166); border-color: rgb(0, 0, 0);">다음 화면으로</button>
+    </article>
+    
+ <!-- 문제 화면 -->
+<article class="question">
+    <div class="progress mt-5">
+        <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <!-- 문제 텍스트에 jelly-question-box 클래스 적용 -->
+    <div class="jelly-question-box">
+        <h6 id="title" style="font-weight: bold; color: black;" class="text-center mt-1">문제</h6>
+    </div>
+    <input id="type" type="hidden" value="EI">
+    <button id="A" type="button" class="btn btn-info mt-3 custom-jelly-button" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(255, 245, 174); border-color: rgb(255, 230, 57); width: 350px; height: 100px; margin: 0 auto; display: block;">Primary</button>
+    <button id="B" type="button" class="btn btn-info mt-3 custom-jelly-button" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(255, 245, 174); border-color: rgb(255, 230, 57); width: 350px; height: 100px; margin: 0 auto; display: block;">Primary</button>
+</article>
+
+
+  <!-- 결과 화면 -->
+<article class="result">
+    <div class="image-container" id="resultContainer">
+        <img id="resultImage" src="" alt="result image" style="width: 100%; height: auto;">
+        <div id="nicknameOverlay">닉네임</div>
+    </div>
+    <button type="button" class="btn btn-info mt-3 save-result-button" onclick="saveResult()" style="font-size:large; font-weight: bold;">결과 저장하기</button>
+    <button type="button" class="btn btn-info mt-3 custom-jelly-button" onclick="location.href='test228.html'" style="font-size:large; font-weight: bold;">다시 해보기</button>
+    <button type="button" class="btn btn-info mt-1 custom-jelly-button" onclick="location.href='/'" style="font-size:large; font-weight: bold;">다른 테스트 해보기</button>
+</article>
+
+
+    <!-- 쿠팡 배너 -->
+    <article class="coupang_ad mt-3 text-center">
+        <script src="https://ads-partners.coupang.com/g.js"></script>
+        <script>
+            new PartnersCoupang.G({"id":798186,"template":"carousel","trackingCode":"AF4391881","width":"350","height":"140","tsource":""});
+        </script>
+    </article>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+
+    <script>
+        var num = 1;
+        var EI = 0, SN = 0, TF = 0, JP = 0;
+          var q = {
+            1: {"title": "내가 있는 모임에 새로운 사람이 들어왔어<br><br>나는 어떻게 행동할까?", "type": "EI", "A": "적극적으로 대화하며 친해질래", "B": "낯설어서 조용히 지켜볼래"},
+            2: {"title": "친구가 꼭 만들어주고 싶은 게 있다면서<br><br>나를 초대해서 요리를 해줬어<br><br>난 이 요리의 뭐가 궁금할까?", "type": "SN", "A": "요리에 들어간 재료와<br>어떻게 만들었는지가 궁금해!", "B": "왜 만들어주고 싶었는지<br>요리에 담긴 사연이 궁금해!"},
+            3: {"title": "친구가 중요한 결정을 내리기 전<br><br>나에게 상담을 해왔어<br><br>나는 뭘 제일 먼저 고려할까?", "type": "TF", "A": "어떤 결정을 하면<br>친구가 행복해질지 고려할 거야", "B": "그 결정이 옳은 건지 아닌지<br>따져보고 고려할 거야"},
+            4: {"title": "자전거를 타고 가다가<br><br>길을 잃은 것 같아<br><br>나는 어떻게 할까?", "type": "JP", "A": "일단 감으로 한번 가볼래", "B": "빨리 지도를 보고 길을 찾을래"},
+            5: {"title": "좋아하는 가수 콘서트에 갔는데<br><br>팬 참여 이벤트를 한다고 해<br><br>어떻게 할 거야?", "type": "EI", "A":"내가 되기 위해<br>손을 들고 크게 외칠 거야", "B": "하고 싶지만 부담돼서<br>그냥 지켜볼래"},
+            6: {"title": "친구가 생각보다 빠르게<br><br>목표를 이뤄서 좋아하고 있어<br><br>나는 뭐라고 할까?", "type": "TF", "A": "진짜 대단하다 얼마나 좋을까?<br>친구가 자랑스러워", "B": "어떻게 그렇게 빠르게 이뤘어?<br>구체적인 과정이 궁금해!"},
+            7: {"title": "친구들과 바다에서 놀고 있는데<br><br>갑자기 비가 내리기 시작했어<br><br>어떻게 할 거야?", "type": "JP", "A": "이미 젖은 거 그냥 비 맞으며 놀래", "B": "빨리 비를 피할 수 있는 곳을 찾을래"},
+            8: {"title":"길을 걷다가 내가 어릴 적에<br><br>아주 좋아했던 공원을 발견했어<br><br>기분이 어때?", "type": "SN", "A": "어릴 때와 뭐가 달라졌는지<br>확인하고 있어", "B": "그때의 내가 생각나서<br>추억에 잠겨있어"},
+            9: {"title": "주변 산책로에 멧돼지가 출몰했다고<br><br>재난문자가 왔어!", "type": "TF", "A": "얼마나 배고팠으면<br>여기까지 내려왔을까?", "B": "위험하니까 저긴 가지 말아야지"},
+            10: {"title": "재밌어 보이는 게임을 발견해서<br><br>다운을 받았어<br><br>어떻게 시작할 거야?", "type": "SN", "A": "설명을 꼼꼼히 보고 시작할래", "B": "일단 해보고 모르면 설명을 볼래"},
+            11: {"title": "카페에서 친구와 대화중에<br><br>갑자기 대화가 뚝 끊겼어<br><br>이럴 때 나는 어떻게 해?", "type": "EI", "A": "주로 내가 먼저 입을 열어", "B": "주로 친구가 먼저 입을 열어"},
+            12: {"title": "드라이브 중에 계획에 없던<br><br>멋진 장소를 발견했어<br><br>어떻게 할 거야?", "type": "JP", "A": "당장 계획을 바꾸고 그 장소에 머물래", "B": "다음에 오면 되니까<br>기억해 두고 일단 지나갈래"}
+        };
+  function showNicknameInput() {
+            $(".start").hide();
+            $(".nickname").show();
+        }
+
+    function start() {
+    var nickname = $("#nicknameInput").val().trim();
+    if (nickname === "") {
+        alert("닉네임을 입력해주세요.");
+        return;
+    }
+
+    // 마지막 글자의 받침 유무에 따라 '의' 또는 '이의' 설정
+    var lastChar = nickname[nickname.length - 1];
+    var hasBatchim = (lastChar.charCodeAt(0) - 0xAC00) % 28 !== 0;
+    var suffix = hasBatchim ? "이의 그림일기" : "의 그림일기";
+
+    // '닉네임의/이의 그림일기'로 표시되도록 수정
+    $("#nicknameOverlay").text(nickname + suffix);
+    $(".nickname").hide();
+    $(".question").show();
+    next();
+}
+
+        function next() {
+            if (num == 13) {
+                $(".question").hide();
+                $(".result").show();
+                var mbti = "";
+                mbti += (EI >= 2) ? "E" : "I";
+                mbti += (SN >= 2) ? "S" : "N";
+                mbti += (TF >= 2) ? "F" : "T";
+                mbti += (JP >= 2) ? "P" : "J";
+                $("#resultImage").attr("src", "img_" + mbti.toLowerCase() + "228.png");
+            } else {
+                $(".progress-bar").css('width', `calc(100/12*${num}%)`);
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+        }
+
+        $("#A").click(function () {
+            var type = $("#type").val();
+            if (type == "EI") EI++;
+            else if (type == "SN") SN++;
+            else if (type == "TF") TF++;
+            else if (type == "JP") JP++;
+            next();
+        });
+
+        $("#B").click(function () {
+            next();
+        });
+
+function saveResult() {
+    window.scrollTo(0, 0); // 페이지 상단으로 스크롤
+    html2canvas(document.querySelector("#resultContainer"), {
+        useCORS: true,
+        scale: 2, 
+        backgroundColor: null 
+    }).then(function (canvas) {
+        var link = document.createElement("a");
+        link.download = "testit228_result.png";
+        link.href = canvas.toDataURL();
+        link.click();
+    });
+}
+
+
+    </script>
+</body>
+</html>
