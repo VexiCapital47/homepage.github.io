@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+     crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>테스트잇 아파트 캐릭터 성격 테스트</title>
+    <meta name="description" content="테스트잇 아파트 캐릭터 성격 테스트">
+    <meta name="keywords" content="테스트잇,성격테스트,아파트캐릭터성격테스트,아파트캐릭터성격테스트,테스트잇연애,테스트잇아파트캐릭터성격,아파트캐릭터성격테스트결과,연애테스트,연애mbti,연애성격테스트, 심리테스트, mbti테스트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="테스트잇 아파트 캐릭터 성격 테스트">
+    <meta property="og:description" content="테스트잇 아파트 캐릭터 성격 테스트">
+    <meta property="og:image" content="img_main229.png">
+    <meta property="og:url" content="https://test-it.co.kr/test229">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+    <style>
+        
+        @font-face {
+    font-family: 'YoonChildfundkoreaManSeh';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/YoonChildfundkoreaManSeh.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+        
+        body {
+            font-family: 'YoonChildfundkoreaManSeh', sans-serif;
+        }
+        .logo {
+            width: 100px;
+            margin-top: 14px;
+        }
+        .main-nav {
+            display: flex;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            margin-top: 34px;
+            list-style: none;
+        }
+        .main-nav li {
+            margin-left: 36px;
+            line-height: 1.7;
+            color: #432;
+        }
+        .main-nav a{
+            color: #432;
+            line-height: 1.7;
+        }
+        .main-nav a:hover {
+            color: #0bd;
+        }
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+        }
+        article{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .question, .nickname, .result {
+            display: none;
+        }
+        .progress-bar {
+            background-color: #ffb527;
+        }
+        .progress {
+            background-color: #ffffff;
+        }
+        
+        #img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+ 
+        .custom-jelly-button {
+    width: 100%; /* 모바일에서 화면 너비에 맞춤 */
+    max-width: 350px; /* 버튼 최대 너비 */
+    height: 60px; /* 원하는 세로 크기 */
+    font-size: 15px !important;
+    font-weight: bold;
+    color: black !important;
+    background: linear-gradient(145deg, #ffe600, #ffd500); /* 쨍한 노란색으로 변경 */
+    border: none;
+    border-radius: 17px;
+    box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.7), 
+                inset 4px 4px 10px rgba(0, 0, 0, 0.1),
+                2px 2px 8px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    display: block;
+}
+
+.custom-jelly-button:hover {
+    background: linear-gradient(145deg, #ffd700, #ffcc00); /* 호버 시 더 진한 노란색 */
+}
+        
+    
+.jelly-question-box {
+    width: 100%;
+    max-width: 400px;
+    min-height: 150px;
+    padding: 30px 20px;
+    margin: 20px auto;
+    background: linear-gradient(145deg, #ffc1cc, #ff91a1); /* 진한 분홍색으로 변경 */
+    border-radius: 25px;
+    box-shadow: inset -6px -6px 12px rgba(255, 255, 255, 0.8), 
+                inset 6px 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #432;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* h6 요소의 폰트 크기 강제 적용 */
+.jelly-question-box h6 {
+    font-size: 18px !important;
+}
+        
+  .save-result-button {
+    width: 100%;
+    max-width: 350px;
+    height: 60px;
+    font-size: 15px !important;
+    font-weight: bold;
+    color: black !important;
+    background: linear-gradient(145deg, #ffc1cc, #ff91a1); /* 진한 핑크색으로 변경 */
+    border: none;
+    border-radius: 17px;
+    box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.7), 
+                inset 4px 4px 10px rgba(0, 0, 0, 0.1),
+                2px 2px 8px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    display: block;
+}
+
+.save-result-button:hover {
+    background: linear-gradient(145deg, #ffef87, #ffe066); /* 호버 시 유지 */
+}
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden; /* 컨테이너 내에서 이미지가 넘치지 않도록 설정 */
+}
+
+#resultImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#resultContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#nicknameOverlay {
+    position: absolute;
+    top: 25%; /* 이미지 내에서 더 위로 이동 */
+    left: 50%; /* 왼쪽에서 50% 지점 (가운데 정렬) */
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    z-index: 10;
+    white-space: nowrap;
+    pointer-events: none;
+    font-family: 'YoonChildfundkoreaManSeh', sans-serif; /* 폰트 적용 */
+}
+
+        #img_main{
+            width: 500px;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .custom-button {
+            width: 100%;
+            max-width: 350px;
+            margin: 10px auto;
+        }
+        .nickname-input {
+            max-width: 350px;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body class="container" style="background-color:#ffffff">
+    <header class="page-header wrapper">
+        <h1><a href="index.html"><img class="logo" src="img_logo.png" alt="test it"></a>
+        </h1>
+        <nav>
+            <ul class="main-nav">
+                <li> <a href="https://test-it.co.kr/test.html">성격</a></li>
+                <li> <a href="https://test-it.co.kr/face.html">얼굴</a></li>
+                <li> <a href="https://test-it.co.kr/etc.html">그외</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- 시작화면 -->
+<article class="start">
+    <img id="img_main" class="mt-3" src="img_main229.png">
+    <button type="button" class="btn btn-info mt-1 custom-jelly-button" onclick='showNicknameInput();' style="font-size:large; font-weight: bold; color: black; background-color: rgb(255, 197, 197); border-color: rgb(0, 0, 0); width: 350px; height: 50px; margin: 0 auto;">테스트 시작하기</button>
+</article>
+
+
+    <!-- 닉네임 입력 화면 -->
+    <article class="nickname">
+        <img id="img_nickname" class="mt-1" src="img_nickname229.png" style="max-width: 100%; height: auto; margin: 0 auto; display: block;">
+        <input type="text" id="nicknameInput" class="form-control nickname-input" placeholder="여기에 입력해요!">
+     <button type="button" class="btn btn-info mt-3 custom-jelly-button" onclick='start();' style="font-size: 16px; font-weight: bold; color: black; background-color: rgb(180, 170, 166); border-color: rgb(0, 0, 0);">다음 화면으로</button>
+    </article>
+    
+ <!-- 문제 화면 -->
+<article class="question">
+    <div class="progress mt-5">
+        <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <!-- 문제 텍스트에 jelly-question-box 클래스 적용 -->
+    <div class="jelly-question-box">
+        <h6 id="title" style="font-weight: bold; color: black;" class="text-center mt-1">문제</h6>
+    </div>
+    <input id="type" type="hidden" value="EI">
+    <button id="A" type="button" class="btn btn-info mt-3 custom-jelly-button" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(255, 245, 174); border-color: rgb(255, 230, 57); width: 350px; height: 100px; margin: 0 auto; display: block;">Primary</button>
+    <button id="B" type="button" class="btn btn-info mt-3 custom-jelly-button" style="font-size:smaller; font-weight: bold; color: black; background-color: rgb(255, 245, 174); border-color: rgb(255, 230, 57); width: 350px; height: 100px; margin: 0 auto; display: block;">Primary</button>
+</article>
+
+
+  <!-- 결과 화면 -->
+<article class="result">
+    <div class="image-container" id="resultContainer">
+        <img id="resultImage" src="" alt="result image" style="width: 100%; height: auto;">
+        <div id="nicknameOverlay">닉네임</div>
+    </div>
+    <button type="button" class="btn btn-info mt-3 save-result-button" onclick="saveResult()" style="font-size:large; font-weight: bold;">결과 저장하기</button>
+    <button type="button" class="btn btn-info mt-3 custom-jelly-button" onclick="location.href='test229.html'" style="font-size:large; font-weight: bold;">다시 해보기</button>
+    <button type="button" class="btn btn-info mt-1 custom-jelly-button" onclick="location.href='/'" style="font-size:large; font-weight: bold;">다른 테스트 해보기</button>
+</article>
+
+
+    <!-- 쿠팡 배너 -->
+    <article class="coupang_ad mt-3 text-center">
+        <script src="https://ads-partners.coupang.com/g.js"></script>
+        <script>
+            new PartnersCoupang.G({"id":798186,"template":"carousel","trackingCode":"AF4391881","width":"350","height":"140","tsource":""});
+        </script>
+    </article>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+
+    <script>
+        var num = 1;
+        var EI = 0, SN = 0, TF = 0, JP = 0;
+          var q = {
+            1: {"title": "엘리베이터에서 만난 이웃이<br><br>오늘 날씨 좋네요! 라고 말을 걸어왔어요<br><br>당신의 반응은?", "type": "EI", "A": "그러게요! 어디 가세요?<br>하고 자연스럽게 대화를 이어갈래요", "B": "네..ㅎㅎ살짝 미소를 짓고<br>빨리 내리길 기다릴래요"},
+            2: {"title": "아파트 관리실에서 경비원분이<br><br>화분을 잘못 배치해서 누군가 넘어졌다고 해요!<br><br>당신은 어떻게 반응할까요?", "type": "TF", "A": "어디가 얼마나 다쳤는지 물어볼래요", "B": "어디다 둬서 넘어졌는지 확인할래요"},
+            3: {"title": "아파트 안에 흉흉한 소문이 도는데...<br><br>지하실에서 이상한 소리가 들린다고 해요<br><br>당신의 첫 반응은?", "type": "SN", "A": "지하실에 뭔 문제가 있겠지", "B": "뭔가 있는 거야... 귀신이라던가.."},
+            4: {"title": "외출하고 들어왔는데<br><br>현관에 있는 전등이 켜지지 않아요!<br><br>어떻게 대처할까요?", "type": "JP", "A": "버티다가 불편할 때 관리실에 말해요", "B": "발견한 즉시 관리실에 말해요"},
+            5: {"title": "아파트 단지에 축제가 열려서<br><br>아침부터 시끌시끌해요<br><br>어떻게 할까요?", "type": "EI", "A":"재밌을 것 같아 가볼래요!", "B": "사람이 너무 많아서 안 갈래요"},
+            6: {"title": "갑자기 아파트가 정전돼서<br><br>급한 대로 촛불을 켜고 있어요<br><br>지금 기분은 어떤가요?", "type": "TF", "A": "불편하지만 뭔가 감성적이라 좋아요", "B": "정전이 된 상황이 짜증 나요"},
+            7: {"title": "아파트에 텃밭 가꾸기가 시작됐어요<br><br>나는 텃밭을 어떻게 가꿀까요?", "type": "JP", "A": "심고 싶은 걸 생각하고 바로 살래요", "B": "뭘 심어야 하는지 철저히 계획할래요"},
+            8: {"title":"아파트 단지에 새로운 조형물이 생겼어요<br><br>구경하는 나의 머릿속은 어떤가요?", "type": "SN", "A": "오 새로 생긴 조형물이구나", "B": "무슨 의미를 담고 있길래 세운 걸까?"},
+            9: {"title": "주말에 집에 누워서 쉬고 있는데<br><br>윗집에서 쿵쿵거리기 시작했어요<br><br>어떻게 할까요?", "type": "TF", "A": "주말이니까 좀 참아줄래요", "B": "냅두면 계속할 테니까 바로 말할래요"},
+            10: {"title": "아파트 상가에 새로운 카페가 생겼어요<br><br>오늘이 첫 개업 일이라는데<br><br>어떻게 할까요?", "type": "SN", "A": "일단은 익숙한 카페로 갈래요", "B": "새로운 카페가 궁금하니까 가볼래요"},
+            11: {"title": "아파트에서 반상회가 열린다고 해요<br><br>꼭 참석해야 한다고 하네요..", "type": "EI", "A": "가면 가는데 뭔 얘기를 하지?", "B": "최대한 피할 방법이 없을까.."},
+            12: {"title": "결국 반상회를 가기로 했는데<br><br>내일까지 할 일이 산더미에요<br><br>어떻게 할까요?", "type": "JP", "A": "지금 하고 싶은 거 먼저 할래요", "B": "우선순위를 매겨서 시작할래요"}
+        };
+  function showNicknameInput() {
+            $(".start").hide();
+            $(".nickname").show();
+        }
+
+function start() {
+    var nickname = $("#nicknameInput").val().trim();
+    if (nickname === "") {
+        alert("닉네임을 입력해주세요.");
+        return;
+    }
+
+    // 닉네임과 고정된 접미사 '님은'을 결합
+    $("#nicknameOverlay").text(nickname + "님은");
+
+    $(".nickname").hide();
+    $(".question").show();
+    next();
+}
+
+
+
+
+
+        function next() {
+            if (num == 13) {
+                $(".question").hide();
+                $(".result").show();
+                var mbti = "";
+                mbti += (EI >= 2) ? "E" : "I";
+                mbti += (SN >= 2) ? "S" : "N";
+                mbti += (TF >= 2) ? "F" : "T";
+                mbti += (JP >= 2) ? "P" : "J";
+                $("#resultImage").attr("src", "img_" + mbti.toLowerCase() + "229.png");
+            } else {
+                $(".progress-bar").css('width', `calc(100/12*${num}%)`);
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+        }
+
+        $("#A").click(function () {
+            var type = $("#type").val();
+            if (type == "EI") EI++;
+            else if (type == "SN") SN++;
+            else if (type == "TF") TF++;
+            else if (type == "JP") JP++;
+            next();
+        });
+
+        $("#B").click(function () {
+            next();
+        });
+
+function saveResult() {
+    window.scrollTo(0, 0); // 페이지 상단으로 스크롤
+    html2canvas(document.querySelector("#resultContainer"), {
+        useCORS: true,
+        scale: 2, 
+        backgroundColor: null 
+    }).then(function (canvas) {
+        var link = document.createElement("a");
+        link.download = "testit229_result.png";
+        link.href = canvas.toDataURL();
+        link.click();
+    });
+}
+
+
+    </script>
+</body>
+</html>
