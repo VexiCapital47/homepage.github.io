@@ -1,0 +1,559 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522499110435321"
+     crossorigin="anonymous"></script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>테스트잇 타고난 기질 성격 보고서</title>
+    <meta name="description" content="테스트잇 타고난 기질 성격 보고서">
+<meta name="keywords" content="테스트잇,성격테스트,기질성격테스트,기질테스트,테스트잇연애,테스트잇기질보고서,기질성격테스트잇,연애테스트,연애mbti,연애성격테스트, 심리테스트, mbti테스트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="테스트잇 타고난 기질 성격 보고서">
+    <meta property="og:description" content="테스트잇 타고난 기질 성격 보고서">
+    <meta property="og:image" content="img_main234.png">
+    <meta property="og:url" content="https://test-it.co.kr/test234">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+    <style>
+        
+         @font-face {
+    font-family: 'ChosunGu';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+        
+     /* 전체 화면 레이아웃 */
+        body {
+            font-family: 'ChosunGu', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 120px; /* 헤더와 프로그래스바 높이만큼 여유 공간 확보 */
+        }
+ header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            position: fixed; /* 상단 고정 */
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 100px;
+            margin-top: 14px;
+        }
+
+  .main-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+        .main-nav li {
+            margin: 0 15px;
+            font-family: 'Do Hyeon', sans-serif;
+            color: #432;
+        }
+
+        .main-nav a {
+            color: #432;
+            text-decoration: none;
+        }
+
+        .main-nav a:hover {
+            color: #0bd;
+        }
+
+        .main-image {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px 0;
+        }
+
+       .start-button {
+    display: block; /* 블록으로 설정하여 수직 정렬 */
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #ff68dd; /* 버튼 배경색 */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    margin-top: 10px; /* 이미지 아래 여백 */
+            outline: none;
+}
+
+        .start-button:hover {
+            background-color: #ff68dd; /* 호버 시 배경색 */
+            transform: scale(1.05); /* 약간 확대 효과 */
+        }
+
+        .start-button:active {
+            background-color: #ff68dd; /* 클릭 시 배경색 */
+            transform: scale(1); /* 클릭 시 원래 크기 */
+        }
+        
+
+        .question, .progress-bar, #tieBreaker, #result {
+    display: none;
+}
+             /* 컨텐츠가 헤더 및 프로그래스바와 겹치지 않도록 추가 여백 */
+   #mainScreen {
+    display: flex;
+    flex-direction: column; /* 이미지와 버튼을 수직으로 배치 */
+    align-items: center;
+    margin-top: 20px; /* 메인 화면 위치 조정 */
+}
+        
+       #mainScreen, #questionContainer {
+            margin-top: 20px; /* 초기 메인 화면 및 질문 컨테이너 여백 */
+            text-align: center;
+        }
+        
+      #questionContainer {
+    display: none; /* 플렉스로 설정 */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute; /* 화면의 중앙에 배치 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 화면 정중앙에 배치 */
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 220px; /* 광고와 겹치지 않도록 여백 추가 */
+}
+    
+        
+  .options {
+    display: flex;
+    flex-direction: column; /* 버튼을 세로로 배치 */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.options button {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #76c7c0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    text-align: center;
+    margin-bottom: 20px; /* 버튼 사이 간격 */
+     outline: none;
+}
+
+.options button:last-child {
+    margin-bottom: 0; /* 마지막 버튼은 여백 제거 */
+}
+
+.options button:hover {
+    background-color: #4fa89b; /* 호버 시 배경색 */
+    transform: scale(1.03); /* 약간 확대 효과 */
+}
+
+.options button:active {
+    background-color: #3d8278; /* 클릭 시 배경색 */
+    transform: scale(1); /* 클릭 시 원래 크기 */
+}
+        
+#tieBreaker {
+    display: none; /* 초기에는 숨김 */
+ flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+        
+.tie-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #76c7c0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 20px; /* 버튼 간 간격 */
+}
+
+.tie-button:last-child {
+    margin-bottom: 0; /* 마지막 버튼은 여백 제거 */
+}
+
+.tie-button:hover {
+    background-color: #4fa89b;
+    transform: scale(1.03);
+}
+
+.tie-button:active {
+    background-color: #3d8278;
+    transform: scale(1);
+}
+      .progress-bar {
+            width: 100%;
+            max-width: 500px;
+            background-color: #76c7c0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 10px;
+            display: none; /* 초기에는 숨김 */
+            position: fixed; /* 프로그래스바 상단 고정 */
+            top: 80px; /* 헤더 바로 아래 위치 */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+        }
+
+        .progress {
+            height: 20px;
+            width: 0%;
+            background-color: #ff68dd;
+            transition: width 0.5s;
+        }
+     .result img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        
+ #result {
+    text-align: center; /* 결과 화면에서 모든 요소 중앙 정렬 */
+}
+.custom-jelly-button {
+    display: block; /* 버튼을 블록 요소로 설정 */
+    width: 350px; /* 버튼 너비 지정 (필요 시 조정) */
+    margin: 10px auto; /* 위아래 여백과 가운데 정렬 */
+    font-size: large;
+    font-weight: bold;
+    background-color: #ff68dd; /* 버튼 배경색 */
+    border: none; /* 기본 보더 제거 */
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+/* 호버와 클릭 효과 제거 */
+.custom-jelly-button:hover, .custom-jelly-button:active {
+    background-color: #ff68dd; /* 원래 배경색 유지 */
+    transform: none; /* 크기 변화 효과 제거 */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 효과 유지 */
+}
+        
+.coupang_ad {
+    margin-top: 30px; /* 결과 화면과의 간격 설정 */
+    width: 100%;
+    max-width: 350px;
+    height: 140px;
+    text-align: center;
+    display: block; /* 광고를 기본적으로 보이도록 설정 */
+}
+
+/* 질문 화면에서는 광고 숨기기 */
+#questionContainer + .coupang_ad {
+    display: none; /* 질문 화면에서 광고 숨기기 */
+}
+    </style>
+</head>
+   <!-- 헤더 네비게이션 -->
+<header>
+    <a href="index.html"><img class="logo" src="img_logo.png" alt="test it"></a>
+    <nav>
+        <ul class="main-nav">
+            <li><a href="https://test-it.co.kr/test.html">성격</a></li>
+            <li><a href="https://test-it.co.kr/face.html">얼굴</a></li>
+            <li><a href="https://test-it.co.kr/etc.html">그외</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- 프로그래스바 -->
+<div class="progress-bar"><div class="progress"></div></div>
+
+<!-- 메인 화면 -->
+<div id="mainScreen">
+    <img src="img_main234.png" alt="메인 이미지" class="main-image">
+    <button class="start-button" onclick="startQuiz()">시작하기</button>
+</div>
+    
+  <!-- 질문 화면 -->
+    <div id="questionContainer" class="question">
+        <p id="questionText"></p>
+        <div class="options">
+            <button onclick="selectOption(1)">네, 그렇습니다</button>
+            <button onclick="selectOption(0)">아니요, 그렇지 않습니다</button>
+        </div>
+    </div>
+    
+     <!-- 동점 해소 질문 화면 -->
+    <div id="tieBreaker" class="tie-breaker">
+        <p id="tieQuestionText"></p>
+        <button class="tie-button" onclick="resolveTie('optionA')">첫번째</button>
+        <button class="tie-button" onclick="resolveTie('optionB')">두번째</button>
+    </div>
+
+     <!-- 결과 화면 -->
+    <div id="result" class="result">
+        <p id="resultText"></p>
+        <img id="resultImage" src="" alt="기질 결과 이미지">
+        
+         <!-- 추가된 버튼 -->
+    <button type="button" class="btn btn-info mt-3 custom-jelly-button" onclick="location.href='test234.html'" style="font-size:large; font-weight: bold;">
+        다시 해보기
+    </button>
+    <button type="button" class="btn btn-info mt-3 custom-jelly-button" onclick="location.href='/'" style="font-size:large; font-weight: bold;">
+        다른 테스트 해보기
+    </button>
+        
+    </div>
+    
+    
+
+<script>
+    const questions = [
+        { text: "새로운 사람을 만날 때<br><br>적극적으로 먼저 다가가는 편인가요?", type: "다혈" },
+        { text: "계획보다는 즉흥적인 상황에서<br><br>더 재미와 즐거움을 느끼나요?", type: "다혈" },
+ { text: "주변 사람들에게 밝은 에너지를 주고<br><br>분위기를 즐겁게 만드는 편인가요?", type: "다혈" },
+        { text: "평소에 감정 표현이<br><br>풍부하고 솔직한 편인가요?", type: "다혈" },
+
+
+        { text: "일이나 목표를 이루는 데 있어<br><br>실수 없이 완벽하게 하고자 하나요?", type: "우울" },
+  { text: "감정적으로 예민하고<br><br>타인의 말이나 행동에 쉽게 영향을 받는 편인가요?", type: "우울" },
+  { text: "혼자만의 시간을 즐기며 사색을 통해<br><br>자신을 돌아보는 것을 좋아하나요?", type: "우울" },
+  { text: "사람들과의 대화에서 그들의 감정을<br><br>세심하게 읽고 공감하려고 하나요?", type: "우울" },
+
+
+        { text: "어려운 상황에서도 쉽게 포기하지 않고<br><br>해결책을 찾으려고 하나요?", type: "담즙" },
+  { text: "자신이 주도하는 일을 하면서<br><br>강한 리더십을 발휘하는 걸 즐기나요?", type: "담즙" },
+        { text: "빠르게 결단을 내리는 편이며<br><br>일을 시작하면 끝까지 밀어붙이는 성향인가요?", type: "담즙" },
+{ text: "목표 달성에 대한 열정이 너무 강해서<br><br>다른 사람의 의견을 무시하는 경우가 있나요?", type: "담즙" },
+
+
+        { text: "갈등을 피하고 사람들과<br><br>조화로운 관계를 유지하는 것을 선호하나요?", type: "점액" },
+        { text: "문제가 생겼을 때 차분하게 접근하며<br><br>성급한 결정보다는 신중한 결정을 내리나요?", type: "점액" },
+       { text: "상대방의 의견을 잘 듣고<br><br>그들의 기분을 고려해주는 편인가요?", type: "점액" },
+       { text: "주변에서 종종 차분하고<br><br>안정적인 사람으로 여겨지나요?", type: "점액" }
+    ];
+
+    const resultImages = {
+      "다혈": "img_dh234.png",
+      "우울": "img_uu234.png",
+      "담즙": "img_dj234.png",
+      "점액": "img_ja234.png",
+      "다혈우울": "img_dhuu234.png",
+      "우울다혈": "img_uudh234.png",
+      "다혈담즙": "img_dhdj234.png",
+      "다혈점액": "img_dhja234.png",
+      "우울담즙": "img_uudj234.png",
+      "우울점액": "img_uuja234.png",
+      "담즙다혈": "img_djdh234.png",
+      "담즙우울": "img_djuu234.png",
+      "담즙점액": "img_djja234.png",
+      "점액다혈": "img_jadh234.png",
+      "점액우울": "img_jauu234.png",
+      "점액담즙": "img_jadj234.png",
+      "다혈우울담즙": "img_dhuudj234.png",
+      "다혈우울점액": "img_dhuuja234.png",
+      "다혈담즙점액": "img_dhdjja234.png",
+      "우울담즙점액": "img_uudjja234.png",
+   "우울다혈담즙": "img_uudhdj234.png",
+   "우울다혈점액": "img_uudhja234.png",
+   "담즙다혈점액": "img_djdhja234.png",
+   "담즙우울점액": "img_djuuja234.png",
+      "다혈우울담즙점액": "img_dhuudjja234.png"
+
+    };
+
+    const tieBreakerQuestions = {
+        "다혈_우울": {
+            question: "활발하게 에너지를 표현하는 걸 좋아하나요<br><br>깊이 있는 감정을 나누는 걸 선호하나요?",
+            optionA: "다혈우울",
+            optionB: "우울다혈"
+        },
+        "다혈_담즙": {
+            question: "즉흥적으로 즐기기 좋아하나요<br><br>목표를 위해 결단을 내리기를 좋아하나요?",
+            optionA: "다혈담즙",
+            optionB: "담즙다혈"
+        },
+        "다혈_점액": {
+            question: "새로운 사람과의 만남을 더 즐기나요<br><br>아니면 조화롭게 안정감을 유지하는 걸 좋아하나요?",
+            optionA: "다혈점액",
+            optionB: "점액다혈"
+        },
+        "우울_담즙": {
+            question: "신중하게 깊이 고민하는 걸 선호하나요<br><br>아니면 빠르게 결단하고 추진하는 걸 선호하나요?",
+            optionA: "우울담즙",
+            optionB: "담즙우울"
+        },
+        "우울_점액": {
+            question: "감정적으로 깊이 공감하는 게 중요한가요<br><br>아니면 조화를 이루며 차분함을 유지하는 게 더 중요한가요?",
+            optionA: "우울점액",
+            optionB: "점액우울"
+        },
+        "담즙_점액": {
+            question: "목표를 향해 밀어붙이는 게 더 중요하다고 생각하나요<br><br>아니면 안정감을 주는 것이 더 중요하다고 생각하나요?",
+            optionA: "담즙점액",
+            optionB: "점액담즙"
+        },
+        "다혈_우울_담즙": {
+            question: "즉흥적으로 에너지를 발산하는 걸 선호하나요<br><br>아니면 신중히 고민하며 목표를 설정하는 걸 선호하나요?",
+            optionA: "다혈우울담즙",
+            optionB: "우울다혈담즙"
+        },
+        "다혈_우울_점액": {
+            question: "감정적으로 활발하고 공감을 중요시하나요<br><br>아니면 차분하게 관계를 유지하는 걸 더 중요하게 생각하나요?",
+            optionA: "다혈우울점액",
+            optionB: "우울다혈점액"
+        },
+        "다혈_담즙_점액": {
+            question: "자유롭게 즐기는 걸 더 좋아하나요<br><br>아니면 계획적으로 목표를 설정하고 실천하는 걸 좋아하나요?",
+            optionA: "다혈담즙점액",
+            optionB: "담즙다혈점액"
+        },
+        "우울_담즙_점액": {
+            question: "깊이 있는 감정을 중시하고 목표를 달성하고자 하나요<br><br>아니면 차분하게 사람들과 조화를 이루려 하나요?",
+            optionA: "우울담즙점액",
+            optionB: "담즙우울점액"
+        }
+    };
+
+    let currentQuestion = 0;
+    const scores = { 다혈: 0, 우울: 0, 담즙: 0, 점액: 0 };
+    let tieKey = ""; 
+
+function startQuiz() {
+    document.getElementById("mainScreen").style.display = "none"; // 메인 화면 숨기기
+    document.querySelector(".progress-bar").style.display = "block"; // 프로그래스바 표시
+    document.getElementById("questionContainer").style.display = "flex"; // 질문 화면 표시
+    document.getElementById("coupangAd").style.display = "none"; // 광고 숨기기
+    loadQuestion();
+}
+    
+    
+    function updateProgress() {
+            const progressPercentage = ((currentQuestion + 1) / questions.length) * 100;
+            document.querySelector(".progress").style.width = progressPercentage + "%";
+        }
+    
+function loadQuestion() {
+    document.getElementById("questionText").innerHTML = questions[currentQuestion].text;
+    document.querySelector(".options").style.display = "block"; // 옵션 버튼 표시
+    updateProgress();
+}
+    
+
+    
+
+    function selectOption(score) {
+        const questionType = questions[currentQuestion].type;
+        scores[questionType] += score;
+        currentQuestion++;
+
+        if (currentQuestion < questions.length) {
+            loadQuestion();
+        } else {
+            showResult();
+        }
+    }
+
+function showResult() {
+    document.getElementById("questionContainer").style.display = "none"; // 질문 화면 숨기기
+    document.querySelector(".progress-bar").style.display = "none"; // 결과 화면에서 프로그래스바 숨기기
+    document.getElementById("coupangAd").style.display = "block"; // 광고 다시 표시
+
+    const sortedScores = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+    const highestScores = sortedScores.filter(item => item[1] === sortedScores[0][1]);
+
+    if (highestScores.length === 4) {
+        displayFinalResult("다혈우울담즙점액");
+        return;
+    }
+
+    if (highestScores.length > 1) {
+        tieKey = highestScores.map(item => item[0]).join("_");
+        showTieBreakerQuestion(tieKey);
+    } else {
+        displayFinalResult(highestScores[0][0]);
+    }
+}
+    
+    function resolveTie(choice) {
+    const finalType = tieBreakerQuestions[tieKey][choice]; // 선택한 옵션에 따라 최종 타입 결정
+    displayFinalResult(finalType); // 최종 결과 표시
+}
+    
+
+function displayFinalResult(resultType) {
+    document.getElementById("tieBreaker").style.display = "none";
+    document.getElementById("resultImage").src = resultImages[resultType];
+    document.getElementById("resultImage").alt = `${resultType} 기질 이미지`;
+    document.getElementById("result").style.display = "block"; // 결과 화면 보이기
+}
+
+function showTieBreakerQuestion(tieKey) {
+    const tieData = tieBreakerQuestions[tieKey];
+    document.getElementById("tieQuestionText").innerHTML = tieData.question; // innerText -> innerHTML로 변경
+    document.getElementById("tieBreaker").style.display = "flex"; // 동점 해소 화면 표시
+    document.getElementById("coupangAd").style.display = "none"; // 동점 해소 질문 시 광고 숨기기
+}
+
+    
+    function updateProgress() {
+        const progressPercentage = ((currentQuestion + 1) / questions.length) * 100;
+        document.querySelector(".progress").style.width = progressPercentage + "%";
+    }
+</script>
+ <article id="coupangAd" class="coupang_ad mt-3">
+    <script src="https://ads-partners.coupang.com/g.js"></script>
+    <script>
+        new PartnersCoupang.G({"id":798186,"template":"carousel","trackingCode":"AF4391881","width":"350","height":"140","tsource":""});
+    </script>
+</article>
+
+</body>
+</html>
