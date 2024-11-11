@@ -243,6 +243,10 @@ button:hover {
         background-color: #f6da8d; /* 여섯 번째 제목 색상 */
     }
 
+.health-title {
+        background-color: #ffb8f2; /* 여섯 번째 제목 색상 */
+    }
+
      .exit-title {
         background-color: #a6e8ea; /* 일곱 번째 제목 색상 (변경된 색상) */
     }
@@ -251,7 +255,7 @@ button:hover {
         background-color: #50b823; /* 일곱 번째 제목 색상 (변경된 색상) */
     }
 
- .wealth-title, .love-title, .exam-title, .job-title, .caution-title, .exit-title, .luck-title {
+ .wealth-title, .love-title, .health-title, .exam-title, .job-title, .caution-title, .exit-title, .luck-title {
           display: block; /* 각 요소를 개별 줄로 배치 */
     max-width: 400px; /* 제목의 최대 너비 설정 */
     margin: 10px auto; /* 가운데 정렬 및 위아래 여백 */
@@ -280,7 +284,7 @@ button:hover {
     text-align: center; /* 중앙 정렬 */
 }
 
-.wealth-title, .love-title, .exam-title, .job-title, .caution-title, .exit-title, .luck-title {
+.wealth-title, .love-title, .exam-title, .job-title, .caution-title, .exit-title, .health-title, .luck-title {
     font-size: 18px; /* 카테고리 제목의 폰트 크기 */
     font-weight: bold;
     color: #000000; /* 텍스트 색상 */
@@ -1115,6 +1119,7 @@ button:hover {
         resultText += `<h3 class="bubble exam-title">연애운</h3><p>${fortune['연애운']}</p>`;
         resultText += `<h3 class="bubble job-title">시험운</h3><p>${fortune['시험운']}</p>`;
         resultText += `<h3 class="bubble caution-title">직장운</h3><p>${fortune['직장운']}</p>`;
+               resultText += `<h3 class="bubble health-title">건강운</h3><p>${fortune['건강운']}</p>`;
         resultText += `<h3 class="bubble exit-title">주의해야 할 점</h3><p>${fortune['주의해야 할 점'] || "정보가 없습니다."}</p>`;
         resultText += `<h3 class="bubble luck-title">2025년에 얻게 될 행운</h3><p>${fortune['2025년에 얻게 될 행운'] || "정보가 없습니다."}</p>`;
         
