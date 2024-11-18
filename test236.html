@@ -68,7 +68,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     background-color: #ffffff;
     position: fixed;
@@ -79,7 +79,7 @@
 }
 
      #main-screen, #name-screen, #word-selection-screen, #result-screen {
-    margin-top: 20px; /* 헤더 아래로 여백을 조금만 둠 */
+    margin-top: 30px; /* 헤더 아래로 여백을 조금만 둠 */
 }
 
         .logo {
@@ -119,7 +119,7 @@
         .screen {
             display: none;
             margin-top: 20px;
-            width: 90%;
+            width: 100%;
             max-width: 500px;
             padding: 20px;
             border-radius: 15px;
@@ -386,7 +386,7 @@
         position: relative;
         width: 100%;
         max-width: 500px;
-        margin: 20px auto;
+         margin: 80px auto 20px;
         height: auto; /* 높이를 자동 조정 */
     }
         #result-message {
@@ -404,15 +404,18 @@
       /* 반응형 디자인을 위한 미디어 쿼리 */
     @media (max-width: 600px) {
         body {
+               align-items: center; /* 모든 요소를 중앙 정렬 */
               padding-top: 50px;
         background-size: auto; /* 배경 이미지 원래 크기 유지 */
         background-repeat: repeat; /* 여전히 반복 */
         background-position: top left; /* 왼쪽 상단부터 시작 */
+             overflow-x: hidden; /* 가로 스크롤 방지 */
     }
         }
           header {
         height: 50px; /* 모바일에서 헤더 높이를 더 줄임 */
         padding: 10px;
+               justify-content: center;
     }
 
         .screen {
@@ -445,6 +448,7 @@
       #result-screen {
             padding: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          margin-top: 70px;
         }
 
         .inner-content {
@@ -503,7 +507,9 @@
             <!-- 단어들 -->
            <span class="word">나</span>
             <span class="word">자격증</span>
-            <span class="word">멋져지기</span>
+         <span class="word">쇼핑</span>
+         <span class="word">도전</span>
+            <span class="word">멋져짐</span>
             <span class="word">숨쉬기</span>
             <span class="word">밥먹기</span>
             <span class="word">친구</span>
@@ -520,11 +526,14 @@
             <span class="word">졸업</span>
             <span class="word">연애</span>
             <span class="word">결혼</span>
+               <span class="word">이별</span>
             <span class="word">손절</span>
             <span class="word">강아지</span>
             <span class="word">고양이</span>
+           <span class="word">열정</span>
           <span class="word">식물</span>
             <span class="word">생각가득</span>
+            <span class="word">지옥탈출</span>
             <span class="word">여행가기</span>
             <span class="word">이민</span>
             <span class="word">짜증내기</span>
@@ -594,6 +603,8 @@
           <span class="word">독서</span>
           <span class="word">일->집</span>
              <span class="word">학교->집</span>
+           <span class="word">수술</span>
+           <span class="word">견뎌냄</span>
         </div>
         <div id="selected-words"></div>
         <button id="result-button" disabled>결과 보기</button>
