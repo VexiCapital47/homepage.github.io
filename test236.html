@@ -49,7 +49,7 @@
     text-align: center;
     margin: 0;
     padding: 0;
-    padding-top: 120px;
+    padding-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,20 +63,24 @@
     height: 100vh;
     box-sizing: border-box;
 }
-        header {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: #ffffff;
-            position: fixed; /* 상단 고정 */
-            top: 0;
-            left: 0;
-            z-index: 1000;
-              height: 80px;
-        }
+     header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 60px; /* 기존 80px에서 줄여봄 */
+}
+
+     #main-screen, #name-screen, #word-selection-screen, #result-screen {
+    margin-top: 20px; /* 헤더 아래로 여백을 조금만 둠 */
+}
 
         .logo {
             width: 100px;
@@ -400,11 +404,16 @@
       /* 반응형 디자인을 위한 미디어 쿼리 */
     @media (max-width: 600px) {
         body {
+              padding-top: 50px;
         background-size: auto; /* 배경 이미지 원래 크기 유지 */
         background-repeat: repeat; /* 여전히 반복 */
         background-position: top left; /* 왼쪽 상단부터 시작 */
     }
         }
+          header {
+        height: 50px; /* 모바일에서 헤더 높이를 더 줄임 */
+        padding: 10px;
+    }
 
         .screen {
             padding: 15px;
@@ -451,7 +460,7 @@
         max-width: 400px;  /* 모바일에서 이미지 최대 크기 제한 */
     }
          #word-selection-screen {
-        margin-top: 100px; /* 모바일 환경에서도 헤더 높이와 여백 유지 */
+        margin-top: 60px; /* 모바일 환경에서도 헤더 높이와 여백 유지 */
     }
     }
     </style>
@@ -488,7 +497,7 @@
 
 <!-- 단어 선택 화면 -->
 <!-- 단어 선택 화면 -->
-<div id="word-selection-screen" class="screen" style="margin-top: 1200px;">
+<div id="word-selection-screen" class="screen" style="margin-top: 1500px;">
     <p style="margin-bottom: 20px;">2024년 나의 연관검색어를 골라보세요<br>1개에서 12개까지 고르기 가능!</p>
     <div id="floating-words" style="padding-top: 20px;">
             <!-- 단어들 -->
