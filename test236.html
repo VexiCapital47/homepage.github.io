@@ -11,7 +11,7 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>테스트잇 2024년 나의 연관검색어</title>
     <meta name="description" content="테스트잇 2024년 나의 연관검색어">
@@ -60,7 +60,8 @@
     background-position: top left; /* 배경이 왼쪽 상단에서부터 시작 */
     font-weight: 700;
     width: 100vw;
-    height: 100vh;
+      min-height: 100vh;
+    height: auto;
     box-sizing: border-box;
 }
      header {
@@ -79,9 +80,9 @@
            overflow: hidden; 
 }
 
-     #main-screen, #name-screen, #word-selection-screen, #result-screen {
+     #main-screen, #name-screen,#result-screen {
     margin-top: 200px; /* 헤더 아래로 여백을 조금만 둠 */
-          overflow-y: auto; /* 세로 스크롤 허용 */
+           overflow-y: scroll;/* 세로 스크롤 허용 */
 }
 
         .logo {
@@ -432,7 +433,7 @@
 
         .screen {
             padding: 15px;
-              margin-top: 200px; 
+              margin-top: 100px; 
         }
 
         #start-button, #next-button, #result-button, #restart-button {
@@ -461,7 +462,7 @@
       #result-screen {
             padding: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          margin-top: 500px;
+          margin-top: 200px;
         }
 
         .inner-content {
@@ -469,11 +470,14 @@
                margin-top: 20px;
         }
 
-        #main-screen, #name-screen, #word-selection-screen {
-   
-       margin-top: 300px;
-            overflow-y: auto; /* 세로 스크롤 허용 */}
-      
+        #main-screen, #name-screen
+       {
+       margin-top: 150px;
+            overflow-y: scroll; /* 세로 스크롤 허용 */}
+      #word-selection-screen {
+    margin-top: 10px; /* 헤더와의 간격을 줄여보세요 */
+    overflow-y: scroll;
+}
         #result-message {
             font-size: 18px; /* 모바일 화면에서 글씨 크기를 줄임 */
             font-weight: normal; /* 모바일 화면에서도 굵기가 적용되지 않도록 설정 */
@@ -482,7 +486,8 @@
         max-width: 400px;  /* 모바일에서 이미지 최대 크기 제한 */
     }
          #word-selection-screen {
-        margin-top: 60px; /* 모바일 환경에서도 헤더 높이와 여백 유지 */
+        margin-top: 10px; /* 모바일 환경에서도 헤더 높이와 여백 유지 */
+              overflow-y: scroll;
     }
     }
     </style>
