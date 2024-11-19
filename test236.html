@@ -76,6 +76,7 @@
     left: 0;
     z-index: 1000;
     height: 60px; /* 기존 80px에서 줄여봄 */
+           overflow: hidden; 
 }
 
      #main-screen, #name-screen, #word-selection-screen, #result-screen {
@@ -386,7 +387,7 @@
         position: relative;
         width: 100%;
         max-width: 500px;
-         margin: 80px auto 20px;
+         margin: 100px auto 20px;
         height: auto; /* 높이를 자동 조정 */
     }
         #result-message {
@@ -397,6 +398,14 @@
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
+.coupang_ad {
+    margin-top: 30px; /* 결과 화면과의 간격 설정 */
+    width: 100%;
+    max-width: 400px;
+    height: 140px;
+    text-align: center;
+    display: block; /* 광고를 기본적으로 보이도록 설정 */
+}
 
  
        
@@ -412,10 +421,10 @@
              overflow-x: hidden; /* 가로 스크롤 방지 */
     }
         }
-          header {
-        height: 50px; /* 모바일에서 헤더 높이를 더 줄임 */
+        header {
+        height: 50px;
         padding: 10px;
-               justify-content: center;
+        justify-content: center;
     }
 
         .screen {
@@ -448,7 +457,7 @@
       #result-screen {
             padding: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          margin-top: 70px;
+          margin-top: 200px;
         }
 
         .inner-content {
@@ -508,11 +517,13 @@
            <span class="word">나</span>
             <span class="word">자격증</span>
          <span class="word">쇼핑</span>
+        <span class="word">가족</span>
          <span class="word">도전</span>
             <span class="word">멋져짐</span>
             <span class="word">숨쉬기</span>
             <span class="word">밥먹기</span>
             <span class="word">친구</span>
+        <span class="word">쉼</span>
               <span class="word">...</span>
               <span class="word">봉사</span>
             <span class="word">운동</span>
@@ -689,6 +700,12 @@
     </div>
 </div>
 
+ <article id="coupangAd" class="coupang_ad mt-3">
+    <script src="https://ads-partners.coupang.com/g.js"></script>
+    <script>
+        new PartnersCoupang.G({"id":798186,"template":"carousel","trackingCode":"AF4391881","width":"350","height":"140","tsource":""});
+    </script>
+</article>
 
 
 
